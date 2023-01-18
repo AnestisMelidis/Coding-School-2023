@@ -6,32 +6,39 @@ using System.Threading.Tasks;
 
 namespace Session_07 {
     public class MessageLogger {
-        // PROPERTIES
+
+        //  PROPERTIES
         public Message[] Messages { get; set; }
 
+        private int _messageCounter = 0;
 
         // CTOR
         public MessageLogger() {
-
-        }
-        public MessageLogger(Message message) {
             Messages = new Message[1000];
         }
 
-        //methods
+
+        // METHODS
         public void ReadAll() {
+            foreach (Message message in Messages) {
 
-        }
-
-        public void Write(Message Messages) {
-            int i = 0;
-            if (Messages != null) {
+                if (message != null) {
+                    Console.WriteLine(message.Text);
+                }
 
             }
         }
 
         public void Clear() {
-
+            Messages = new Message[1000];
+            _messageCounter = 0;
         }
+
+        public void Write(Message message) {
+
+            Messages[_messageCounter] = message;
+            _messageCounter++;
+        }
+
     }
 }
