@@ -6,29 +6,20 @@ using System.Threading.Tasks;
 
 namespace Session_07 {
 
-
-    public class ActionRequest {
-
-        // PROPERTIES
-        public Action ActionEnum { get; set; }
-        public string Input { get; set; }
+    public class ActionEntity {
 
         public Guid RequestID { get; set; }
+    }
 
-        // CTOR
+
+    public class ActionRequest : ActionEntity {
+
+        public string Input { get; set; }
+        public ActionEnum Action { get; set; }
+
         public ActionRequest() {
+            RequestID = Guid.NewGuid();
         }
-        public ActionRequest(Action actionEnum) {
-
-        }
-        public ActionRequest(Action actionEnum,string input) { 
-        }
-        public ActionRequest(Action actionEnum, string input,Guid requestID) {
-        }
-
-
-
-        //methods
-    }
 
     }
+}
