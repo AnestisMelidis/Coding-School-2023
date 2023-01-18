@@ -1,10 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Session_07;
 
-
+  
 
 ActionRequest request = new ActionRequest() {
-    Input = "Fotis",
+    Input = "Anestis",
     Action = ActionEnum.Convert
 };
 
