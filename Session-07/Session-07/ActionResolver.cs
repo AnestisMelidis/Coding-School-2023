@@ -30,6 +30,9 @@ namespace Session_07 {
             ActionResponse response = new ActionResponse();
             response.ResponseID = Guid.NewGuid();
             response.RequestID = request.RequestID;
+            
+            StringManipulator stringManipulator= new StringManipulator();
+           
 
             Log("EXECUTION START");
 
@@ -39,16 +42,23 @@ namespace Session_07 {
                     case ActionEnum.Convert:
                         Log("CONVERT");
                         response.Output = Convert(request.Input);
+                        stringManipulator = new StringConvert();
+                        stringManipulator.Manipulate();
                         break;
 
                     case ActionEnum.Uppercase:
                         Log("UPPERCASE");
                         response.Output = Uppercase(request.Input);
+                        stringManipulator = new StringUpperCase();
+                        stringManipulator.Manipulate();
+                        
                         break;
 
                     case ActionEnum.Reverse:
                         Log("REVERSE");
                         response.Output = Reverse(request.Input);
+                        stringManipulator = new StringReverse();
+                        stringManipulator.Manipulate();
                         break;
 
                     default:

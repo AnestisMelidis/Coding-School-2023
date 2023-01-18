@@ -23,12 +23,12 @@ namespace Session_07 {
                         longestWord = word;
                     }
                 }
-                Console.Write("Longest word: " + longestWord.ToUpper());
+                Console.WriteLine("Longest word: " + longestWord.ToUpper());
                 return longestWord.ToUpper();
 
             }
             else if(!input.Contains(" ")) {
-                Console.Write("The input does not contain multiple words so :" + input.ToUpper());
+                Console.WriteLine("The input does not contain multiple words so :" + input.ToUpper());
                 return input.ToUpper();
 
             }
