@@ -31,8 +31,9 @@ namespace Session_07 {
             response.ResponseID = Guid.NewGuid();
             response.RequestID = request.RequestID;
             
-            StringManipulator stringManipulator= new StringManipulator();
            
+            StringManipulator stringManipulator;
+
 
             Log("EXECUTION START");
 
