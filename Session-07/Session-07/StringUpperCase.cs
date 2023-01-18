@@ -32,7 +32,7 @@ namespace Session_07 {
                 return input.ToUpper();
 
             }
-            else {
+            else{
                 return null;
             }
         }

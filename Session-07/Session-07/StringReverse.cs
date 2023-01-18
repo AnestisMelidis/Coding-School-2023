@@ -9,7 +9,14 @@ namespace Session_07 {
 
         public override string Manipulate() {
 
-            return string.Empty;
+            Console.WriteLine("Enter a string:");
+            string input = Console.ReadLine();
+
+            char[] charArray = input.ToCharArray();
+            Array.Reverse(charArray);
+            string reversedString = new string(charArray);
+            Console.WriteLine("Reversed string: " + reversedString);
+            return reversedString;
         }
 
     }
