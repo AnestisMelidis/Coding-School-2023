@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Session_07 {
     public class ConvertAndCheck : ActionResponse {
         
-        public override void CheckAndAct() {
+        public  void CheckAndAct() {
             Boolean checkOperation = false;
 
             while (!checkOperation) {

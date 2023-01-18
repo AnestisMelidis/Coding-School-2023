@@ -9,7 +9,32 @@ namespace Session_07 {
 
         public override string Manipulate() {
 
-            return string.Empty;
+            Console.WriteLine("Enter a string with multiple words if you like");
+            string input = Console.ReadLine();
+
+            if (input.Contains(" ")) {
+                string[] words = input.Split(' ');
+                string longestWord = "";
+                int maxLength = 0;
+
+                foreach (string word in words) {
+                    if (word.Length > maxLength) {
+                        maxLength = word.Length;
+                        longestWord = word;
+                    }
+                }
+                Console.Write("Longest word: " + longestWord.ToUpper());
+                return longestWord.ToUpper();
+
+            }
+            else if(!input.Contains(" ")) {
+                Console.Write("The input does not contain multiple words so :" + input.ToUpper());
+                return input.ToUpper();
+
+            }
+            else {
+                return null;
+            }
         }
     }
 }
