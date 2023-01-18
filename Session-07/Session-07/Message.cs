@@ -5,21 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Session_07 {
+
     public class Message {
-        // PROPERTIES
+
         public Guid ID { get; set; }
         public DateTime TimeStamp { get; set; }
-        public string? MessageLoggerMessage { get; set; }
 
-        // CTOR
-        public Message() { 
-        }
-        public Message(Guid id) {
-        }
-        public Message(Guid id, DateTime timeStamp) {
-        }
-        public Message(Guid id,DateTime timeStamp,string? messageLoggerMessage) {
+        // Change from class diagram: Message property cannot be the same as class name
+        public string Text { get; set; }
+
+        public Message() {
+            ID = Guid.NewGuid();
         }
 
+        public Message(string text) {
+            ID = Guid.NewGuid();
+            TimeStamp = DateTime.Now;
+            Text = text;
+        }
     }
 }
