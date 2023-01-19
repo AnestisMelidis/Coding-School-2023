@@ -35,6 +35,11 @@
             this.btnEquals = new System.Windows.Forms.Button();
             this.btnAddition = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bntSubtraction = new System.Windows.Forms.Button();
+            this.btnMultiplication = new System.Windows.Forms.Button();
+            this.btnDivision = new System.Windows.Forms.Button();
+            this.btnRaisetoPower = new System.Windows.Forms.Button();
+            this.btnSquareRoot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bntOne
@@ -156,11 +161,66 @@
             this.textBox1.TabIndex = 11;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // bntSubtraction
+            // 
+            this.bntSubtraction.Location = new System.Drawing.Point(362, 313);
+            this.bntSubtraction.Name = "bntSubtraction";
+            this.bntSubtraction.Size = new System.Drawing.Size(75, 23);
+            this.bntSubtraction.TabIndex = 12;
+            this.bntSubtraction.Text = "-";
+            this.bntSubtraction.UseVisualStyleBackColor = true;
+            this.bntSubtraction.Click += new System.EventHandler(this.bntSubtraction_Click);
+            // 
+            // btnMultiplication
+            // 
+            this.btnMultiplication.Location = new System.Drawing.Point(362, 274);
+            this.btnMultiplication.Name = "btnMultiplication";
+            this.btnMultiplication.Size = new System.Drawing.Size(75, 23);
+            this.btnMultiplication.TabIndex = 13;
+            this.btnMultiplication.Text = "X";
+            this.btnMultiplication.UseVisualStyleBackColor = true;
+            this.btnMultiplication.Click += new System.EventHandler(this.btnMultiplication_Click);
+            // 
+            // btnDivision
+            // 
+            this.btnDivision.Location = new System.Drawing.Point(252, 274);
+            this.btnDivision.Name = "btnDivision";
+            this.btnDivision.Size = new System.Drawing.Size(75, 23);
+            this.btnDivision.TabIndex = 14;
+            this.btnDivision.Text = "÷";
+            this.btnDivision.UseVisualStyleBackColor = true;
+            this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
+            // 
+            // btnRaisetoPower
+            // 
+            this.btnRaisetoPower.Location = new System.Drawing.Point(135, 274);
+            this.btnRaisetoPower.Name = "btnRaisetoPower";
+            this.btnRaisetoPower.Size = new System.Drawing.Size(75, 23);
+            this.btnRaisetoPower.TabIndex = 15;
+            this.btnRaisetoPower.Text = "^";
+            this.btnRaisetoPower.UseVisualStyleBackColor = true;
+            this.btnRaisetoPower.Click += new System.EventHandler(this.btnRaisetoPower_Click);
+            // 
+            // btnSquareRoot
+            // 
+            this.btnSquareRoot.Location = new System.Drawing.Point(25, 274);
+            this.btnSquareRoot.Name = "btnSquareRoot";
+            this.btnSquareRoot.Size = new System.Drawing.Size(75, 23);
+            this.btnSquareRoot.TabIndex = 16;
+            this.btnSquareRoot.Text = "√ ";
+            this.btnSquareRoot.UseVisualStyleBackColor = true;
+            this.btnSquareRoot.Click += new System.EventHandler(this.btnSquareRoot_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSquareRoot);
+            this.Controls.Add(this.btnRaisetoPower);
+            this.Controls.Add(this.btnDivision);
+            this.Controls.Add(this.btnMultiplication);
+            this.Controls.Add(this.bntSubtraction);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnAddition);
             this.Controls.Add(this.btnEquals);
@@ -194,5 +254,10 @@
         private Button btnEquals;
         private Button btnAddition;
         private TextBox textBox1;
+        private Button bntSubtraction;
+        private Button btnMultiplication;
+        private Button btnDivision;
+        private Button btnRaisetoPower;
+        private Button btnSquareRoot;
     }
 }
