@@ -1,5 +1,7 @@
 
-//using CalculationsLib;
+
+
+using CalculationsLib;
 
 namespace Session_09 {
     public partial class Form1 : Form {
@@ -69,6 +71,37 @@ namespace Session_09 {
 
         private void btnEquals_Click(object sender, EventArgs e) {
             textBox1.Text += "=";
+            IMathematicalCal cal;
+
+
+            switch (_calcOperation) {
+                case CalcOperation.Addition:
+
+                    cal = new Addition();
+                    _result = cal.Calculation(_value1, _value2);
+              
+                    break;
+                case CalcOperation.Subtraction:                   
+
+                    break;
+                case CalcOperation.Multiplication:
+
+                    break;
+                case CalcOperation.Division:
+
+                    break;
+                case CalcOperation.RaisetoPower:
+
+                    break;
+                case CalcOperation.SquareRoot:
+
+                    break;
+
+                default:
+                    break;
+            }
+
+            textBox1.Text += _result;
         }
 
         private void btnAddition_Click(object sender, EventArgs e) {
