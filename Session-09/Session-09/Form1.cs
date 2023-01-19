@@ -4,6 +4,8 @@
 using CalculationsLib;
 
 namespace Session_09 {
+
+    //SquareRoot Doesnt work
     public partial class Form1 : Form {
 
         public decimal? _value1 = null;
@@ -91,7 +93,7 @@ namespace Session_09 {
         private void btnEquals_Click(object sender, EventArgs e) {
             textBox1.Text += "=";
             IMathematicalCal cal;
-
+            SquareRoot squareRoot = new SquareRoot();
 
             switch (_calcOperation) {
                 case CalcOperation.Addition:
@@ -121,6 +123,8 @@ namespace Session_09 {
 
                     break;
                 case CalcOperation.SquareRoot:
+                    
+                    _result = squareRoot.Calculation(_values[1]);
 
                     break;
 
@@ -175,11 +179,8 @@ namespace Session_09 {
         private void Set(decimal x) {
 
             if (_result != null) {
-
                 textBox1.Text = string.Empty;
                 EmptyStringText();
-
-
                 _values[setValue.SetInputValue(_values)] = x;
             }
             else {

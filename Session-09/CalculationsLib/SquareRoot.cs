@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CalculationsLib {
-    //public class SquareRoot : IMathematicalCal {
-    //    //M
-    //    //public decimal Calculation(decimal? x, decimal? y) {
-    //    //    decimal result = 0;
+    public class SquareRoot {
+        
+        public decimal Calculation(decimal? x) {
+            double result = 0;
 
-    //    //    if (x != null && y != null) {
-    //    //        result = x.Value * y.Value;
-    //    //    }
+            if (x != null ) {
+                result = Math.Sqrt((double)x);
+            }
 
-    //    //    return result;
-    //    //}
-    //}
+            return (decimal)result;
+        }
+    }
 }
