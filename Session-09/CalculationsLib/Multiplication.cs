@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 namespace CalculationsLib {
     public class Multiplication : IMathematicalCal {
         public decimal Calculation(decimal? x, decimal? y) {
-            throw new NotImplementedException();
+            decimal result = 0;
+
+            if (x != null && y != null) {
+                result = x.Value * y.Value;
+            }
+
+            return result;
         }
+    
     }
 }
