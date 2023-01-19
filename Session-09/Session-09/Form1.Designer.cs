@@ -40,6 +40,7 @@
             this.btnDivision = new System.Windows.Forms.Button();
             this.btnRaisetoPower = new System.Windows.Forms.Button();
             this.btnSquareRoot = new System.Windows.Forms.Button();
+            this.btnZero = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bntOne
@@ -211,11 +212,22 @@
             this.btnSquareRoot.UseVisualStyleBackColor = true;
             this.btnSquareRoot.Click += new System.EventHandler(this.btnSquareRoot_Click);
             // 
+            // btnZero
+            // 
+            this.btnZero.Location = new System.Drawing.Point(135, 421);
+            this.btnZero.Name = "btnZero";
+            this.btnZero.Size = new System.Drawing.Size(75, 23);
+            this.btnZero.TabIndex = 17;
+            this.btnZero.Text = "0";
+            this.btnZero.UseVisualStyleBackColor = true;
+            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnZero);
             this.Controls.Add(this.btnSquareRoot);
             this.Controls.Add(this.btnRaisetoPower);
             this.Controls.Add(this.btnDivision);
@@ -259,5 +271,6 @@
         private Button btnDivision;
         private Button btnRaisetoPower;
         private Button btnSquareRoot;
+        private Button btnZero;
     }
 }
