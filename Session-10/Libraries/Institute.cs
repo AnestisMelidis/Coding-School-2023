@@ -20,19 +20,8 @@ namespace Session_06 {
 
         }
 
-        public Institute(Guid id) {
-            ID= id;
-        }
-
-        public Institute(Guid id ,string name) {
-            ID = id;
-            Name= name;
-        }
-        public Institute(Guid id, string name,int yearsInService) {
-            ID = id;
-            Name = name;
-            YearsInService = yearsInService;
-        }
+        
+        
 
         // methods
 

@@ -22,27 +22,7 @@ namespace Session_06 {
         public University() {
 
         }
-        public University(Guid id) : base(id) {
-
-        }
-        public University(Guid id, string name) : base(id, name) {
-
-        }
-        public University(Guid id, string name, int yearsInService) : base(id, name, yearsInService) {
-
-        }
-        public University(Guid id, string name, int yearsInService, Student[] students) : base(id, name, yearsInService) {
-
-        }
-        public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses) : base(id, name, yearsInService) {
-
-        }
-        public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses, Grade[] grades) : base(id, name, yearsInService) {
-
-        }
-        public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses, Grade[] grades, Schedule[] scheduledCourse) : base(id, name, yearsInService) {
-
-        }
+        
 
 
         // methods

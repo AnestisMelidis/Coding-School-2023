@@ -19,27 +19,7 @@ namespace Session_06 {
         public Grade() {
         }
 
-        public Grade(Guid id) {
-            ID = id;
-        }
-
-        public Grade(Guid id,Guid studentId) {
-            ID = id;
-            StudentID = studentId;    
-        }
-
-        public Grade(Guid id, Guid studentId, Guid courseId) {
-            ID = id;
-            StudentID = studentId;
-            CourseID = courseId;
-        }
-
-        public Grade(Guid id, Guid studentId, Guid courseId,int mark) {
-            ID = id;
-            StudentID = studentId;
-            CourseID = courseId;
-            Mark = mark;
-        }
+       
 
 
         // methods

@@ -20,21 +20,7 @@ namespace Session_06 {
         public Professor() {
 
         }
-        public Professor(Guid id) : base(id) { 
-
-        }
-        public Professor(Guid id, string name) : base(id, name) { 
-
-        }
-        public Professor(Guid id, string name, int age) : base(id, name, age) { 
-
-        }
-        public Professor(Guid id, string name, int age, string rank) : base(id, name, age) {
-
-        }
-        public Professor(Guid id, string name, int age, string rank, Course[] course) : base(id, name, age) {
-
-        }
+       
             
 
         

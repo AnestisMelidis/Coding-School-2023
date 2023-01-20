@@ -21,21 +21,7 @@ namespace Session_06 {
 
         }
 
-        public Course(Guid id) {
-            ID = id;
-        }
-
-        public Course(Guid id, string code) {
-            ID = id;
-            Code = code;
-
-        }
-
-        public Course(Guid id, string code, string subject) {
-            ID = id;
-            Code = code;
-            Subject = subject;
-        }
+       
 
 
         // methods

@@ -23,27 +23,7 @@ namespace Session_06 {
         public Schedule() {
         }
 
-        public Schedule(Guid id) {
-            ID= id;
-        }
-
-        public Schedule(Guid id,Guid courseId) {
-            ID = id;
-            CourseID = courseId;
-        }
-
-        public Schedule(Guid id, Guid courseId, Guid professorId) {
-            ID = id;
-            CourseID = courseId;
-            ProfessorID = professorId;
-        }
-
-        public Schedule(Guid id, Guid courseId, Guid professorId, DateTime callendar) {
-            ID = id;
-            CourseID = courseId;
-            ProfessorID = professorId;
-            Callendar = callendar;
-        }
+        
 
 
         // methods
