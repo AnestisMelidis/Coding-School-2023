@@ -33,6 +33,7 @@
             this.lblCourses = new System.Windows.Forms.Label();
             this.lblGrades = new System.Windows.Forms.Label();
             this.lblScheduledCourses = new System.Windows.Forms.Label();
+            this.btnShowGridResults = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grvStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvGrades)).BeginInit();
@@ -138,11 +139,22 @@
             this.lblScheduledCourses.Text = "Scheduled Courses Grid";
             this.lblScheduledCourses.Click += new System.EventHandler(this.lblScheduledCourses_Click);
             // 
+            // btnShowGridResults
+            // 
+            this.btnShowGridResults.Location = new System.Drawing.Point(432, 578);
+            this.btnShowGridResults.Name = "btnShowGridResults";
+            this.btnShowGridResults.Size = new System.Drawing.Size(115, 40);
+            this.btnShowGridResults.TabIndex = 10;
+            this.btnShowGridResults.Text = "Show Grid Results";
+            this.btnShowGridResults.UseVisualStyleBackColor = true;
+            this.btnShowGridResults.Click += new System.EventHandler(this.btnShowGridResults_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 630);
+            this.Controls.Add(this.btnShowGridResults);
             this.Controls.Add(this.lblScheduledCourses);
             this.Controls.Add(this.lblGrades);
             this.Controls.Add(this.lblCourses);
@@ -177,5 +189,6 @@
         private Label lblCourses;
         private Label lblGrades;
         private Label lblScheduledCourses;
+        private Button btnShowGridResults;
     }
 }

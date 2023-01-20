@@ -18,10 +18,7 @@ namespace Session_10 {
 
         private void Form1_Load(object sender, EventArgs e) {
             
-            PopulateStudents();
-            PopulateCourses();
-            PopulateGrades();
-            PopulateSchedeCourses();
+            
 
 
         }
@@ -29,11 +26,13 @@ namespace Session_10 {
         private void btnSave_Click(object sender, EventArgs e) {
             Serializer serializer = new Serializer();
             serializer.SerializeToFile(_university, "test.json");
+            MessageBox.Show("Save Done");
         }
 
         private void btnLoad_Click(object sender, EventArgs e) {
             Serializer serializer = new Serializer();
             _university = serializer.Deserialize<University>("test.json");
+            MessageBox.Show("Load Done");
 
         }
         private void PopulateStudents() {
@@ -162,6 +161,14 @@ namespace Session_10 {
         }
 
         private void lblScheduledCourses_Click(object sender, EventArgs e) {
+
+        }
+
+        private void btnShowGridResults_Click(object sender, EventArgs e) {
+            PopulateStudents();
+            PopulateCourses();
+            PopulateGrades();
+            PopulateSchedeCourses();
 
         }
     }
