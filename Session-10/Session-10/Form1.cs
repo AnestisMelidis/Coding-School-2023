@@ -72,10 +72,10 @@ namespace Session_10 {
         }
         private void PopulateCourses() {
 
-            _university = new University() {
-                Name = "University Of Sheffield",
-                YearsInService = 45
-            };
+            //_university = new University() {
+            //    Name = "University Of Sheffield",
+            //    YearsInService = 45
+            //};
             Course course1 = new Course() {
                 Code= "56",
                 Subject="Mathematics"
@@ -93,10 +93,10 @@ namespace Session_10 {
         }
         private void PopulateGrades() {
             
-            _university = new University() {
-                Name = "University Of Sheffield",
-                YearsInService = 45
-            };
+            //_university = new University() {
+            //    Name = "University Of Sheffield",
+            //    YearsInService = 45
+            //};
             Grade grade1 = new Grade() {
                 Mark = 98,
                 
@@ -117,10 +117,10 @@ namespace Session_10 {
 
         private void PopulateSchedeCourses() {
             
-            _university = new University() {
-                Name = "University Of Sheffield",
-                YearsInService = 45
-            };
+            //_university = new University() {
+            //    Name = "University Of Sheffield",
+            //    YearsInService = 45
+            //};
             Schedule scheduledCourse1 = new Schedule() {
                 Callendar = DateTime.Now
 
