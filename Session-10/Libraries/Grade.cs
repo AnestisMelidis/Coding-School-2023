@@ -17,6 +17,9 @@ namespace Libraries {
 
         // constructors
         public Grade() {
+            ID = Guid.NewGuid();
+            StudentID= Guid.NewGuid();
+            CourseID = Guid.NewGuid();
         }
 
        

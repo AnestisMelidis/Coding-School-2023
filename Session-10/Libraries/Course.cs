@@ -18,6 +18,7 @@ namespace Libraries {
         // constructors
 
         public Course() {
+            ID = Guid.NewGuid();
 
         }
 

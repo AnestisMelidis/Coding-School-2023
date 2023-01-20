@@ -1,5 +1,6 @@
 
 using Libraries;
+using System.Globalization;
 
 
 namespace Session_10 {
@@ -7,9 +8,9 @@ namespace Session_10 {
 
         //Student student = new Student();
         private University _university;
-        private string? classes="Math";
+        
 
-        List<Student> students;
+        
         public Form1() {
             InitializeComponent();
 
@@ -19,6 +20,8 @@ namespace Session_10 {
             
             PopulateStudents();
             PopulateCourses();
+            PopulateGrades();
+            PopulateSchedeCourses();
 
 
         }
@@ -65,15 +68,65 @@ namespace Session_10 {
                 YearsInService = 45
             };
             Course course1 = new Course() {
-
+                Code= "56",
+                Subject="Mathematics"
             };
             Course course2 = new Course() {
+                Code = "69",
+                Subject = "Mathematics"
+            };
 
-             };
+            _university.Courses.Add(course1);
+            _university.Courses.Add(course2);
+
+            grvCourses.DataSource = _university.Courses;
+
+        }
+        private void PopulateGrades() {
+            
+            _university = new University() {
+                Name = "University Of Sheffield",
+                YearsInService = 45
+            };
+            Grade grade1 = new Grade() {
+                Mark = 98,
+                
+                
+            };
+            Grade grade2 = new Grade() {
+                Mark = 39,
+                
+                
+            };
+
+            _university.Grades.Add(grade1);
+            _university.Grades.Add(grade2);
+
+            grvGrades.DataSource = _university.Grades;
+
+        }
+
+        private void PopulateSchedeCourses() {
+            
+            _university = new University() {
+                Name = "University Of Sheffield",
+                YearsInService = 45
+            };
+            Schedule scheduledCourse1 = new Schedule() {
+                Callendar = DateTime.Now
 
 
+        };
+            Schedule scheduledCourse2 = new Schedule() {
+                Callendar = DateTime.Now
 
-            // grvCourses.DataSource = _university;
+
+        };
+            //_university.Add(Name);
+            _university.ScheduleCourses.Add(scheduledCourse1);
+            _university.ScheduleCourses.Add(scheduledCourse2);
+
+            grvSchedeCourses.DataSource = _university.ScheduleCourses;
 
         }
 
@@ -82,6 +135,14 @@ namespace Session_10 {
         }
 
         private void grvCourses_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void grvGrades_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void grvSchedeCourses_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
     }

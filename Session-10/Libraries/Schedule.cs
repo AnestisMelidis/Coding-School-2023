@@ -21,6 +21,10 @@ namespace Libraries {
         // constructors
 
         public Schedule() {
+            ID = Guid.NewGuid();
+            CourseID = Guid.NewGuid() ;
+            ProfessorID = Guid.NewGuid();
+            
         }
 
         

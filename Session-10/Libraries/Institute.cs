@@ -17,7 +17,7 @@ namespace Libraries {
         // constructors
 
         public Institute() {
-
+            ID = Guid.NewGuid();
         }
 
         
