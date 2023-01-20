@@ -8,18 +8,19 @@ namespace Session_06 {
     public class University : Institute {
         
         // properties
-        public Student[] Students { get; set; }
+        public List<Student> Students { get; set; }
 
-        public Course[] Courses { get; set; }
+        public List<Grade> Grades { get; set; }
 
-        public Grade[] Grades { get; set; }
+        public List<Course> Courses { get; set; }
 
-        public Schedule[] ScheduledCourse { get; set; }
+        public List<Schedule> ScheduleCourses { get; set; }
 
 
         // constructors
 
         public University() {
+            Students = new List<Student>();
 
         }
         

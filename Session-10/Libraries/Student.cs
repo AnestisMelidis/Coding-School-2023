@@ -5,27 +5,43 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Session_06 {
-    public class Student : Person {
+    public class Student { /*: Person*/
 
         // properties
 
-        public int RegistrationNumber { get; set; }
+        //public int RegistrationNumber { get; set; }
 
-        public Course[] Courses { get; set; }
+        //public Course[] Courses { get; set; }
 
-        // constructors
+        //// constructors
 
-        public Student() { 
+        //public Student() { 
+        //}
+
+
+        //// methods
+
+        //public void Attend( string course,DateTime dateTime) {
+
+        //}
+
+        //public void WriteExam( string course, DateTime dateTime) { }
+
+        // }
+        public Student() {
+            
         }
+
         
 
-        // methods
+       
+        public string Name { get; set; }
+        
+        public int Age { get; set; }
+        
+       
 
-        public void Attend( string course,DateTime dateTime) {
+        
+    }
 
-        }
-
-        public void WriteExam( string course, DateTime dateTime) { }
-
-         }
-}
+    }
