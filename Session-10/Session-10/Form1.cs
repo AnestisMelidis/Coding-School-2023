@@ -6,7 +6,7 @@ using System.Globalization;
 namespace Session_10 {
     public partial class Form1 : Form {
 
-        /* The System is Saving Only the Last Input which is ScheduleCourse*/
+        
         private University _university;
         
 
