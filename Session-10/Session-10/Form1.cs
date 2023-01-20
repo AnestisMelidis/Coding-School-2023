@@ -6,20 +6,27 @@ using System.Globalization;
 namespace Session_10 {
     public partial class Form1 : Form {
 
-        //Student student = new Student();
+        /* The System is Saving Only the Last Input which is ScheduleCourse*/
         private University _university;
         
 
         
         public Form1() {
             InitializeComponent();
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e) {
             
             
 
+
+        }
+        private void btnShowGridResults_Click(object sender, EventArgs e) {
+            PopulateStudents();
+            PopulateCourses();
+            PopulateGrades();
+            PopulateSchedeCourses();
 
         }
 
@@ -48,7 +55,7 @@ namespace Session_10 {
                 Name = "Dimitris",
                 RegistrationNumber = 1,
                 Age = 40,
-                //Courses = < classes >                
+                               
             };
 
 
@@ -118,13 +125,14 @@ namespace Session_10 {
                 Callendar = DateTime.Now
 
 
-        };
+            };
+
             Schedule scheduledCourse2 = new Schedule() {
                 Callendar = DateTime.Now
 
 
         };
-            //_university.Add(Name);
+            
             _university.ScheduleCourses.Add(scheduledCourse1);
             _university.ScheduleCourses.Add(scheduledCourse2);
 
@@ -163,12 +171,8 @@ namespace Session_10 {
         private void lblScheduledCourses_Click(object sender, EventArgs e) {
 
         }
-
-        private void btnShowGridResults_Click(object sender, EventArgs e) {
-            PopulateStudents();
-            PopulateCourses();
-            PopulateGrades();
-            PopulateSchedeCourses();
+                
+        private void grvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
     }
