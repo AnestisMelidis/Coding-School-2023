@@ -145,5 +145,21 @@ namespace Session_10 {
         private void grvSchedeCourses_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
+
+        private void lblStudents_Click(object sender, EventArgs e) {
+
+        }
+
+        private void lblCourses_Click(object sender, EventArgs e) {
+
+        }
+
+        private void lblGrades_Click(object sender, EventArgs e) {
+
+        }
+
+        private void lblScheduledCourses_Click(object sender, EventArgs e) {
+
+        }
     }
 }

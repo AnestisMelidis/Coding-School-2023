@@ -29,6 +29,10 @@
             this.grvCourses = new System.Windows.Forms.DataGridView();
             this.grvGrades = new System.Windows.Forms.DataGridView();
             this.grvSchedeCourses = new System.Windows.Forms.DataGridView();
+            this.lblStudents = new System.Windows.Forms.Label();
+            this.lblCourses = new System.Windows.Forms.Label();
+            this.lblGrades = new System.Windows.Forms.Label();
+            this.lblScheduledCourses = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grvStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvGrades)).BeginInit();
@@ -37,7 +41,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(181, 541);
+            this.btnSave.Location = new System.Drawing.Point(149, 578);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(108, 40);
             this.btnSave.TabIndex = 0;
@@ -47,7 +51,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(538, 541);
+            this.btnLoad.Location = new System.Drawing.Point(779, 578);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(108, 40);
             this.btnLoad.TabIndex = 1;
@@ -58,47 +62,91 @@
             // grvStudents
             // 
             this.grvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvStudents.Location = new System.Drawing.Point(33, 12);
+            this.grvStudents.Location = new System.Drawing.Point(45, 27);
             this.grvStudents.Name = "grvStudents";
             this.grvStudents.RowTemplate.Height = 25;
-            this.grvStudents.Size = new System.Drawing.Size(720, 90);
+            this.grvStudents.Size = new System.Drawing.Size(899, 90);
             this.grvStudents.TabIndex = 2;
             // 
             // grvCourses
             // 
             this.grvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvCourses.Location = new System.Drawing.Point(33, 133);
+            this.grvCourses.Location = new System.Drawing.Point(45, 156);
             this.grvCourses.Name = "grvCourses";
             this.grvCourses.RowTemplate.Height = 25;
-            this.grvCourses.Size = new System.Drawing.Size(720, 104);
+            this.grvCourses.Size = new System.Drawing.Size(899, 104);
             this.grvCourses.TabIndex = 3;
             this.grvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvCourses_CellContentClick);
             // 
             // grvGrades
             // 
             this.grvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvGrades.Location = new System.Drawing.Point(33, 254);
+            this.grvGrades.Location = new System.Drawing.Point(45, 299);
             this.grvGrades.Name = "grvGrades";
             this.grvGrades.RowTemplate.Height = 25;
-            this.grvGrades.Size = new System.Drawing.Size(720, 110);
+            this.grvGrades.Size = new System.Drawing.Size(899, 110);
             this.grvGrades.TabIndex = 4;
             this.grvGrades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvGrades_CellContentClick);
             // 
             // grvSchedeCourses
             // 
             this.grvSchedeCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvSchedeCourses.Location = new System.Drawing.Point(33, 394);
+            this.grvSchedeCourses.Location = new System.Drawing.Point(57, 457);
             this.grvSchedeCourses.Name = "grvSchedeCourses";
             this.grvSchedeCourses.RowTemplate.Height = 25;
-            this.grvSchedeCourses.Size = new System.Drawing.Size(720, 112);
+            this.grvSchedeCourses.Size = new System.Drawing.Size(887, 99);
             this.grvSchedeCourses.TabIndex = 5;
             this.grvSchedeCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvSchedeCourses_CellContentClick);
+            // 
+            // lblStudents
+            // 
+            this.lblStudents.AutoSize = true;
+            this.lblStudents.Location = new System.Drawing.Point(445, 9);
+            this.lblStudents.Name = "lblStudents";
+            this.lblStudents.Size = new System.Drawing.Size(78, 15);
+            this.lblStudents.TabIndex = 6;
+            this.lblStudents.Text = "Students Grid";
+            this.lblStudents.Click += new System.EventHandler(this.lblStudents_Click);
+            // 
+            // lblCourses
+            // 
+            this.lblCourses.AutoSize = true;
+            this.lblCourses.Location = new System.Drawing.Point(449, 129);
+            this.lblCourses.Name = "lblCourses";
+            this.lblCourses.Size = new System.Drawing.Size(74, 15);
+            this.lblCourses.TabIndex = 7;
+            this.lblCourses.Text = "Courses Grid";
+            this.lblCourses.Click += new System.EventHandler(this.lblCourses_Click);
+            // 
+            // lblGrades
+            // 
+            this.lblGrades.AutoSize = true;
+            this.lblGrades.Location = new System.Drawing.Point(455, 272);
+            this.lblGrades.Name = "lblGrades";
+            this.lblGrades.Size = new System.Drawing.Size(68, 15);
+            this.lblGrades.TabIndex = 8;
+            this.lblGrades.Text = "Grades Grid";
+            this.lblGrades.Click += new System.EventHandler(this.lblGrades_Click);
+            // 
+            // lblScheduledCourses
+            // 
+            this.lblScheduledCourses.AutoSize = true;
+            this.lblScheduledCourses.Location = new System.Drawing.Point(432, 428);
+            this.lblScheduledCourses.Name = "lblScheduledCourses";
+            this.lblScheduledCourses.Size = new System.Drawing.Size(132, 15);
+            this.lblScheduledCourses.TabIndex = 9;
+            this.lblScheduledCourses.Text = "Scheduled Courses Grid";
+            this.lblScheduledCourses.Click += new System.EventHandler(this.lblScheduledCourses_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 630);
+            this.Controls.Add(this.lblScheduledCourses);
+            this.Controls.Add(this.lblGrades);
+            this.Controls.Add(this.lblCourses);
+            this.Controls.Add(this.lblStudents);
             this.Controls.Add(this.grvSchedeCourses);
             this.Controls.Add(this.grvGrades);
             this.Controls.Add(this.grvCourses);
@@ -113,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvGrades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvSchedeCourses)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +173,9 @@
         private DataGridView grvCourses;
         private DataGridView grvGrades;
         private DataGridView grvSchedeCourses;
+        private Label lblStudents;
+        private Label lblCourses;
+        private Label lblGrades;
+        private Label lblScheduledCourses;
     }
 }
