@@ -22,6 +22,9 @@ namespace Libraries {
 
         public University() {
             Students = new List<Student>();
+            Grades = new List<Grade>();
+            Courses = new List<Course>();
+            ScheduleCourses = new List<Schedule>();
 
         }
         

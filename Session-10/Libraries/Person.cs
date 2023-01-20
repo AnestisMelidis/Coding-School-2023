@@ -17,6 +17,7 @@ namespace Libraries {
         // constructors
 
         public Person() {
+            ID= Guid.NewGuid();
 
         }
        

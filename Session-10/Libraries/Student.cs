@@ -5,43 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Libraries {
-    public class Student { /*: Person*/
+    public class Student : Person {
 
         // properties
 
-        //public int RegistrationNumber { get; set; }
+        public int RegistrationNumber { get; set; }
 
-        //public Course[] Courses { get; set; }
+        public Course Courses { get; set; }
 
-        //// constructors
+        //constructors
 
-        //public Student() { 
-        //}
-
-
-        //// methods
-
-        //public void Attend( string course,DateTime dateTime) {
-
-        //}
-
-        //public void WriteExam( string course, DateTime dateTime) { }
-
-        // }
         public Student() {
-            
+            //Courses = new List<Course>();
         }
 
-        
 
-       
-        public string Name { get; set; }
-        
-        public int Age { get; set; }
-        
-       
+        //methods
 
-        
-    }
+        public void Attend(string course, DateTime dateTime) {
+
+        }
+
+        public void WriteExam(string course, DateTime dateTime) { }
 
     }
+}

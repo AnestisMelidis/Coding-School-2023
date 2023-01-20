@@ -26,12 +26,14 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.grvStudents = new System.Windows.Forms.DataGridView();
+            this.grvCourses = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.grvStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvCourses)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(77, 398);
+            this.btnSave.Location = new System.Drawing.Point(203, 504);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(108, 40);
             this.btnSave.TabIndex = 0;
@@ -41,7 +43,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(261, 398);
+            this.btnLoad.Location = new System.Drawing.Point(532, 504);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(108, 40);
             this.btnLoad.TabIndex = 1;
@@ -55,14 +57,25 @@
             this.grvStudents.Location = new System.Drawing.Point(33, 12);
             this.grvStudents.Name = "grvStudents";
             this.grvStudents.RowTemplate.Height = 25;
-            this.grvStudents.Size = new System.Drawing.Size(720, 150);
+            this.grvStudents.Size = new System.Drawing.Size(720, 90);
             this.grvStudents.TabIndex = 2;
+            // 
+            // grvCourses
+            // 
+            this.grvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvCourses.Location = new System.Drawing.Point(33, 178);
+            this.grvCourses.Name = "grvCourses";
+            this.grvCourses.RowTemplate.Height = 25;
+            this.grvCourses.Size = new System.Drawing.Size(720, 88);
+            this.grvCourses.TabIndex = 3;
+            this.grvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvCourses_CellContentClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1002, 630);
+            this.Controls.Add(this.grvCourses);
             this.Controls.Add(this.grvStudents);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
@@ -70,6 +83,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grvStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvCourses)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -79,5 +93,6 @@
         private Button btnSave;
         private Button btnLoad;
         private DataGridView grvStudents;
+        private DataGridView grvCourses;
     }
 }
