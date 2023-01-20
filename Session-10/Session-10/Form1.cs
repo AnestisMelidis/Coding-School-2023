@@ -1,6 +1,6 @@
 
 using Libraries;
-using Session_06;
+
 
 namespace Session_10 {
     public partial class Form1 : Form {
@@ -31,7 +31,7 @@ namespace Session_10 {
         }
         private void PopulateStudents() {
 
-            // List<University> unis = GetUniversities();
+            
             _university = new University() {
                 Name = "University Of Sheffield"
             };
@@ -43,7 +43,7 @@ namespace Session_10 {
                
                 Age = 40
                 
-                //UniversityID = unis[0].ID,
+                
             };
             
 
@@ -52,7 +52,7 @@ namespace Session_10 {
                
                 Age = 44
                 
-                //UniversityID = unis[1].ID
+                
             };
             
 
