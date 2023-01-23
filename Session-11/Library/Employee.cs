@@ -4,7 +4,7 @@ namespace Session_11{
 
     public class Employee
     {
-       
+       //Properties
        public Guid ID { get; set; }
        public string Name { get; set; }
        public string Surname { get; set; }
@@ -22,5 +22,11 @@ namespace Session_11{
         Waiter
     }
 
- }
+    //Constractors
+    public Employee()
+    {
+    }
+
+    //Methods
+}
 
