@@ -19,7 +19,7 @@ namespace Library
         public Guid EmployeeID { get; set; }
         public double TotalPrice { get; set; }
 
-        public Transaction{
+        public Transaction(){
             }
     }   
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class Transaction
+    public class Transaction_Line
     {
         public Guid ID { get; set; }
         public Guid ProductID { get; set; }
@@ -15,7 +15,9 @@ namespace Library
         public double Price { get; set; }
         public double Discount { get; set; }
         public double TotalPrice { get; set; }
-        public Transaction{
+        public Transaction_Line(){
             }
-        public void DiscountCheck(){}
+        public void DiscountCheck() { 
+   }
+    }
 }
