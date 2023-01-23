@@ -15,6 +15,8 @@ namespace Library {
         public int Code { get; set; }
         public string Description { get; set; }
 
+
+
         //Constractors
         public ProductCategory() { 
         }
