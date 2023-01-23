@@ -10,8 +10,15 @@ namespace Session_11
         public int Code { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
-    
     }
+
+    //Constructors
+    public Customer()
+    {
+    }
+
+    //Methods
+
 }
 
 

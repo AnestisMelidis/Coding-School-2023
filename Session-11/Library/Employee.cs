@@ -22,7 +22,7 @@ namespace Session_11{
         Waiter
     }
 
-    //Constractors
+    //Constructors
     public Employee()
     {
     }
