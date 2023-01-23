@@ -191,6 +191,8 @@ namespace Session_09 {
 
         }
 
+        private void Form1_Load(object sender, EventArgs e) {
 
+        }
     }
 }
