@@ -23,8 +23,7 @@ namespace Library {
         }
 
         //Constractors
-        public ProductCategory() { 
-        }
+       
 
         //Methods
 

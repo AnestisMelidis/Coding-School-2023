@@ -9,9 +9,10 @@ namespace Library
        public Guid ID { get; set; }
        public string Name { get; set; }
        public string Surname { get; set; }
-       public enum EmployeeType { get; set; }
+      // public enum EmployeeType { get; set; }
        public double SalaryPerMonth { get; set; }
 
+        //Constructors
         public Employee()
         {
             ID = Guid.NewGuid();
@@ -28,10 +29,8 @@ namespace Library
         Waiter
     }
 
-    //Constructors
-    public Employee()
-    {
-    }
+    
+   
 
     //Methods
 }
