@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library
-{
-    public class Transaction
-    {
-        public enum MethodPayment
-        {
+namespace Library {
+    public class Transaction {
+        public enum MethodPayment {
             Cash,
             Credit_Card
         };
@@ -19,14 +16,10 @@ namespace Library
         public Guid EmployeeID { get; set; }
         public double TotalPrice { get; set; }
 
-        public Transaction()
-        {
+        public Transaction() {
             ID = Guid.NewGuid();
         }
 
-        public Transaction()
-        {
 
-        }
-    }   
+    }  
 }
