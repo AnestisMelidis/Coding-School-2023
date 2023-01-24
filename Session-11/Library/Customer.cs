@@ -15,13 +15,20 @@ namespace Library
         public Customer() {
             ID = Guid.NewGuid();
         }
+       
+        
+        //Methods
+        public void TestMethod() {
+
+        }
 
 
     }
 
    
 
-    //Methods
+    
+     
 
 }
 
