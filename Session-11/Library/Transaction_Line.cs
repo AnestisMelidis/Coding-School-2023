@@ -31,7 +31,25 @@ namespace Library
                 return false;
             }
         }
-        
+        public void DoTotalCost(Transaction_Line test) {
+
+            if (test.DiscountCheck(test.Price, test.Quantity)) {
+                //MessageBox.Show("Mpika sthn If");
+                test.TotalPrice = (test.Price * test.Quantity) * test.Discount;
+               // MessageBox.Show("" + test.TotalPrice);
+
+            }
+            else {
+               // MessageBox.Show("DEn Mpika sthn If");
+                test.TotalPrice = (test.Price * test.Quantity);
+               // MessageBox.Show("" + test.TotalPrice);
+
+
+
+            }
+
         }
+
     }
-}
+    }
+

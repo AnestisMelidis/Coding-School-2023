@@ -1,5 +1,6 @@
 using DevExpress.XtraCharts;
 using Library;
+using System.Linq;
 
 namespace Session_11
 {
@@ -19,12 +20,12 @@ namespace Session_11
 
 
             InitializeComponent();
-  /*          PopulateCoffee();
+            PopulateCoffee();/*
             PopulateEmployees();*/
 
             
             //PopulateCoffee();
-            PopulateTransaction_Line();
+            //PopulateTransaction_Line();
 
         }
 
@@ -57,17 +58,38 @@ namespace Session_11
             {
 
                 Code = 2,
-                Description = "Frape",
-                TypeOfProduct = Product.ProductType.Coffee,
+                Description = "Burger",
+                TypeOfProduct = Product.ProductType.Food,
                 Price = 8,
                 Cost = 4,
 
             };
             products.Add(product2);
-            MessageBox.Show(product1.Description + " " + product2.Description);
-            MessageBox.Show(product1.Description + " " + product2.Description);
 
-            MessageBox.Show(product1.Description + " " + product2.Description);
+            Product product3 = new Product() {
+                Code = 3,
+                Description = "Frape",
+                TypeOfProduct = Product.ProductType.Coffee,
+                Price = 30,
+                Cost = 10
+
+            };
+            products.Add(product3);
+            //MessageBox.Show(product1.Description + " " + product2.Description);
+
+
+            /*product2.
+                Product.AddRange(courses.FindAll(x => x.Semester == Course.SemesterEnum.Winter));
+            student1.Courses.AddRange(courses.FindAll(x => x.Semester == Course.SemesterEnum.Winter));*/
+
+            // products.AddRange(products.FindAll(x => x.TypeOfProduct == Product.ProductType.Coffee));
+
+            //MessageBox.Show(" " + products.AddRange(products.FindAll(x => x.TypeOfProduct == Product.ProductType.Coffee)));
+            MessageBox.Show("Coffee Products: " + string.Join(", ", products.Where(x => x.TypeOfProduct == Product.ProductType.Coffee)
+            .Select(x => (x.Description,x.Code,x.Price,x.Cost))));
+
+            //MessageBox.Show("Coffee Products: " + string.Join(", ", products.Where(x => x.TypeOfProduct == Product.ProductType.Coffee).Select(x => x.Code)));
+
 
         }
 
@@ -76,8 +98,8 @@ namespace Session_11
             transaction_Lines = new List<Transaction_Line>();
 
             Transaction_Line transaction_Line1 = new Transaction_Line() {
-                Quantity = 1,
-                Price = 8
+                Quantity = 2,
+                Price = 4
 
             };
             Transaction_Line transaction_Line2 = new Transaction_Line() {
@@ -89,25 +111,9 @@ namespace Session_11
             transaction_Lines.Add(transaction_Line1);
             transaction_Lines.Add(transaction_Line2);
 
-            DoTotalCost(transaction_Line1);
+            transaction_Line1.DoTotalCost(transaction_Line1);
 
 
-                MessageBox.Show(""+transaction_Line2.TotalPrice);
-
-            }
-            else {
-                MessageBox.Show("DEn Mpika sthn If");
-                transaction_Line2.TotalPrice = (transaction_Line2.Price * transaction_Line2.Quantity) * transaction_Line2.Discount;
-                MessageBox.Show("" + transaction_Line2.TotalPrice);
-            }
-                MessageBox.Show(""+transaction_Line2.TotalPrice);
-
-            }
-            else {
-                MessageBox.Show("DEn Mpika sthn If");
-                transaction_Line2.TotalPrice = (transaction_Line2.Price * transaction_Line2.Quantity) * transaction_Line2.Discount;
-                MessageBox.Show("" + transaction_Line2.TotalPrice);
-            }
             //MessageBox.Show(product1.Description + " " + product2.Description);
         }
 
@@ -161,16 +167,6 @@ namespace Session_11
 
         }
 
-      } 
-}                MessageBox.Show("Mpika sthn If");
-                test.TotalPrice = (test.Price * test.Quantity) * test.Discount;
-                MessageBox.Show("" + test.TotalPrice);
-
-    }
-}                MessageBox.Show("DEn Mpika sthn If");
-                test.TotalPrice = (test.Price * test.Quantity) * test.Discount;
-                MessageBox.Show("" + test.TotalPrice);
-
-
-    }
+       
+    } 
 }
