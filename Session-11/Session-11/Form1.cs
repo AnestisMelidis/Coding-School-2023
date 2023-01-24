@@ -26,7 +26,7 @@ namespace Session_11
 
 
         }
-        /*
+  
         public void PopulateCoffee()
         {
 
@@ -60,7 +60,7 @@ namespace Session_11
             MessageBox.Show(product1.Description + " " + product2.Description);
 
         }
-        */
+        
 
         public void PopulateEmployees()
         {
