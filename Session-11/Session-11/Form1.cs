@@ -37,7 +37,7 @@ namespace Session_11
         public void PopulateCoffee()
         {
 
-            //_productCategory = new ProductCategory();
+            _productCategory = new ProductCategory();
 
             products = new List<Product>();
 
