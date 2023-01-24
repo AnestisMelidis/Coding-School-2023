@@ -5,7 +5,7 @@ namespace Session_11 {
 
         
         private ProductCategory _productCategory;
-
+        List<Product> products;
 
 
         public Form1() {
@@ -22,8 +22,11 @@ namespace Session_11 {
         }
         public void PopulateCoffee() {
 
-            _productCategory = new ProductCategory();
-            Product product = new Product() {
+            //_productCategory = new ProductCategory();
+
+            products= new List<Product>();
+
+            Product product1 = new Product() {
                 Code = 1,
                 Description = "Fredo",
                 TypeOfProduct = Product.ProductType.Coffee,
@@ -32,9 +35,9 @@ namespace Session_11 {
                 
             };
 
-            _productCategory.products.Add(product);
+            products.Add(product1);
 
-            Product product1 = new Product() {
+            Product product2 = new Product() {
                 Code = 2,
                 Description = "Frape",
                 TypeOfProduct = Product.ProductType.Coffee,
@@ -42,8 +45,9 @@ namespace Session_11 {
                 Cost = 4,
 
             };
-            _productCategory.products.Add(product1);
-
+            products.Add(product2);
+            MessageBox.Show(product1.Description+" "+product2.Description);
+            MessageBox.Show(product1.Description + " " + product2.Description);
         }
     }
 }

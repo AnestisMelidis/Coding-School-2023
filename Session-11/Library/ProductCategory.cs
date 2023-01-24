@@ -15,7 +15,7 @@ namespace Library {
         public int Code { get; set; }
         public string Description { get; set; }
 
-        public List<Product>? products;
+        
         
 
         
@@ -23,7 +23,7 @@ namespace Library {
         public ProductCategory()
         {
             ID = Guid.NewGuid();
-            List<Product>? products = new List<Product>();
+           
         }
 
         //Constractors

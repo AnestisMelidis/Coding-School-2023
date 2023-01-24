@@ -20,6 +20,8 @@ namespace Library {
         public string Description { get; set; }
         public Guid ProductCategoryID { get; set; }
         public ProductType TypeOfProduct { get; set; }
+        
+        public List<Product>? products;
         public double Price { get; set; }
         public double Cost { get; set; }
 
@@ -30,7 +32,8 @@ namespace Library {
         {
             ID = Guid.NewGuid();
             ProductCategoryID = Guid.NewGuid();
-            
+            List<Product>? products = new List<Product>();
+
         }
 
 
