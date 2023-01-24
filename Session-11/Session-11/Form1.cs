@@ -8,8 +8,8 @@ namespace Session_11
 
 
         private ProductCategory _productCategory;
-        
-       // private ProductCategory _productCategory;
+
+        // private ProductCategory _productCategory;
         List<Product> products;
         List<Employee> employees;
         List<Transaction_Line> transaction_Lines;
@@ -19,13 +19,13 @@ namespace Session_11
 
 
             InitializeComponent();
-            //PopulateCoffee();
-            //PopulateEmployees();
+  /*          PopulateCoffee();
+            PopulateEmployees();*/
 
             
             //PopulateCoffee();
             PopulateTransaction_Line();
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace Session_11
 
 
         }
-  
+
         public void PopulateCoffee()
         {
 
@@ -54,8 +54,8 @@ namespace Session_11
             products.Add(product1);
 
             Product product2 = new Product()
-            {            
-           
+            {
+
                 Code = 2,
                 Description = "Frape",
                 TypeOfProduct = Product.ProductType.Coffee,
@@ -67,9 +67,8 @@ namespace Session_11
             MessageBox.Show(product1.Description + " " + product2.Description);
             MessageBox.Show(product1.Description + " " + product2.Description);
 
-            MessageBox.Show(product1.Description+" "+product2.Description);
-            
-            
+            MessageBox.Show(product1.Description + " " + product2.Description);
+
         }
 
         public void PopulateTransaction_Line() {
@@ -78,11 +77,11 @@ namespace Session_11
 
             Transaction_Line transaction_Line1 = new Transaction_Line() {
                 Quantity = 1,
-                Price = 8            
+                Price = 8
 
             };
             Transaction_Line transaction_Line2 = new Transaction_Line() {
-                Quantity =2 ,
+                Quantity = 2,
                 Price = 50
 
             };
@@ -90,12 +89,28 @@ namespace Session_11
             transaction_Lines.Add(transaction_Line1);
             transaction_Lines.Add(transaction_Line2);
 
-            
+            DoTotalCost(transaction_Line1);
 
 
+                MessageBox.Show(""+transaction_Line2.TotalPrice);
+
+            }
+            else {
+                MessageBox.Show("DEn Mpika sthn If");
+                transaction_Line2.TotalPrice = (transaction_Line2.Price * transaction_Line2.Quantity) * transaction_Line2.Discount;
+                MessageBox.Show("" + transaction_Line2.TotalPrice);
+            }
+                MessageBox.Show(""+transaction_Line2.TotalPrice);
+
+            }
+            else {
+                MessageBox.Show("DEn Mpika sthn If");
+                transaction_Line2.TotalPrice = (transaction_Line2.Price * transaction_Line2.Quantity) * transaction_Line2.Discount;
+                MessageBox.Show("" + transaction_Line2.TotalPrice);
+            }
             //MessageBox.Show(product1.Description + " " + product2.Description);
         }
-        
+
 
         public void PopulateEmployees()
         {
@@ -131,7 +146,7 @@ namespace Session_11
                 SalaryPerMonth = 1200
             };
             employees.Add(barista1);
-            MessageBox.Show(barista1.TypeOfEmployee + " " + barista1.Name + " " );
+            MessageBox.Show(barista1.TypeOfEmployee + " " + barista1.Name + " ");
 
             Employee waiter1 = new Employee()
             {
@@ -146,7 +161,15 @@ namespace Session_11
 
         }
 
-       
+      } 
+}                MessageBox.Show("Mpika sthn If");
+                test.TotalPrice = (test.Price * test.Quantity) * test.Discount;
+                MessageBox.Show("" + test.TotalPrice);
+
+    }
+}                MessageBox.Show("DEn Mpika sthn If");
+                test.TotalPrice = (test.Price * test.Quantity) * test.Discount;
+                MessageBox.Show("" + test.TotalPrice);
 
 
     }
