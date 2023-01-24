@@ -20,9 +20,9 @@ namespace Session_11
 
             InitializeComponent();
             //PopulateCoffee();
-            PopulateEmployees();
+            //PopulateEmployees();
 
-            //Test push
+            
             //PopulateCoffee();
             PopulateTransaction_Line();
             
@@ -69,6 +69,7 @@ namespace Session_11
 
             MessageBox.Show(product1.Description+" "+product2.Description);
             
+            
         }
 
         public void PopulateTransaction_Line() {
@@ -89,17 +90,9 @@ namespace Session_11
             transaction_Lines.Add(transaction_Line1);
             transaction_Lines.Add(transaction_Line2);
 
-            if (transaction_Line1.DiscountCheck(transaction_Line2.Price,transaction_Line2.Quantity)) {
-                MessageBox.Show("Mpika sthn If");
-                transaction_Line2.TotalPrice = (transaction_Line2.Price * transaction_Line2.Quantity) * transaction_Line2.Discount;
-                MessageBox.Show(""+transaction_Line2.TotalPrice);
+            
 
-            }
-            else {
-                MessageBox.Show("DEn Mpika sthn If");
-                transaction_Line2.TotalPrice = (transaction_Line2.Price * transaction_Line2.Quantity) * transaction_Line2.Discount;
-                MessageBox.Show("" + transaction_Line2.TotalPrice);
-            }
+
             //MessageBox.Show(product1.Description + " " + product2.Description);
         }
         
@@ -118,7 +111,7 @@ namespace Session_11
                 SalaryPerMonth = 1600
             };
             employees.Add(manager);
-            MessageBox.Show(manager.TypeOfEmployee + " " + manager.Name + " ");
+            MessageBox.Show(manager.TypeOfEmployee + " " + manager.Name + "ID is : " + manager.ID);
 
             Employee cashier1 = new Employee()
             {
@@ -128,7 +121,7 @@ namespace Session_11
                 SalaryPerMonth = 1200
             };
             employees.Add(cashier1);
-            MessageBox.Show(cashier1.TypeOfEmployee + " " + cashier1.Name + " ");
+            MessageBox.Show(cashier1.TypeOfEmployee + " " + cashier1.Name + "ID is :  " + cashier1.ID);
 
             Employee barista1 = new Employee()
             {
@@ -152,6 +145,8 @@ namespace Session_11
 
 
         }
+
+       
 
 
     }
