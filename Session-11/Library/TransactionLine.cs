@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class Transaction_Line
+    public class TransactionLine
     {
         public Guid ID { get; set; }
         public Guid ProductID { get; set; }
@@ -14,11 +14,11 @@ namespace Library
         public int Quantity { get; set; }
         public double Price { get; set; }
 
-        public double Discount = 0.75;
+        public double Discount = 0.85;
         public double TotalPrice { get; set; }
-        public List<Transaction_Line> transactionLines { get; set; }
+        public List<TransactionLine> transactionLines { get; set; }
 
-        public Transaction_Line()
+        public TransactionLine()
         {
             ID = Guid.NewGuid();
             Date= DateTime.Now;
@@ -31,7 +31,7 @@ namespace Library
                 return false;
             }
         }
-        public void DoTotalCost(Transaction_Line test) {
+        public double DoTotalCost(TransactionLine test) {
 
             if (test.DiscountCheck(test.Price, test.Quantity)) {
                 //MessageBox.Show("Mpika sthn If");
@@ -43,10 +43,8 @@ namespace Library
                // MessageBox.Show("DEn Mpika sthn If");
                 test.TotalPrice = (test.Price * test.Quantity);
                // MessageBox.Show("" + test.TotalPrice);
-
-
-
             }
+            return test.TotalPrice;
 
         }
 

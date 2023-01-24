@@ -25,10 +25,11 @@ namespace Library
         }
 
 
-        public T Deserialize<T>(string fileName)
+        public T DeserializeFromFile<T>(string fileName)
         {
 
             string jsonString = File.ReadAllText(fileName);
+
             T? obj = JsonSerializer.Deserialize<T>(jsonString);
 
             return obj;

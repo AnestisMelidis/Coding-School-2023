@@ -24,12 +24,12 @@
         /// </summary>
         private void InitializeComponent() {
             this.grvEmployee = new System.Windows.Forms.DataGridView();
-            this.grvProducts = new System.Windows.Forms.DataGridView();
             this.clmEmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEmployeeType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grvProducts = new System.Windows.Forms.DataGridView();
             this.clmPropertyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPropertyCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPropertyDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,28 +50,11 @@
             this.clmSurname,
             this.clmEmployeeType,
             this.clmSalary});
-            this.grvEmployee.Location = new System.Drawing.Point(69, 31);
+            this.grvEmployee.Location = new System.Drawing.Point(69, 104);
             this.grvEmployee.Name = "grvEmployee";
             this.grvEmployee.RowTemplate.Height = 25;
             this.grvEmployee.Size = new System.Drawing.Size(564, 135);
             this.grvEmployee.TabIndex = 0;
-            // 
-            // grvProducts
-            // 
-            this.grvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmPropertyID,
-            this.clmPropertyCode,
-            this.clmPropertyDescription,
-            this.clmPCID,
-            this.clmTypeOfProduct,
-            this.clmPrice,
-            this.clmCost});
-            this.grvProducts.Location = new System.Drawing.Point(69, 193);
-            this.grvProducts.Name = "grvProducts";
-            this.grvProducts.RowTemplate.Height = 25;
-            this.grvProducts.Size = new System.Drawing.Size(700, 118);
-            this.grvProducts.TabIndex = 1;
             // 
             // clmEmployeeID
             // 
@@ -102,6 +85,23 @@
             this.clmSalary.DataPropertyName = "SalaryPerMonth";
             this.clmSalary.HeaderText = "Salary";
             this.clmSalary.Name = "clmSalary";
+            // 
+            // grvProducts
+            // 
+            this.grvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmPropertyID,
+            this.clmPropertyCode,
+            this.clmPropertyDescription,
+            this.clmPCID,
+            this.clmTypeOfProduct,
+            this.clmPrice,
+            this.clmCost});
+            this.grvProducts.Location = new System.Drawing.Point(69, 284);
+            this.grvProducts.Name = "grvProducts";
+            this.grvProducts.RowTemplate.Height = 25;
+            this.grvProducts.Size = new System.Drawing.Size(700, 118);
+            this.grvProducts.TabIndex = 1;
             // 
             // clmPropertyID
             // 
