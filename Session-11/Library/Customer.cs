@@ -22,6 +22,9 @@ namespace Library
         public void Method() {
 
         }
+        public void Test() {
+
+        }
 
         
 
