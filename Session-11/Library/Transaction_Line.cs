@@ -13,14 +13,23 @@ namespace Library
         public DateTime Date { get; set; }
         public int Quantity { get; set; }
         public double Price { get; set; }
-        public double Discount { get; set; }
+
+        public double Discount = 0.75;
         public double TotalPrice { get; set; }
+        public List<Transaction_Line> transactionLines { get; set; }
 
         public Transaction_Line()
         {
             ID = Guid.NewGuid();
+            Date= DateTime.Now;
         }
-        public void DiscountCheck() { 
+        public bool DiscountCheck (double price,int quantity) {
+            if (quantity*price > 10) { 
+                return true;
+            }
+            else {
+                return false;
+            }
         }
     }
 }

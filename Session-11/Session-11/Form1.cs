@@ -1,3 +1,4 @@
+using DevExpress.XtraCharts;
 using Library;
 
 namespace Session_11
@@ -7,8 +8,11 @@ namespace Session_11
 
 
         private ProductCategory _productCategory;
+        
+       // private ProductCategory _productCategory;
         List<Product> products;
         List<Employee> employees;
+        List<Transaction_Line> transaction_Lines;
 
         public Form1()
         {
@@ -19,6 +23,9 @@ namespace Session_11
             PopulateEmployees();
 
             //Test push
+            //PopulateCoffee();
+            PopulateTransaction_Line();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,7 +54,8 @@ namespace Session_11
             products.Add(product1);
 
             Product product2 = new Product()
-            {
+            {            
+           
                 Code = 2,
                 Description = "Frape",
                 TypeOfProduct = Product.ProductType.Coffee,
@@ -59,6 +67,40 @@ namespace Session_11
             MessageBox.Show(product1.Description + " " + product2.Description);
             MessageBox.Show(product1.Description + " " + product2.Description);
 
+            MessageBox.Show(product1.Description+" "+product2.Description);
+            
+        }
+
+        public void PopulateTransaction_Line() {
+
+            transaction_Lines = new List<Transaction_Line>();
+
+            Transaction_Line transaction_Line1 = new Transaction_Line() {
+                Quantity = 1,
+                Price = 8            
+
+            };
+            Transaction_Line transaction_Line2 = new Transaction_Line() {
+                Quantity =2 ,
+                Price = 50
+
+            };
+
+            transaction_Lines.Add(transaction_Line1);
+            transaction_Lines.Add(transaction_Line2);
+
+            if (transaction_Line1.DiscountCheck(transaction_Line2.Price,transaction_Line2.Quantity)) {
+                MessageBox.Show("Mpika sthn If");
+                transaction_Line2.TotalPrice = (transaction_Line2.Price * transaction_Line2.Quantity) * transaction_Line2.Discount;
+                MessageBox.Show(""+transaction_Line2.TotalPrice);
+
+            }
+            else {
+                MessageBox.Show("DEn Mpika sthn If");
+                transaction_Line2.TotalPrice = (transaction_Line2.Price * transaction_Line2.Quantity) * transaction_Line2.Discount;
+                MessageBox.Show("" + transaction_Line2.TotalPrice);
+            }
+            //MessageBox.Show(product1.Description + " " + product2.Description);
         }
         
 
