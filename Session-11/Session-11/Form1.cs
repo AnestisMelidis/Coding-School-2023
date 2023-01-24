@@ -15,7 +15,7 @@ namespace Session_11
 
 
             InitializeComponent();
-            //PopulateCoffee();
+            PopulateCoffee();
             PopulateEmployees();
 
             //Test push
