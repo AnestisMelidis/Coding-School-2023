@@ -5,7 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Library {
-    public class Product : ProductCategory {
+    public class Product  {
+
+        public enum ProductType {
+            Coffee,
+            Beverages,
+            Food
+        }
 
         //Properties
 
@@ -13,13 +19,18 @@ namespace Library {
         public int Code { get; set; }
         public string Description { get; set; }
         public Guid ProductCategoryID { get; set; }
+        public ProductType TypeOfProduct { get; set; }
         public double Price { get; set; }
         public double Cost { get; set; }
+
+        
 
         //Constractors
         public Product()
         {
             ID = Guid.NewGuid();
+            ProductCategoryID = Guid.NewGuid();
+            
         }
 
 
