@@ -1,3 +1,4 @@
+using DevExpress.DataAccess.Native.Data;
 using DevExpress.XtraCharts;
 using Library;
 using System.Linq;
@@ -15,13 +16,16 @@ namespace Session_11
         List<Employee> employees;
         List<Transaction_Line> transaction_Lines;
 
+        
+
         public Form1()
         {
 
 
             InitializeComponent();
-            PopulateCoffee();/*
-            PopulateEmployees();*/
+            PopulateCoffee();
+            LoadJson("employees.json");
+           // PopulateEmployees();
 
             
             //PopulateCoffee();
@@ -75,6 +79,11 @@ namespace Session_11
 
             };
             products.Add(product3);
+            WriteJson(products);
+
+            grvProducts.DataSource = products;
+
+
             //MessageBox.Show(product1.Description + " " + product2.Description);
 
 
@@ -119,9 +128,7 @@ namespace Session_11
 
 
         public void PopulateEmployees()
-        {
-
-
+        { 
             employees = new List<Employee>();
 
             Employee manager = new Employee()
@@ -163,10 +170,25 @@ namespace Session_11
             };
             employees.Add(waiter1);
             MessageBox.Show(waiter1.TypeOfEmployee + " " + waiter1.Name + " ");
+            WriteJson(employees);
 
 
+            grvEmployee.DataSource = employees;
+            
         }
 
-       
+       public void WriteJson(object obj)
+        {
+            Serializer serializer = new Serializer();
+            serializer.SerializeToFile(obj, "employees.json");
+        }
+
+        public void LoadJson(string file)
+        {
+            Serializer serializer = new Serializer();
+            Employee employees = new Employee();
+            employees = serializer.Deserialize<Employee>(file);
+            grvEmployee.DataSource = employees;
+        }
     } 
 }
