@@ -16,13 +16,20 @@ namespace Library
             ID = Guid.NewGuid();
             /// test comment
         }
+       
+        
+        //Methods
+        public void TestMethod() {
+
+        }
 
 
     }
 
    
 
-    //Methods
+    
+     
 
 }
 
