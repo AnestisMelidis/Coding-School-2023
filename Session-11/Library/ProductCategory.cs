@@ -17,6 +17,11 @@ namespace Library {
 
        // public enum ProductType { get; set; }
 
+        public ProductCategory()
+        {
+            ID = Guid.NewGuid();
+        }
+
         //Constractors
         public ProductCategory() { 
         }

@@ -8,18 +8,25 @@ namespace Library
 {
     public class Transaction
     {
-        public enum MethodPaymet
+        public enum MethodPayment
         {
             Cash,
             Credit_Card
         };
         public Guid ID { get; set; }
-        public Datetime Date { get; set; }
+        public DateTime Date { get; set; }
         public Guid CustomerID { get; set; }
         public Guid EmployeeID { get; set; }
         public double TotalPrice { get; set; }
 
-        public Transaction(){
-            }
+        public Transaction()
+        {
+            ID = Guid.NewGuid();
+        }
+
+        public Transaction()
+        {
+
+        }
     }   
 }

@@ -16,6 +16,11 @@ namespace Library {
         public double Price { get; set; }
         public double Cost { get; set; }
 
+        public Product()
+        {
+            ID = Guid.NewGuid();
+        }
+
 
         //Constractors
         public Product() { 
