@@ -42,6 +42,10 @@
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.cmbType = new System.Windows.Forms.ComboBox();
+            this.chkFredo = new System.Windows.Forms.CheckBox();
+            this.chkCap = new System.Windows.Forms.CheckBox();
+            this.txtFredo = new System.Windows.Forms.TextBox();
+            this.txtCap = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).BeginInit();
             this.SuspendLayout();
@@ -194,11 +198,51 @@
             this.cmbType.Size = new System.Drawing.Size(114, 23);
             this.cmbType.TabIndex = 8;
             // 
+            // chkFredo
+            // 
+            this.chkFredo.AutoSize = true;
+            this.chkFredo.Location = new System.Drawing.Point(890, 39);
+            this.chkFredo.Name = "chkFredo";
+            this.chkFredo.Size = new System.Drawing.Size(56, 19);
+            this.chkFredo.TabIndex = 9;
+            this.chkFredo.Text = "Fredo";
+            this.chkFredo.UseVisualStyleBackColor = true;
+            this.chkFredo.CheckedChanged += new System.EventHandler(this.chkFredo_CheckedChanged);
+            // 
+            // chkCap
+            // 
+            this.chkCap.AutoSize = true;
+            this.chkCap.Location = new System.Drawing.Point(890, 64);
+            this.chkCap.Name = "chkCap";
+            this.chkCap.Size = new System.Drawing.Size(90, 19);
+            this.chkCap.TabIndex = 10;
+            this.chkCap.Text = "Cappuccino";
+            this.chkCap.UseVisualStyleBackColor = true;
+            this.chkCap.CheckedChanged += new System.EventHandler(this.chkCap_CheckedChanged);
+            // 
+            // txtFredo
+            // 
+            this.txtFredo.Location = new System.Drawing.Point(988, 35);
+            this.txtFredo.Name = "txtFredo";
+            this.txtFredo.Size = new System.Drawing.Size(112, 23);
+            this.txtFredo.TabIndex = 11;
+            // 
+            // txtCap
+            // 
+            this.txtCap.Location = new System.Drawing.Point(988, 62);
+            this.txtCap.Name = "txtCap";
+            this.txtCap.Size = new System.Drawing.Size(112, 23);
+            this.txtCap.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1169, 594);
+            this.Controls.Add(this.txtCap);
+            this.Controls.Add(this.txtFredo);
+            this.Controls.Add(this.chkCap);
+            this.Controls.Add(this.chkFredo);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSalary);
@@ -237,5 +281,9 @@
         private TextBox txtSalary;
         private Button btnSave;
         private ComboBox cmbType;
+        private CheckBox chkFredo;
+        private CheckBox chkCap;
+        private TextBox txtFredo;
+        private TextBox txtCap;
     }
 }

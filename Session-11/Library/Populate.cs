@@ -122,7 +122,6 @@ namespace Library
         }
         public Employee FillEmployees(List<Employee>? employees, string name, string surname, string type, string salary)
         {
-            //employees = new List<Employee>();
             Employee employeeInput = new Employee()
             {
                 Name = name,
