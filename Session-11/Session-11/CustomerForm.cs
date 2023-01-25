@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraCharts;
+﻿using DevExpress.Printing.Core.PdfExport.Metafile;
+using DevExpress.XtraCharts;
 using Library;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Library.Product;
+using static Library.Transaction;
 
 namespace Session_11
 {
@@ -17,6 +19,7 @@ namespace Session_11
     {
         public CoffeeShopData Data { get; set; }
         private CoffeeShopData _CoffeeShopData = new CoffeeShopData();
+        public double Discount = 0.85;
 
         public CustomerForm(CoffeeShopData test)
         {
@@ -27,7 +30,7 @@ namespace Session_11
 
         private void chkCofee_Checked(object sender, EventArgs e)
         {
-            
+
             if (chkCoffee.Checked == true)
             {
                 foreach (var i in _CoffeeShopData.products)
@@ -89,7 +92,7 @@ namespace Session_11
                 Description = cmbMenu.Text,
                 Quantity = Convert.ToInt32(numQuantity.Text),
                 ProductID = test[0].ProductCategoryID,
-                Price= test[0].Price,
+                Price = test[0].Price,
                 TotalPrice = test[0].Price * Convert.ToInt32(numQuantity.Text)
             };
             _CoffeeShopData.transactionLines.Add(transactionLine);
@@ -101,16 +104,47 @@ namespace Session_11
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             List<TransactionLine> transactionLine = _CoffeeShopData.transactionLines;
-            TransactionLine transactionLine1 = new TransactionLine();
+            //TransactionLine transactionLine1 = new TransactionLine();
             Customer customer = new Customer();
+            List<Employee> employees = _CoffeeShopData.employees;
+            int length = employees.Count;
+            Random ran = new Random();
+            int num = ran.Next(0, length);
             double total = transactionLine.Sum(x => x.TotalPrice);
-            total = transactionLine1.DiscountCheck(total);
-            MessageBox.Show("The total price after discount is: " + total.ToString());
+            total = DiscountCheck(total);
+            var payment = CheckPayment(total);
+            //MessageBox.Show("The total price after discount is: " + total.ToString());
             Transaction transaction = new Transaction()
             {
-
+                CustomerID = customer.ID,
+                EmployeeID = employees[num].ID,
+                TypeOfPayment = (MethodPayment)payment,
                 TotalPrice = total
             };
+
+            _CoffeeShopData.transactions.Add(transaction);
+            gridSales.DataSource = null;
+            gridTransaction.DataSource = null;
+            gridTransaction.DataSource = _CoffeeShopData.transactions;
         }
+        public double DiscountCheck(double price)
+        {
+            if (price > 10)
+            {
+                price *= Discount;
+            }
+            return price;
+        }
+        public object CheckPayment(double price)
+        {
+            var test = (MethodPayment)Enum.Parse(typeof(MethodPayment), cmbPayment.SelectedItem.ToString());
+            if (price > 50) 
+            {
+                test = MethodPayment.Cash;
+            }
+            return test;
+
+        }
+
     }
 }

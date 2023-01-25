@@ -41,9 +41,20 @@
             this.clmPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmTotal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnCheckout = new System.Windows.Forms.Button();
+            this.gridTransaction = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clmID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmCustomerID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmEmployeeID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmPayment = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmbPayment = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTransaction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMenu
@@ -166,11 +177,94 @@
             this.btnCheckout.UseVisualStyleBackColor = true;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
-            // Customer
+            // gridTransaction
+            // 
+            this.gridTransaction.Location = new System.Drawing.Point(87, 333);
+            this.gridTransaction.MainView = this.gridView2;
+            this.gridTransaction.Name = "gridTransaction";
+            this.gridTransaction.Size = new System.Drawing.Size(630, 105);
+            this.gridTransaction.TabIndex = 39;
+            this.gridTransaction.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.clmID,
+            this.clmDate,
+            this.clmCustomerID,
+            this.clmEmployeeID,
+            this.clmPayment,
+            this.clmTotalPrice});
+            this.gridView2.GridControl = this.gridTransaction;
+            this.gridView2.Name = "gridView2";
+            // 
+            // clmID
+            // 
+            this.clmID.Caption = "ID";
+            this.clmID.FieldName = "ID";
+            this.clmID.Name = "clmID";
+            this.clmID.Visible = true;
+            this.clmID.VisibleIndex = 0;
+            // 
+            // clmDate
+            // 
+            this.clmDate.Caption = "Date";
+            this.clmDate.FieldName = "Date";
+            this.clmDate.Name = "clmDate";
+            this.clmDate.Visible = true;
+            this.clmDate.VisibleIndex = 1;
+            // 
+            // clmCustomerID
+            // 
+            this.clmCustomerID.Caption = "CustomerID";
+            this.clmCustomerID.FieldName = "CustomerID";
+            this.clmCustomerID.Name = "clmCustomerID";
+            this.clmCustomerID.Visible = true;
+            this.clmCustomerID.VisibleIndex = 2;
+            // 
+            // clmEmployeeID
+            // 
+            this.clmEmployeeID.Caption = "EmployeeID";
+            this.clmEmployeeID.FieldName = "EmployeeID";
+            this.clmEmployeeID.Name = "clmEmployeeID";
+            this.clmEmployeeID.Visible = true;
+            this.clmEmployeeID.VisibleIndex = 3;
+            // 
+            // clmPayment
+            // 
+            this.clmPayment.Caption = "Payment Method";
+            this.clmPayment.FieldName = "TypeOfPayment";
+            this.clmPayment.Name = "clmPayment";
+            this.clmPayment.Visible = true;
+            this.clmPayment.VisibleIndex = 4;
+            // 
+            // clmTotalPrice
+            // 
+            this.clmTotalPrice.Caption = "Total Price";
+            this.clmTotalPrice.FieldName = "TotalPrice";
+            this.clmTotalPrice.Name = "clmTotalPrice";
+            this.clmTotalPrice.Visible = true;
+            this.clmTotalPrice.VisibleIndex = 5;
+            // 
+            // cmbPayment
+            // 
+            this.cmbPayment.FormattingEnabled = true;
+            this.cmbPayment.Items.AddRange(new object[] {
+            "Cash",
+            "Credit_Card"});
+            this.cmbPayment.Location = new System.Drawing.Point(383, 29);
+            this.cmbPayment.Name = "cmbPayment";
+            this.cmbPayment.Size = new System.Drawing.Size(121, 23);
+            this.cmbPayment.TabIndex = 40;
+            // 
+            // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbPayment);
+            this.Controls.Add(this.gridTransaction);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.gridSales);
             this.Controls.Add(this.addToCart);
@@ -179,11 +273,13 @@
             this.Controls.Add(this.chkFood);
             this.Controls.Add(this.chkBeverages);
             this.Controls.Add(this.chkCoffee);
-            this.Name = "Customer";
+            this.Name = "CustomerForm";
             this.Text = "Customer";
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTransaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +300,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn clmPrice;
         private DevExpress.XtraGrid.Columns.GridColumn clmTotal;
         private Button btnCheckout;
+        private DevExpress.XtraGrid.GridControl gridTransaction;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn clmID;
+        private DevExpress.XtraGrid.Columns.GridColumn clmDate;
+        private DevExpress.XtraGrid.Columns.GridColumn clmCustomerID;
+        private DevExpress.XtraGrid.Columns.GridColumn clmEmployeeID;
+        private DevExpress.XtraGrid.Columns.GridColumn clmPayment;
+        private DevExpress.XtraGrid.Columns.GridColumn clmTotalPrice;
+        private ComboBox cmbPayment;
         //private Button btnAddCart;
     }
 }

@@ -15,7 +15,7 @@ namespace Library
         public int Quantity { get; set; }
         public double Price { get; set; }
 
-        public double Discount = 0.85;
+        
         public double TotalPrice { get; set; }
         //public List<TransactionLine> transactionLines { get; set; }
 
@@ -24,14 +24,7 @@ namespace Library
             ID = Guid.NewGuid();
             Date= DateTime.Now;
         }
-        public double DiscountCheck(double price)
-        {
-            if (price > 10)
-            {
-                price *= Discount;
-            }
-            return price;
-        }
+        
 
 
         }
