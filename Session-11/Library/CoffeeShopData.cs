@@ -11,12 +11,12 @@ namespace Library
     {
 
         // properties
-        public List<Product> Products { get; set; }
+        public List<Product> products { get; set; }
 
-        public List<Employee> Employees { get; set; }
+        public List<Employee> employees { get; set; }
 
 
-        public List<TransactionLine> TransactionLines { get; set; }
+        public List<TransactionLine> transactionLines { get; set; }
 
 
 
@@ -24,11 +24,12 @@ namespace Library
         // constructors
         public CoffeeShopData()
         {
-            Products = new List<Product>();
-            Employees = new List<Employee>();
-            TransactionLines = new List<TransactionLine>();
-
-
+            //List<Product>? products = new List<Product>();
+            //List<Employee>? employees = new List<Employee>();
+            //List<TransactionLine>? transactionLines = new List<TransactionLine>();
+            products = new List<Product>();
+            employees = new List<Employee>();
+            transactionLines = new List<TransactionLine>();
 
         }
 

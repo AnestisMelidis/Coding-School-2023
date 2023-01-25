@@ -13,26 +13,23 @@ using static Library.Product;
 namespace Session_11
 {
     public partial class Form1 : Form {
-        private ProductCategory _productCategory;
+       
         public CoffeeShopData Data { get; set; }
-
+        private CoffeeShopData _CoffeeShopData=new CoffeeShopData();
+        
         List<Product> products;
         List<Employee> employees;
         List<TransactionLine> transaction_Lines;
         Serializer serializer = new Serializer();
-        Populate populate = new Populate();
+        
         int cnt = 0;
 
         public Form1() {
             
-            employees = new List<Employee>();
-            products = new List<Product>();
+            
+           
             InitializeComponent();
-            //grvEmployee.DataSource = populate.PopulateEmployees();
-            //grvEmployee.DataSource = employees;
-            //grvProducts.DataSource = populate.PopulateCoffee();
-            //PopulateTransaction_Line();
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -98,24 +95,14 @@ namespace Session_11
 
         public void LoadJson(string file) {
             object employees = serializer.DeserializeFromFile<Employee>(file);
-            //grvEmployee.DataSource = employees;
+          
         }
 
 
         public void btnSaveEmployeesClick(object sender, EventArgs e) 
         {
+            
 
-            //string name = txtName.Text;
-            //string surname = txtSurname.Text;
-            //string type = cmbType.SelectedItem.ToString();
-            //string salary = txtSalary.Text;
-            //Employee userInput = populate.FillEmployees(employees, name, surname, type, salary);
-            //employees.Add(userInput);
-
-            //grvEmployee.DataSource = employees;
-
-
-            // Create a new Employee object with the user's input
             Employee newEmployee = new Employee() {
                 Name = txtName.Text,
                 Surname = txtSurname.Text,
@@ -123,15 +110,8 @@ namespace Session_11
                 SalaryPerMonth = Convert.ToDouble(txtSalary.Text)
             };
 
-            // Add the new employee to the list
-            employees.Add(newEmployee);
+            _CoffeeShopData.employees.Add(newEmployee);
             
-          
-            // Refresh the data grid to display the new employee
-            //grvEmployee.Refresh();
-            //gridEmployee.DataSource = employees;
-
-
         }
     public void btnSaveProductsClick(object sender, EventArgs e)
         {
@@ -144,7 +124,7 @@ namespace Session_11
                 Cost = Convert.ToDouble(txtCost.Text)
             };
             cnt++;
-            products.Add(newProduct);
+            _CoffeeShopData.products.Add(newProduct);
         }
 
 
@@ -154,14 +134,14 @@ namespace Session_11
 
             
             gridEmployee.DataSource = null;
-            gridEmployee.DataSource = employees;
+            gridEmployee.DataSource = _CoffeeShopData.employees;
 
 
         }
         public void btnLoadProductsClick(object sender, EventArgs e)
         {
             gridProducts.DataSource = null;
-            gridProducts.DataSource = products;
+            gridProducts.DataSource = _CoffeeShopData.products;
         }
 
 

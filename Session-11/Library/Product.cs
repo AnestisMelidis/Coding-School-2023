@@ -21,7 +21,7 @@ namespace Library {
         public Guid ProductCategoryID { get; set; }
         public ProductType TypeOfProduct { get; set; }
         
-        public List<Product>? products;
+        //public List<Product>? products;
         public double Price { get; set; }
         public double Cost { get; set; }
 

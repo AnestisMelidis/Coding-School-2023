@@ -21,7 +21,7 @@ namespace Library
        // public enum EmployeeType { get; set; }
        public EmployeeType TypeOfEmployee { get; set; }
 
-       public List<Employee>? employees;
+       //public List<Employee>? employees;
 
 
         public double SalaryPerMonth { get; set; }

@@ -16,7 +16,7 @@ namespace Library
 
         public double Discount = 0.85;
         public double TotalPrice { get; set; }
-        public List<TransactionLine> transactionLines { get; set; }
+        //public List<TransactionLine> transactionLines { get; set; }
 
         public TransactionLine()
         {
