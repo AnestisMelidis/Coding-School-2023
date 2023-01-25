@@ -110,10 +110,10 @@
             this.clmTypeOfProduct,
             this.clmPrice,
             this.clmCost});
-            this.grvProducts.Location = new System.Drawing.Point(69, 284);
+            this.grvProducts.Location = new System.Drawing.Point(69, 261);
             this.grvProducts.Name = "grvProducts";
             this.grvProducts.RowTemplate.Height = 25;
-            this.grvProducts.Size = new System.Drawing.Size(700, 118);
+            this.grvProducts.Size = new System.Drawing.Size(713, 118);
             this.grvProducts.TabIndex = 1;
             // 
             // clmPropertyID
@@ -236,7 +236,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(919, 145);
+            this.button1.Location = new System.Drawing.Point(919, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 35);
             this.button1.TabIndex = 14;
@@ -262,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 594);
+            this.ClientSize = new System.Drawing.Size(1119, 582);
             this.Controls.Add(this.numCap);
             this.Controls.Add(this.numFredo);
             this.Controls.Add(this.button1);
