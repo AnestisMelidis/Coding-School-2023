@@ -93,8 +93,9 @@ namespace Session_11
             serializer.SerializeToFile(obj, file);
         }
 
-        public void LoadJson(string file) {
-            object employees = serializer.DeserializeFromFile<Employee>(file);
+        public object LoadJson(string file) {
+            object employees = serializer.DeserializeFromFile<CoffeeShopData>(file);
+            return employees;
           
         }
 
@@ -119,7 +120,7 @@ namespace Session_11
             gridEmployee.DataSource = _CoffeeShopData.employees;
 
         }
-    public void btnSaveProductsClick(object sender, EventArgs e)
+        public void btnSaveProductsClick(object sender, EventArgs e)
         {
             Product newProduct = new Product()
             {
@@ -141,16 +142,18 @@ namespace Session_11
 
 
 
-        public void btnLoadEmployeesClick(object sender, EventArgs e)
+        public void btnLoadJson (object sender, EventArgs e)
         {
+            _CoffeeShopData = (CoffeeShopData)LoadJson("test1.json");
+            gridProducts.DataSource = null;
             gridEmployee.DataSource = null;
+            gridProducts.DataSource = _CoffeeShopData.products;
             gridEmployee.DataSource = _CoffeeShopData.employees;
 
         }
-        public void btnLoadProductsClick(object sender, EventArgs e)
+        public void btnSaveJson(object sender, EventArgs e)
         {
-            gridProducts.DataSource = null;
-            gridProducts.DataSource = _CoffeeShopData.products;
+            WriteJson(_CoffeeShopData, "test1.json") ;
         }
 
 

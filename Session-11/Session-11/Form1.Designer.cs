@@ -28,7 +28,7 @@
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.btnSaveEmployees = new System.Windows.Forms.Button();
             this.cmbType = new System.Windows.Forms.ComboBox();
-            this.btnShowEmployees = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.gridEmployee = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridclmID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,7 +47,7 @@
             this.gridProClmCost = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.btnSaveProducts = new System.Windows.Forms.Button();
-            this.btnLoadProducts = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCost = new System.Windows.Forms.TextBox();
@@ -107,15 +107,15 @@
             this.cmbType.Size = new System.Drawing.Size(114, 23);
             this.cmbType.TabIndex = 8;
             // 
-            // btnShowEmployees
+            // btnSave
             // 
-            this.btnShowEmployees.Location = new System.Drawing.Point(339, 64);
-            this.btnShowEmployees.Name = "btnShowEmployees";
-            this.btnShowEmployees.Size = new System.Drawing.Size(163, 35);
-            this.btnShowEmployees.TabIndex = 13;
-            this.btnShowEmployees.Text = "Show";
-            this.btnShowEmployees.UseVisualStyleBackColor = true;
-            this.btnShowEmployees.Click += new System.EventHandler(this.btnLoadEmployeesClick);
+            this.btnSave.Location = new System.Drawing.Point(582, 101);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(163, 35);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaveJson);
             // 
             // gridEmployee
             // 
@@ -276,15 +276,15 @@
             this.btnSaveProducts.UseVisualStyleBackColor = true;
             this.btnSaveProducts.Click += new System.EventHandler(this.btnSaveProductsClick);
             // 
-            // btnLoadProducts
+            // btnLoad
             // 
-            this.btnLoadProducts.Location = new System.Drawing.Point(339, 252);
-            this.btnLoadProducts.Name = "btnLoadProducts";
-            this.btnLoadProducts.Size = new System.Drawing.Size(163, 35);
-            this.btnLoadProducts.TabIndex = 21;
-            this.btnLoadProducts.Text = "Show";
-            this.btnLoadProducts.UseVisualStyleBackColor = true;
-            this.btnLoadProducts.Click += new System.EventHandler(this.btnLoadProductsClick);
+            this.btnLoad.Location = new System.Drawing.Point(582, 147);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(163, 35);
+            this.btnLoad.TabIndex = 21;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoadJson);
             // 
             // txtPrice
             // 
@@ -386,12 +386,12 @@
             this.Controls.Add(this.txtCost);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.btnLoadProducts);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSaveProducts);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.gridProducts);
             this.Controls.Add(this.gridEmployee);
-            this.Controls.Add(this.btnShowEmployees);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.btnSaveEmployees);
             this.Controls.Add(this.txtSalary);
@@ -444,5 +444,7 @@
         private CheckBox chkBeverages;
         private CheckBox chkFood;
         private ComboBox cmbMenu;
+        private Button btnSave;
+        private Button btnLoad;
     }
 }
