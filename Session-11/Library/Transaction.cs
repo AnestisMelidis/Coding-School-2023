@@ -20,7 +20,5 @@ namespace Library {
         public Transaction() {
             ID = Guid.NewGuid();
         }
-
-
-    }  
+    }
 }
