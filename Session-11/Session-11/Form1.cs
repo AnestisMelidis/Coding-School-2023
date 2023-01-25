@@ -27,12 +27,9 @@ namespace Session_11
 
         int cnt = 0;
 
-        public Form1() {
-            
-            
-           
+        public Form1() 
+        {
             InitializeComponent();
-            
         }
 
         private void Form1_Load(object sender, EventArgs e) {
