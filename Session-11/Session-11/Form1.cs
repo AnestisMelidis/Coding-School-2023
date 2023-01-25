@@ -36,61 +36,31 @@ namespace Session_11
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-
+            numFredo.Enabled = false;
+            numCap.Enabled = false;
+            chkFredo.Checked = false;
+            chkCap.Checked = false;
         }
 
-        private void chkCofee_Checked(object sender, EventArgs e)
-        {
-            
-            if (chkCoffee.Checked == true)
-            {
-                foreach (var i in products)
-                {
-                    if (i.TypeOfProduct == ProductType.Coffee)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
+        private void chkFredo_CheckedChanged(object sender, EventArgs e) {
+            if (chkFredo.Checked == true) {
+                numFredo.Enabled = true;
             }
-            if (chkCoffee.Checked == false)
-            {
-                cmbMenu.Items.Clear();
+            if (chkFredo.Checked == false) {
+                numFredo.Enabled = false;
+                numFredo.Text = "0";
             }
         }
-        private void chkBevarages_Checked(object sender, EventArgs e)
-        {
-            if (chkBeverages.Checked == true)
-            {
-                foreach (var i in products)
-                {
-                    if (i.TypeOfProduct == ProductType.Beverages)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
+        private void chkCap_CheckedChanged(object sender, EventArgs e) {
+            if (chkCap.Checked == true) {
+                numCap.Enabled = true;
             }
-            if (chkBeverages.Checked == false)
-            {
-                cmbMenu.Items.Clear();
+            if (chkCap.Checked == false) {
+                numCap.Enabled = false;
+                numCap.Text = "0";
             }
         }
-        private void chkFood_Checked(object sender, EventArgs e)
-        {
-            if (chkFood.Checked == true)
-            {
-                foreach (var i in products)
-                {
-                    if (i.TypeOfProduct == ProductType.Food)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkFood.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }
+
         public void WriteJson(object obj, string file) {
             serializer.SerializeToFile(obj, file);
         }
@@ -131,19 +101,22 @@ namespace Session_11
 
 
         }
-        public void btnSaveProductsClick(object sender, EventArgs e)
+    public void btnSaveProductsClick(object sender, EventArgs e)
+        {
+            Product newProduct = new Product()
             {
-                Product newProduct = new Product()
-                {
-                    Code = cnt,
-                    Description = txtDesc.Text,
-                    TypeOfProduct = (ProductType)Enum.Parse(typeof(ProductType), cmbProType.SelectedItem.ToString()),
-                    Price = Convert.ToDouble(txtPrice.Text),
-                    Cost = Convert.ToDouble(txtCost.Text)
-                };
-                cnt++;
-                products.Add(newProduct);
+                Code = cnt,
+                Description = txtDesc.Text,
+                TypeOfProduct = (ProductType)Enum.Parse(typeof(ProductType), cmbProType.SelectedItem.ToString()),
+                Price = Convert.ToDouble(txtPrice.Text),
+                Cost = Convert.ToDouble(txtCost.Text)
+            };
+            cnt++;
+            products.Add(newProduct);
         }
+
+
+
         public void btnLoadEmployeesClick(object sender, EventArgs e)
         {
 
@@ -158,7 +131,14 @@ namespace Session_11
             gridProducts.DataSource = null;
             gridProducts.DataSource = products;
         }
-
+        public void btnPrice(object sender, EventArgs e)
+        {
+            double coffeePrice = 2.3;
+            double fredo = Convert.ToDouble(numFredo.Text);
+            double cap = Convert.ToDouble(numCap.Text);
+            double cost = (fredo * coffeePrice + cap * coffeePrice);
+            MessageBox.Show(cost.ToString());
+        }
        
     } 
 }
