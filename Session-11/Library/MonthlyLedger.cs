@@ -9,8 +9,8 @@ namespace Library
     public class MonthlyLedger
     {
         //Properties
-        public DateTime Year { get; set; }
-        public DateTime Month { get; set; }
+        public int Year { get; set; }
+        public int Month { get; set; }
         public double Income { get; set; }
         public double Expenses { get; set; }
         public double Total { get; set; }
@@ -18,7 +18,8 @@ namespace Library
         //Constructors
         public MonthlyLedger() 
         {
-
+            Year = DateTime.Now.Year;
+            Month = DateTime.Now.Month;
         }
     }
 }

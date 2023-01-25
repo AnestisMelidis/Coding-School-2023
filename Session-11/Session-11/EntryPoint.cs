@@ -20,11 +20,7 @@ namespace Session_11 {
 
         public EntryPoint() {
             InitializeComponent();
-            if (File.Exists("test1.json"))
-            {
-                //_CoffeeShopData = serializer.DeserializeFromFile<CoffeeShopData>("test1.json");
-                _CoffeeShopData = (CoffeeShopData)LoadJson("test1.json");
-            }
+
         }
 
         public object LoadJson(string file)
@@ -35,7 +31,7 @@ namespace Session_11 {
         }
         private void btnManager_Click(object sender, EventArgs e) {
             this.Hide();
-            Form1 form1 = new Form1();
+            Form1 form1 = new Form1(_CoffeeShopData);
             form1.Show(); 
 
         }
@@ -60,7 +56,10 @@ namespace Session_11 {
 
         }
         private void EntryPoint_Load(object sender, EventArgs e) {
-
+            if (File.Exists("test1.json"))
+            {
+                _CoffeeShopData = (CoffeeShopData)LoadJson("test1.json");
+            }
 
         }
 

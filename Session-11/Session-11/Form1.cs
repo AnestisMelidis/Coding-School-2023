@@ -24,16 +24,18 @@ namespace Session_11
         
         int cnt = 0;
 
-        public Form1() {
-            
-            
-           
+        public Form1(CoffeeShopData test) {
+
+
+            _CoffeeShopData = test;
             InitializeComponent();
+
             
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-
+            gridProducts.DataSource = _CoffeeShopData.products;
+            gridEmployee.DataSource = _CoffeeShopData.employees;
         }
 
 
@@ -42,11 +44,6 @@ namespace Session_11
             serializer.SerializeToFile(obj, file);
         }
 
-        public object LoadJson(string file) {
-            object employees = serializer.DeserializeFromFile<CoffeeShopData>(file);
-            return employees;
-          
-        }
 
 
         public void btnSaveEmployeesClick(object sender, EventArgs e) 
@@ -91,7 +88,7 @@ namespace Session_11
 
 
 
-        public void btnLoadJson (object sender, EventArgs e)
+/*        public void btnLoadJson (object sender, EventArgs e)
         {
             _CoffeeShopData = (CoffeeShopData)LoadJson("test1.json");
             gridProducts.DataSource = null;
@@ -99,7 +96,7 @@ namespace Session_11
             gridProducts.DataSource = _CoffeeShopData.products;
             gridEmployee.DataSource = _CoffeeShopData.employees;
 
-        }
+        }*/
         public void btnSaveJson(object sender, EventArgs e)
         {
             WriteJson(_CoffeeShopData, "test1.json") ;
@@ -111,6 +108,25 @@ namespace Session_11
             EntryPoint entryPoint = new EntryPoint();
             entryPoint.Show();
 
+        }
+
+        private void btnShowLedger_Click(object sender, EventArgs e)
+        {
+            int rent = 3000;
+            //List<MonthlyLedger> ledger = new List<MonthlyLedger>();
+            List <Transaction> transactions = _CoffeeShopData.transactions;
+            List<Employee> employees = _CoffeeShopData.employees;
+            double income = transactions.Sum(x => x.TotalPrice);
+            double expensesProd = transactions.Sum(x => x.Cost);
+            double expensesSal = employees.Sum(x => x.SalaryPerMonth);
+            double total = (income - expensesProd - expensesSal - rent);
+            MonthlyLedger ledger = new MonthlyLedger()
+            {
+                Income = income,
+                Expenses = expensesProd + expensesSal + rent,
+                Total = total
+            };
+            gridLedger.DataSource = ledger;
         }
     } 
 }
