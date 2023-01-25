@@ -34,7 +34,15 @@
             this.chkCoffee = new System.Windows.Forms.CheckBox();
             this.numQuantity = new System.Windows.Forms.NumericUpDown();
             this.addToCart = new System.Windows.Forms.Button();
+            this.gridSales = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clmDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmTotal = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMenu
@@ -95,11 +103,64 @@
             this.addToCart.UseVisualStyleBackColor = true;
             this.addToCart.Click += new System.EventHandler(this.addToCart_Click);
             // 
+            // gridSales
+            // 
+            this.gridSales.Location = new System.Drawing.Point(90, 197);
+            this.gridSales.MainView = this.gridView1;
+            this.gridSales.Name = "gridSales";
+            this.gridSales.Size = new System.Drawing.Size(622, 208);
+            this.gridSales.TabIndex = 37;
+            this.gridSales.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.clmDescription,
+            this.clmQuantity,
+            this.clmPrice,
+            this.clmTotal});
+            this.gridView1.GridControl = this.gridSales;
+            this.gridView1.Name = "gridView1";
+            // 
+            // clmDescription
+            // 
+            this.clmDescription.Caption = "Description";
+            this.clmDescription.FieldName = "Description";
+            this.clmDescription.Name = "clmDescription";
+            this.clmDescription.Visible = true;
+            this.clmDescription.VisibleIndex = 3;
+            // 
+            // clmQuantity
+            // 
+            this.clmQuantity.Caption = "Quantity";
+            this.clmQuantity.FieldName = "Quantity";
+            this.clmQuantity.Name = "clmQuantity";
+            this.clmQuantity.Visible = true;
+            this.clmQuantity.VisibleIndex = 0;
+            // 
+            // clmPrice
+            // 
+            this.clmPrice.Caption = "Price";
+            this.clmPrice.FieldName = "Price";
+            this.clmPrice.Name = "clmPrice";
+            this.clmPrice.Visible = true;
+            this.clmPrice.VisibleIndex = 2;
+            // 
+            // clmTotal
+            // 
+            this.clmTotal.Caption = "Total Price";
+            this.clmTotal.FieldName = "TotalPrice";
+            this.clmTotal.Name = "clmTotal";
+            this.clmTotal.Visible = true;
+            this.clmTotal.VisibleIndex = 1;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gridSales);
             this.Controls.Add(this.addToCart);
             this.Controls.Add(this.numQuantity);
             this.Controls.Add(this.cmbMenu);
@@ -109,6 +170,8 @@
             this.Name = "Customer";
             this.Text = "Customer";
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,6 +185,12 @@
         private CheckBox chkCoffee;
         private NumericUpDown numQuantity;
         private Button addToCart;
+        private DevExpress.XtraGrid.GridControl gridSales;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn clmQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn clmDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn clmPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn clmTotal;
         //private Button btnAddCart;
     }
 }

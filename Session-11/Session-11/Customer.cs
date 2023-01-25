@@ -1,4 +1,5 @@
-﻿using Library;
+﻿using DevExpress.XtraCharts;
+using Library;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,10 +17,12 @@ namespace Session_11
     {
         public CoffeeShopData Data { get; set; }
         private CoffeeShopData _CoffeeShopData = new CoffeeShopData();
+
         public Customer(CoffeeShopData test)
         {
             InitializeComponent();
             _CoffeeShopData = test;
+
         }
 
         private void chkCofee_Checked(object sender, EventArgs e)
@@ -78,12 +81,22 @@ namespace Session_11
 
         private void addToCart_Click(object sender, EventArgs e)
         {
-            Product product = new Product();
+
+            List<Product> products = _CoffeeShopData.products;
+            var test = (products.Where(x => x.Description == cmbMenu.Text).ToList());
             TransactionLine transactionLine = new TransactionLine()
             {
+                Description = cmbMenu.Text,
                 Quantity = Convert.ToInt32(numQuantity.Text),
-                //ProductID = (product.ProductCategoryID.Where)
+                ProductID = test[0].ProductCategoryID,
+                Price= test[0].Price,
+                TotalPrice = test[0].Price * Convert.ToInt32(numQuantity.Text)
             };
+            _CoffeeShopData.transactionLines.Add(transactionLine);
+
+            gridSales.DataSource = null;
+            gridSales.DataSource = _CoffeeShopData.transactionLines;
         }
+
     }
 }
