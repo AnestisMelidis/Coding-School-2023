@@ -41,7 +41,7 @@ namespace Session_11
 
             if (chkCoffee.Checked == true)
             {
-                foreach (var i in products)
+                foreach (var i in _CoffeeShopData.products)
                 {
                     if (i.TypeOfProduct == ProductType.Coffee)
                     {
@@ -58,7 +58,7 @@ namespace Session_11
         {
             if (chkBeverages.Checked == true)
             {
-                foreach (var i in products)
+                foreach (var i in _CoffeeShopData.products)
                 {
                     if (i.TypeOfProduct == ProductType.Beverages)
                     {
@@ -75,7 +75,7 @@ namespace Session_11
         {
             if (chkFood.Checked == true)
             {
-                foreach (var i in products)
+                foreach (var i in _CoffeeShopData.products)
                 {
                     if (i.TypeOfProduct == ProductType.Food)
                     {
@@ -110,8 +110,14 @@ namespace Session_11
                 SalaryPerMonth = Convert.ToDouble(txtSalary.Text)
             };
 
+            txtName.Text = "";
+            txtSurname.Text = "";
+            cmbType.Text = "";
+            txtSalary.Text = "";
             _CoffeeShopData.employees.Add(newEmployee);
-            
+            gridEmployee.DataSource = null;
+            gridEmployee.DataSource = _CoffeeShopData.employees;
+
         }
     public void btnSaveProductsClick(object sender, EventArgs e)
         {
@@ -124,18 +130,21 @@ namespace Session_11
                 Cost = Convert.ToDouble(txtCost.Text)
             };
             cnt++;
+            txtDesc.Text = "";
+            cmbProType.Text = "";
+            txtPrice.Text = "";
+            txtCost.Text = "";
             _CoffeeShopData.products.Add(newProduct);
+            gridProducts.DataSource = null;
+            gridProducts.DataSource = _CoffeeShopData.products;
         }
 
 
 
         public void btnLoadEmployeesClick(object sender, EventArgs e)
         {
-
-            
             gridEmployee.DataSource = null;
             gridEmployee.DataSource = _CoffeeShopData.employees;
-
 
         }
         public void btnLoadProductsClick(object sender, EventArgs e)
