@@ -15,13 +15,16 @@ namespace Session_11
     public partial class Form1 : Form {
         private ProductCategory _productCategory;
 
+
         List<Product> products;
         List<Employee> employees;
         List<TransactionLine> transaction_Lines;
         Serializer serializer = new Serializer();
         Populate populate = new Populate();
+        int cnt = 0;
 
         public Form1() {
+            
             employees = new List<Employee>();
             products = new List<Product>();
             InitializeComponent();
@@ -102,11 +105,13 @@ namespace Session_11
         {
             Product newProduct = new Product()
             {
+                Code = cnt,
                 Description = txtDesc.Text,
                 TypeOfProduct = (ProductType)Enum.Parse(typeof(ProductType), cmbProType.SelectedItem.ToString()),
                 Price = Convert.ToDouble(txtPrice.Text),
                 Cost = Convert.ToDouble(txtCost.Text)
             };
+            cnt++;
             products.Add(newProduct);
         }
 
