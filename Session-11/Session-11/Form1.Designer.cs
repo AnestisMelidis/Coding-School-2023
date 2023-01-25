@@ -37,6 +37,11 @@
             this.clmTypeOfProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).BeginInit();
             this.SuspendLayout();
@@ -145,11 +150,60 @@
             this.clmCost.HeaderText = "Cost";
             this.clmCost.Name = "clmCost";
             // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(66, 35);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(112, 23);
+            this.txtName.TabIndex = 2;
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(184, 35);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(112, 23);
+            this.txtSurname.TabIndex = 3;
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.Location = new System.Drawing.Point(420, 35);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(112, 23);
+            this.txtSalary.TabIndex = 5;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(259, 65);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(163, 35);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "button1";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaveClick);
+            // 
+            // cmbType
+            // 
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {
+            "Manager",
+            "Cashier",
+            "Barista",
+            "Waiter"});
+            this.cmbType.Location = new System.Drawing.Point(301, 35);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(114, 23);
+            this.cmbType.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbType);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtSalary);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.grvProducts);
             this.Controls.Add(this.grvEmployee);
             this.Name = "Form1";
@@ -158,6 +212,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -177,5 +232,10 @@
         private DataGridViewTextBoxColumn clmTypeOfProduct;
         private DataGridViewTextBoxColumn clmPrice;
         private DataGridViewTextBoxColumn clmCost;
+        private TextBox txtName;
+        private TextBox txtSurname;
+        private TextBox txtSalary;
+        private Button btnSave;
+        private ComboBox cmbType;
     }
 }

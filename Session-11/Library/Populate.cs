@@ -120,5 +120,20 @@ namespace Library
             return transactionLines;
             //MessageBox.Show(product1.Description + " " + product2.Description);
         }
+        public Employee FillEmployees(List<Employee>? employees, string name, string surname, string type, string salary)
+        {
+            //employees = new List<Employee>();
+            Employee employeeInput = new Employee()
+            {
+                Name = name,
+                Surname = surname,
+                TypeOfEmployee = EmployeeType.Waiter,
+                //TypeOfEmployee = EmployeeType.(enum.Parse(Type EmployeeType, string type)),
+                SalaryPerMonth = Convert.ToDouble(salary)
+            };
+            return employeeInput;
+        }
+
     }
+    
 }
