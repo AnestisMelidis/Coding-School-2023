@@ -126,8 +126,7 @@ namespace Library
             {
                 Name = name,
                 Surname = surname,
-                TypeOfEmployee = EmployeeType.Waiter,
-                //TypeOfEmployee = EmployeeType.(enum.Parse(Type EmployeeType, string type)),
+                TypeOfEmployee = (EmployeeType)Enum.Parse(typeof(EmployeeType), type),   
                 SalaryPerMonth = Convert.ToDouble(salary)
             };
             return employeeInput;
