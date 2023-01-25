@@ -95,6 +95,7 @@ namespace Session_11
             // Add the new employee to the list
             employees.Add(newEmployee);
             
+          
             // Refresh the data grid to display the new employee
             //grvEmployee.Refresh();
             //gridEmployee.DataSource = employees;
@@ -120,7 +121,7 @@ namespace Session_11
         public void btnLoadEmployeesClick(object sender, EventArgs e)
         {
 
-            // grvEmployee.DataSource = employees;
+            
             gridEmployee.DataSource = null;
             gridEmployee.DataSource = employees;
 
@@ -139,6 +140,12 @@ namespace Session_11
             double cost = (fredo * coffeePrice + cap * coffeePrice);
             MessageBox.Show(cost.ToString());
         }
-       
+
+        public void button2_Click(object sender, EventArgs e) {
+            this.Hide();
+            EntryPoint entryPoint = new EntryPoint();
+            entryPoint.Show();
+
+        }
     } 
 }
