@@ -129,7 +129,7 @@
             this.clmDescription.FieldName = "Description";
             this.clmDescription.Name = "clmDescription";
             this.clmDescription.Visible = true;
-            this.clmDescription.VisibleIndex = 3;
+            this.clmDescription.VisibleIndex = 0;
             // 
             // clmQuantity
             // 
@@ -137,7 +137,7 @@
             this.clmQuantity.FieldName = "Quantity";
             this.clmQuantity.Name = "clmQuantity";
             this.clmQuantity.Visible = true;
-            this.clmQuantity.VisibleIndex = 0;
+            this.clmQuantity.VisibleIndex = 2;
             // 
             // clmPrice
             // 
@@ -145,7 +145,7 @@
             this.clmPrice.FieldName = "Price";
             this.clmPrice.Name = "clmPrice";
             this.clmPrice.Visible = true;
-            this.clmPrice.VisibleIndex = 2;
+            this.clmPrice.VisibleIndex = 1;
             // 
             // clmTotal
             // 
@@ -153,7 +153,7 @@
             this.clmTotal.FieldName = "TotalPrice";
             this.clmTotal.Name = "clmTotal";
             this.clmTotal.Visible = true;
-            this.clmTotal.VisibleIndex = 1;
+            this.clmTotal.VisibleIndex = 3;
             // 
             // Customer
             // 
