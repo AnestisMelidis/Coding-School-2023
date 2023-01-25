@@ -36,6 +36,8 @@ namespace Session_11
         private void Form1_Load(object sender, EventArgs e) {
             gridProducts.DataSource = _CoffeeShopData.products;
             gridEmployee.DataSource = _CoffeeShopData.employees;
+            gridLedger.DataSource = _CoffeeShopData.monthlyLedgers;
+            
         }
 
 
@@ -113,8 +115,7 @@ namespace Session_11
         private void btnShowLedger_Click(object sender, EventArgs e)
         {
             int rent = 3000;
-            //List<MonthlyLedger> ledger = new List<MonthlyLedger>();
-            List <Transaction> transactions = _CoffeeShopData.transactions;
+            List<Transaction> transactions = _CoffeeShopData.transactions;
             List<Employee> employees = _CoffeeShopData.employees;
             double income = transactions.Sum(x => x.TotalPrice);
             double expensesProd = transactions.Sum(x => x.Cost);
@@ -126,6 +127,8 @@ namespace Session_11
                 Expenses = expensesProd + expensesSal + rent,
                 Total = total
             };
+            _CoffeeShopData.monthlyLedgers.Add(ledger);
+            gridLedger.DataSource = null;
             gridLedger.DataSource = ledger;
         }
     } 

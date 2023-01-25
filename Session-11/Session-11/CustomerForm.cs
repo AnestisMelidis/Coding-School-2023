@@ -20,12 +20,18 @@ namespace Session_11
         public CoffeeShopData Data { get; set; }
         private CoffeeShopData _CoffeeShopData = new CoffeeShopData();
         public double Discount = 0.85;
+        Serializer serializer = new Serializer();
 
         public CustomerForm(CoffeeShopData test)
         {
             InitializeComponent();
             _CoffeeShopData = test;
 
+        }
+
+        public void WriteJson(object obj, string file)
+        {
+            serializer.SerializeToFile(obj, file);
         }
 
         private void chkCofee_Checked(object sender, EventArgs e)
@@ -126,9 +132,12 @@ namespace Session_11
             };
 
             _CoffeeShopData.transactions.Add(transaction);
+            LedgerEntry();
             gridSales.DataSource = null;
             gridTransaction.DataSource = null;
             gridTransaction.DataSource = _CoffeeShopData.transactions;
+            WriteJson(_CoffeeShopData, "test1.json");
+
         }
         public double DiscountCheck(double price)
         {
@@ -148,6 +157,22 @@ namespace Session_11
             return test;
 
         }
-
+        public void LedgerEntry()
+        {
+            int rent = 3000;
+            List<Transaction> transactions = _CoffeeShopData.transactions;
+            List<Employee> employees = _CoffeeShopData.employees;
+            double income = transactions.Sum(x => x.TotalPrice);
+            double expensesProd = transactions.Sum(x => x.Cost);
+            double expensesSal = employees.Sum(x => x.SalaryPerMonth);
+            double total = (income - expensesProd - expensesSal - rent);
+            MonthlyLedger ledger = new MonthlyLedger()
+            {
+                Income = income,
+                Expenses = expensesProd + expensesSal + rent,
+                Total = total
+            };
+            _CoffeeShopData.monthlyLedgers.Add(ledger);
+        }
     }
 }
