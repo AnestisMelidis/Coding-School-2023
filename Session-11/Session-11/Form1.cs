@@ -25,56 +25,43 @@ namespace Session_11
         {
             employees = new List<Employee>();
             InitializeComponent();
-            employees = new List<Employee>();
-            grvEmployee.DataSource = populate.PopulateEmployees();
+            //grvEmployee.DataSource = populate.PopulateEmployees();
             //grvEmployee.DataSource = employees;
             grvProducts.DataSource = populate.PopulateCoffee();
-
             //PopulateTransaction_Line();
             
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            txtFredo.Text = "0";
-            txtFredo.Enabled = false;
+            numFredo.Enabled = false;
+            numCap.Enabled = false;
             chkFredo.Checked = false;
-            txtCap.Text = "0";
-            txtCap.Enabled = false;
             chkCap.Checked = false;
         }
-        private void txtFredo_Click(object sender, EventArgs e)
-        {
-            txtFredo.Text = "";
-            txtFredo.Focus();
-        }
+
         private void chkFredo_CheckedChanged(object sender, EventArgs e)
         {
             if (chkFredo.Checked == true)
             {
-                txtFredo.Enabled = true;
+                numFredo.Enabled = true;
             }
             if (chkFredo.Checked == false)
             {
-                txtFredo.Enabled = false;
-                txtFredo.Text = "0";
+                numFredo.Enabled = false;
+                numFredo.Text = "0";
             }
-        }
-        private void txtCap_Click(object sender, EventArgs e)
-        {
-            txtCap.Text = "";
-            txtCap.Focus();
         }
         private void chkCap_CheckedChanged(object sender, EventArgs e)
         {
             if (chkCap.Checked == true)
             {
-                txtCap.Enabled = true;
+                numCap.Enabled = true;
             }
             if (chkCap.Checked == false)
             {
-                txtCap.Enabled = false;
-                txtCap.Text = "0";
+                numCap.Enabled = false;
+                numCap.Text = "0";
             }
         }
 
@@ -92,18 +79,25 @@ namespace Session_11
 
         public void btnSaveClick(object sender, EventArgs e)
         {
-            double coffeePrice = 2.3;
-            double fredo = Convert.ToDouble(txtFredo.Text);
-            double cap = Convert.ToDouble(txtCap.Text);
-            double cost = (fredo * coffeePrice + cap * coffeePrice);
-            MessageBox.Show(cost.ToString());
-            /*string name = txtName.Text;
+            string name = txtName.Text;
             string surname = txtSurname.Text;
             string type = cmbType.SelectedItem.ToString();
             string salary = txtSalary.Text;
             Employee userInput = populate.FillEmployees(employees, name, surname, type, salary);
             employees.Add(userInput);
-            grvEmployee.DataSource = employees;*/
+            //grvEmployee.DataSource = employees;
+        }
+        public void btnLoadClick(object sender, EventArgs e)
+        {
+            grvEmployee.DataSource = employees;
+        }
+        public void btnPrice(object sender, EventArgs e)
+        {
+            double coffeePrice = 2.3;
+            double fredo = Convert.ToDouble(numFredo.Text);
+            double cap = Convert.ToDouble(numCap.Text);
+            double cost = (fredo * coffeePrice + cap * coffeePrice);
+            MessageBox.Show(cost.ToString());
         }
     } 
 }

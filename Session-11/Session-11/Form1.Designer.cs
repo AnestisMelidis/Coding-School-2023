@@ -44,10 +44,14 @@
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.chkFredo = new System.Windows.Forms.CheckBox();
             this.chkCap = new System.Windows.Forms.CheckBox();
-            this.txtFredo = new System.Windows.Forms.TextBox();
-            this.txtCap = new System.Windows.Forms.TextBox();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.numFredo = new System.Windows.Forms.NumericUpDown();
+            this.numCap = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFredo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCap)).BeginInit();
             this.SuspendLayout();
             // 
             // grvEmployee
@@ -177,11 +181,11 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(259, 65);
+            this.btnSave.Location = new System.Drawing.Point(160, 64);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(163, 35);
             this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "button1";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSaveClick);
             // 
@@ -201,7 +205,7 @@
             // chkFredo
             // 
             this.chkFredo.AutoSize = true;
-            this.chkFredo.Location = new System.Drawing.Point(890, 39);
+            this.chkFredo.Location = new System.Drawing.Point(900, 40);
             this.chkFredo.Name = "chkFredo";
             this.chkFredo.Size = new System.Drawing.Size(56, 19);
             this.chkFredo.TabIndex = 9;
@@ -212,7 +216,7 @@
             // chkCap
             // 
             this.chkCap.AutoSize = true;
-            this.chkCap.Location = new System.Drawing.Point(890, 64);
+            this.chkCap.Location = new System.Drawing.Point(900, 69);
             this.chkCap.Name = "chkCap";
             this.chkCap.Size = new System.Drawing.Size(90, 19);
             this.chkCap.TabIndex = 10;
@@ -220,27 +224,49 @@
             this.chkCap.UseVisualStyleBackColor = true;
             this.chkCap.CheckedChanged += new System.EventHandler(this.chkCap_CheckedChanged);
             // 
-            // txtFredo
+            // btnShow
             // 
-            this.txtFredo.Location = new System.Drawing.Point(988, 35);
-            this.txtFredo.Name = "txtFredo";
-            this.txtFredo.Size = new System.Drawing.Size(112, 23);
-            this.txtFredo.TabIndex = 11;
+            this.btnShow.Location = new System.Drawing.Point(339, 64);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(163, 35);
+            this.btnShow.TabIndex = 13;
+            this.btnShow.Text = "Show";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnLoadClick);
             // 
-            // txtCap
+            // button1
             // 
-            this.txtCap.Location = new System.Drawing.Point(988, 62);
-            this.txtCap.Name = "txtCap";
-            this.txtCap.Size = new System.Drawing.Size(112, 23);
-            this.txtCap.TabIndex = 12;
+            this.button1.Location = new System.Drawing.Point(919, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 35);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Price";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnPrice);
+            // 
+            // numFredo
+            // 
+            this.numFredo.Location = new System.Drawing.Point(996, 35);
+            this.numFredo.Name = "numFredo";
+            this.numFredo.Size = new System.Drawing.Size(86, 23);
+            this.numFredo.TabIndex = 15;
+            // 
+            // numCap
+            // 
+            this.numCap.Location = new System.Drawing.Point(996, 64);
+            this.numCap.Name = "numCap";
+            this.numCap.Size = new System.Drawing.Size(86, 23);
+            this.numCap.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 594);
-            this.Controls.Add(this.txtCap);
-            this.Controls.Add(this.txtFredo);
+            this.Controls.Add(this.numCap);
+            this.Controls.Add(this.numFredo);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.chkCap);
             this.Controls.Add(this.chkFredo);
             this.Controls.Add(this.cmbType);
@@ -255,6 +281,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFredo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCap)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,7 +311,9 @@
         private ComboBox cmbType;
         private CheckBox chkFredo;
         private CheckBox chkCap;
-        private TextBox txtFredo;
-        private TextBox txtCap;
+        private Button btnShow;
+        private Button button1;
+        private NumericUpDown numFredo;
+        private NumericUpDown numCap;
     }
 }
