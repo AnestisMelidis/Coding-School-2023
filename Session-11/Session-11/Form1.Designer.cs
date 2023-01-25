@@ -23,6 +23,12 @@
         ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grvEmployee = new System.Windows.Forms.DataGridView();
             this.clmEmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,14 +54,31 @@
             this.button1 = new System.Windows.Forms.Button();
             this.numFredo = new System.Windows.Forms.NumericUpDown();
             this.numCap = new System.Windows.Forms.NumericUpDown();
+            this.gridEmployee = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridclmID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridclmName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridclmSurname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridclmEmployeeType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridclmSalary = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFredo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // grvEmployee
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmEmployeeID,
@@ -63,10 +86,26 @@
             this.clmSurname,
             this.clmEmployeeType,
             this.clmSalary});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvEmployee.DefaultCellStyle = dataGridViewCellStyle2;
             this.grvEmployee.Location = new System.Drawing.Point(69, 104);
             this.grvEmployee.Name = "grvEmployee";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grvEmployee.RowTemplate.Height = 25;
-            this.grvEmployee.Size = new System.Drawing.Size(564, 135);
+            this.grvEmployee.Size = new System.Drawing.Size(564, 55);
             this.grvEmployee.TabIndex = 0;
             // 
             // clmEmployeeID
@@ -101,6 +140,14 @@
             // 
             // grvProducts
             // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmPropertyID,
@@ -110,8 +157,24 @@
             this.clmTypeOfProduct,
             this.clmPrice,
             this.clmCost});
-            this.grvProducts.Location = new System.Drawing.Point(69, 261);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvProducts.DefaultCellStyle = dataGridViewCellStyle5;
+            this.grvProducts.Location = new System.Drawing.Point(66, 174);
             this.grvProducts.Name = "grvProducts";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grvProducts.RowTemplate.Height = 25;
             this.grvProducts.Size = new System.Drawing.Size(713, 118);
             this.grvProducts.TabIndex = 1;
@@ -258,11 +321,73 @@
             this.numCap.Size = new System.Drawing.Size(86, 23);
             this.numCap.TabIndex = 16;
             // 
+            // gridEmployee
+            // 
+            this.gridEmployee.Location = new System.Drawing.Point(66, 322);
+            this.gridEmployee.MainView = this.gridView1;
+            this.gridEmployee.Name = "gridEmployee";
+            this.gridEmployee.Size = new System.Drawing.Size(758, 200);
+            this.gridEmployee.TabIndex = 17;
+            this.gridEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridclmID,
+            this.gridclmName,
+            this.gridclmSurname,
+            this.gridclmEmployeeType,
+            this.gridclmSalary});
+            this.gridView1.GridControl = this.gridEmployee;
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridclmID
+            // 
+            this.gridclmID.Caption = "ID";
+            this.gridclmID.FieldName = "ID";
+            this.gridclmID.Name = "gridclmID";
+            this.gridclmID.Visible = true;
+            this.gridclmID.VisibleIndex = 0;
+            // 
+            // gridclmName
+            // 
+            this.gridclmName.Caption = "Name";
+            this.gridclmName.FieldName = "Name";
+            this.gridclmName.Name = "gridclmName";
+            this.gridclmName.Visible = true;
+            this.gridclmName.VisibleIndex = 1;
+            // 
+            // gridclmSurname
+            // 
+            this.gridclmSurname.Caption = "Surname";
+            this.gridclmSurname.FieldName = "Surname";
+            this.gridclmSurname.Name = "gridclmSurname";
+            this.gridclmSurname.Visible = true;
+            this.gridclmSurname.VisibleIndex = 2;
+            // 
+            // gridclmEmployeeType
+            // 
+            this.gridclmEmployeeType.Caption = "EmployeeType";
+            this.gridclmEmployeeType.FieldName = "TypeOfEmployee";
+            this.gridclmEmployeeType.Name = "gridclmEmployeeType";
+            this.gridclmEmployeeType.Visible = true;
+            this.gridclmEmployeeType.VisibleIndex = 3;
+            // 
+            // gridclmSalary
+            // 
+            this.gridclmSalary.Caption = "Salary";
+            this.gridclmSalary.FieldName = "SalaryPerMonth";
+            this.gridclmSalary.Name = "gridclmSalary";
+            this.gridclmSalary.Visible = true;
+            this.gridclmSalary.VisibleIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 582);
+            this.Controls.Add(this.gridEmployee);
             this.Controls.Add(this.numCap);
             this.Controls.Add(this.numFredo);
             this.Controls.Add(this.button1);
@@ -283,6 +408,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFredo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +442,12 @@
         private Button button1;
         private NumericUpDown numFredo;
         private NumericUpDown numCap;
+        private DevExpress.XtraGrid.GridControl gridEmployee;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridclmID;
+        private DevExpress.XtraGrid.Columns.GridColumn gridclmName;
+        private DevExpress.XtraGrid.Columns.GridColumn gridclmSurname;
+        private DevExpress.XtraGrid.Columns.GridColumn gridclmEmployeeType;
+        private DevExpress.XtraGrid.Columns.GridColumn gridclmSalary;
     }
 }

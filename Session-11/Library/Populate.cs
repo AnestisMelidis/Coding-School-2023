@@ -120,15 +120,15 @@ namespace Library
             return transactionLines;
             //MessageBox.Show(product1.Description + " " + product2.Description);
         }
-        public Employee FillEmployees(List<Employee>? employees, string name, string surname, string type, string salary)
-        {
-            Employee employeeInput = new Employee()
-            {
+        public Employee FillEmployees(List<Employee>? employees, string name, string surname, string type, string salary) {
+            Employee employeeInput = new Employee() {
                 Name = name,
                 Surname = surname,
-                TypeOfEmployee = (EmployeeType)Enum.Parse(typeof(EmployeeType), type),   
+                TypeOfEmployee = (EmployeeType)Enum.Parse(typeof(EmployeeType), type),
                 SalaryPerMonth = Convert.ToDouble(salary)
+
             };
+
             return employeeInput;
         }
 
