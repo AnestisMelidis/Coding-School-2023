@@ -19,6 +19,7 @@ namespace Library {
 
         public Transaction() {
             ID = Guid.NewGuid();
+            Date = DateTime.Now;
         }
     }
 }

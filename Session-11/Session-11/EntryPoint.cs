@@ -44,7 +44,7 @@ namespace Session_11 {
             
             this.Hide();
 
-            Customer customer = new Customer(_CoffeeShopData);
+            CustomerForm customer = new CustomerForm(_CoffeeShopData);
             customer.Show();
 
             

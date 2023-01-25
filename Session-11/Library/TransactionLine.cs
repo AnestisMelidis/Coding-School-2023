@@ -24,39 +24,20 @@ namespace Library
             ID = Guid.NewGuid();
             Date= DateTime.Now;
         }
-        public bool DiscountCheck(double price, int quantity)
+        public double DiscountCheck(double price)
         {
-            if (quantity * price > 10)
+            if (price > 10)
             {
-                return true;
+                price *= Discount;
             }
-            else
-            {
-                return false;
-            }
+            return price;
         }
-        public double DoTotalCost(TransactionLine test)
-        {
 
-            if (test.DiscountCheck(test.Price, test.Quantity))
-            {
-                //MessageBox.Show("Mpika sthn If");
-                test.TotalPrice = (test.Price * test.Quantity) * test.Discount;
-                // MessageBox.Show("" + test.TotalPrice);
-
-            }
-            else
-            {
-                //MessageBox.Show("DEn Mpika sthn If");
-                test.TotalPrice = (test.Price * test.Quantity);
-                // MessageBox.Show("" + test.TotalPrice);
-            }
-            return test.TotalPrice;
 
         }
         
 
-        public virtual void Write (TransactionLine test)
+/*        public virtual void Write (TransactionLine test)
         {
 
 
@@ -75,7 +56,7 @@ namespace Library
             {
                 TextWriter allmethodspaymends;
             }
-        }
+        }*/
 
         
 
@@ -83,5 +64,5 @@ namespace Library
 
 
     }
-}
+
 

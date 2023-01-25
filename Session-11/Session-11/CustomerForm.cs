@@ -13,12 +13,12 @@ using static Library.Product;
 
 namespace Session_11
 {
-    public partial class Customer : Form
+    public partial class CustomerForm : Form
     {
         public CoffeeShopData Data { get; set; }
         private CoffeeShopData _CoffeeShopData = new CoffeeShopData();
 
-        public Customer(CoffeeShopData test)
+        public CustomerForm(CoffeeShopData test)
         {
             InitializeComponent();
             _CoffeeShopData = test;
@@ -98,5 +98,19 @@ namespace Session_11
             gridSales.DataSource = _CoffeeShopData.transactionLines;
         }
 
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            List<TransactionLine> transactionLine = _CoffeeShopData.transactionLines;
+            TransactionLine transactionLine1 = new TransactionLine();
+            Customer customer = new Customer();
+            double total = transactionLine.Sum(x => x.TotalPrice);
+            total = transactionLine1.DiscountCheck(total);
+            MessageBox.Show("The total price after discount is: " + total.ToString());
+            Transaction transaction = new Transaction()
+            {
+
+                TotalPrice = total
+            };
+        }
     }
 }

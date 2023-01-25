@@ -1,6 +1,6 @@
 ﻿namespace Session_11
 {
-    partial class Customer
+    partial class CustomerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,7 @@
             this.clmQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnCheckout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -108,7 +109,7 @@
             this.gridSales.Location = new System.Drawing.Point(90, 197);
             this.gridSales.MainView = this.gridView1;
             this.gridSales.Name = "gridSales";
-            this.gridSales.Size = new System.Drawing.Size(622, 208);
+            this.gridSales.Size = new System.Drawing.Size(622, 113);
             this.gridSales.TabIndex = 37;
             this.gridSales.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -155,11 +156,22 @@
             this.clmTotal.Visible = true;
             this.clmTotal.VisibleIndex = 3;
             // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Location = new System.Drawing.Point(351, 118);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(203, 32);
+            this.btnCheckout.TabIndex = 38;
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.gridSales);
             this.Controls.Add(this.addToCart);
             this.Controls.Add(this.numQuantity);
@@ -191,6 +203,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn clmDescription;
         private DevExpress.XtraGrid.Columns.GridColumn clmPrice;
         private DevExpress.XtraGrid.Columns.GridColumn clmTotal;
+        private Button btnCheckout;
         //private Button btnAddCart;
     }
 }

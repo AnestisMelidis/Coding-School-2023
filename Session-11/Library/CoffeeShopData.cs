@@ -17,6 +17,7 @@ namespace Library
 
 
         public List<TransactionLine> transactionLines { get; set; }
+        public List<Transaction> transactions{ get; set; }
 
 
 
