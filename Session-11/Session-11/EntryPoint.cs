@@ -37,8 +37,7 @@ namespace Session_11 {
             this.Hide();
             Form1 form1 = new Form1();
             form1.Show(); 
-           
-            
+
         }
 
         private void btnCustomer_Click(object sender, EventArgs e) {
