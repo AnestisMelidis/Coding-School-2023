@@ -14,7 +14,7 @@ namespace Session_11
 {
     public partial class Form1 : Form {
         private ProductCategory _productCategory;
-
+        public CoffeeShopData Data { get; set; }
 
         List<Product> products;
         List<Employee> employees;
