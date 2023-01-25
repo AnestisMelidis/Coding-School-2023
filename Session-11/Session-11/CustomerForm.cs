@@ -93,6 +93,7 @@ namespace Session_11
                 Quantity = Convert.ToInt32(numQuantity.Text),
                 ProductID = test[0].ProductCategoryID,
                 Price = test[0].Price,
+                TotalCost = test[0].Cost * Convert.ToInt32(numQuantity.Text),
                 TotalPrice = test[0].Price * Convert.ToInt32(numQuantity.Text)
             };
             _CoffeeShopData.transactionLines.Add(transactionLine);
@@ -110,16 +111,18 @@ namespace Session_11
             int length = employees.Count;
             Random ran = new Random();
             int num = ran.Next(0, length);
-            double total = transactionLine.Sum(x => x.TotalPrice);
-            total = DiscountCheck(total);
-            var payment = CheckPayment(total);
+            double totalPrice = transactionLine.Sum(x => x.TotalPrice);
+            double totalCost = transactionLine.Sum(x => x.TotalCost);
+            totalPrice = DiscountCheck(totalPrice);
+            var payment = CheckPayment(totalPrice);
             //MessageBox.Show("The total price after discount is: " + total.ToString());
             Transaction transaction = new Transaction()
             {
                 CustomerID = customer.ID,
                 EmployeeID = employees[num].ID,
                 TypeOfPayment = (MethodPayment)payment,
-                TotalPrice = total
+                TotalPrice = totalPrice,
+                Cost = totalCost
             };
 
             _CoffeeShopData.transactions.Add(transaction);

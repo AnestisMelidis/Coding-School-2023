@@ -20,11 +20,5 @@ namespace Library
         {
 
         }
-
-        //Methods
-        public void GetIncome(double income, DateTime date)
-        {
-
-        }
     }
 }
