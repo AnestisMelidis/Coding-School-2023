@@ -31,10 +31,8 @@ namespace Library
             products = new List<Product>();
             employees = new List<Employee>();
             transactionLines = new List<TransactionLine>();
-
+            transactions = new List<Transaction>();
         }
-
-
     }
 }
 
