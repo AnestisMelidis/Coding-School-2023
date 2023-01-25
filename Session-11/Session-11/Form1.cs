@@ -6,8 +6,6 @@ using DevExpress.XtraCharts;
 using DevExpress.XtraSpreadsheet.Export;
 using DevExpress.XtraSpreadsheet.Model;
 using Library;
-using System;
-using System.IO;
 using System.Collections.ObjectModel;
 using System.Linq;
 using static Library.Product;
@@ -23,77 +21,83 @@ namespace Session_11
         List<Employee> employees;
         List<TransactionLine> transaction_Lines;
         Serializer serializer = new Serializer();
-
-
+        
         int cnt = 0;
 
-        public Form1() 
-        {
+        public Form1() {
+            
+            
+           
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e) {
 
         }
 
-/*        private void chkCofee_Checked(object sender, EventArgs e)
-        {
+        //private void chkCofee_Checked(object sender, EventArgs e)
+        //{
 
-            if (chkCoffee.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Coffee)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkCoffee.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }
-        private void chkBevarages_Checked(object sender, EventArgs e)
-        {
-            if (chkBeverages.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Beverages)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkBeverages.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }
-        private void chkFood_Checked(object sender, EventArgs e)
-        {
-            if (chkFood.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Food)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkFood.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }*/
+        //    if (chkCoffee.Checked == true)
+        //    {
+        //        foreach (var i in _CoffeeShopData.products)
+        //        {
+        //            if (i.TypeOfProduct == ProductType.Coffee)
+        //            {
+        //                cmbMenu.Items.Add(i.Description);
+        //            }
+        //        }
+        //    }
+        //    if (chkCoffee.Checked == false)
+        //    {
+        //        cmbMenu.Items.Clear();
+        //    }
+        //}
+        //private void chkBevarages_Checked(object sender, EventArgs e)
+        //{
+        //    if (chkBeverages.Checked == true)
+        //    {
+        //        foreach (var i in _CoffeeShopData.products)
+        //        {
+        //            if (i.TypeOfProduct == ProductType.Beverages)
+        //            {
+        //                cmbMenu.Items.Add(i.Description);
+        //            }
+        //        }
+        //    }
+        //    if (chkBeverages.Checked == false)
+        //    {
+        //        cmbMenu.Items.Clear();
+        //    }
+        //}
+        //private void chkFood_Checked(object sender, EventArgs e)
+        //{
+        //    if (chkFood.Checked == true)
+        //    {
+        //        foreach (var i in _CoffeeShopData.products)
+        //        {
+        //            if (i.TypeOfProduct == ProductType.Food)
+        //            {
+        //                cmbMenu.Items.Add(i.Description);
+        //            }
+        //        }
+        //    }
+        //    if (chkFood.Checked == false)
+        //    {
+        //        cmbMenu.Items.Clear();
+        //    }
+        //}
 
         public void WriteJson(object obj, string file) {
             serializer.SerializeToFile(obj, file);
         }
 
-
+        public object LoadJson(string file) {
+            object employees = serializer.DeserializeFromFile<CoffeeShopData>(file);
+            return employees;
+          
+        }
 
 
         public void btnSaveEmployeesClick(object sender, EventArgs e) 
@@ -138,7 +142,15 @@ namespace Session_11
 
 
 
-        
+        public void btnLoadJson (object sender, EventArgs e)
+        {
+            _CoffeeShopData = (CoffeeShopData)LoadJson("test1.json");
+            gridProducts.DataSource = null;
+            gridEmployee.DataSource = null;
+            gridProducts.DataSource = _CoffeeShopData.products;
+            gridEmployee.DataSource = _CoffeeShopData.employees;
+
+        }
         public void btnSaveJson(object sender, EventArgs e)
         {
             WriteJson(_CoffeeShopData, "test1.json") ;
