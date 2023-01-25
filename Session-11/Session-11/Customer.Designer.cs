@@ -32,6 +32,9 @@
             this.chkFood = new System.Windows.Forms.CheckBox();
             this.chkBeverages = new System.Windows.Forms.CheckBox();
             this.chkCoffee = new System.Windows.Forms.CheckBox();
+            this.numQuantity = new System.Windows.Forms.NumericUpDown();
+            this.addToCart = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMenu
@@ -75,17 +78,37 @@
             this.chkCoffee.UseVisualStyleBackColor = true;
             this.chkCoffee.Click += new System.EventHandler(this.chkCofee_Checked);
             // 
+            // numQuantity
+            // 
+            this.numQuantity.Location = new System.Drawing.Point(80, 91);
+            this.numQuantity.Name = "numQuantity";
+            this.numQuantity.Size = new System.Drawing.Size(120, 23);
+            this.numQuantity.TabIndex = 35;
+            // 
+            // addToCart
+            // 
+            this.addToCart.Location = new System.Drawing.Point(351, 68);
+            this.addToCart.Name = "addToCart";
+            this.addToCart.Size = new System.Drawing.Size(203, 32);
+            this.addToCart.TabIndex = 36;
+            this.addToCart.Text = "Add";
+            this.addToCart.UseVisualStyleBackColor = true;
+            this.addToCart.Click += new System.EventHandler(this.addToCart_Click);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.addToCart);
+            this.Controls.Add(this.numQuantity);
             this.Controls.Add(this.cmbMenu);
             this.Controls.Add(this.chkFood);
             this.Controls.Add(this.chkBeverages);
             this.Controls.Add(this.chkCoffee);
             this.Name = "Customer";
             this.Text = "Customer";
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +120,8 @@
         private CheckBox chkFood;
         private CheckBox chkBeverages;
         private CheckBox chkCoffee;
+        private NumericUpDown numQuantity;
+        private Button addToCart;
+        //private Button btnAddCart;
     }
 }

@@ -36,58 +36,7 @@ namespace Session_11
 
         }
 
-/*        private void chkCofee_Checked(object sender, EventArgs e)
-        {
 
-            if (chkCoffee.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Coffee)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkCoffee.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }
-        private void chkBevarages_Checked(object sender, EventArgs e)
-        {
-            if (chkBeverages.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Beverages)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkBeverages.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }
-        private void chkFood_Checked(object sender, EventArgs e)
-        {
-            if (chkFood.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Food)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkFood.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }*/
 
         public void WriteJson(object obj, string file) {
             serializer.SerializeToFile(obj, file);

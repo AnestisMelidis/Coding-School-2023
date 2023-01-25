@@ -40,6 +40,7 @@ namespace Session_11
                 cmbMenu.Items.Clear();
             }
         }
+
         private void chkBevarages_Checked(object sender, EventArgs e)
         {
             if (chkBeverages.Checked == true)
@@ -75,5 +76,14 @@ namespace Session_11
             }
         }
 
+        private void addToCart_Click(object sender, EventArgs e)
+        {
+            Product product = new Product();
+            TransactionLine transactionLine = new TransactionLine()
+            {
+                Quantity = Convert.ToInt32(numQuantity.Text),
+                //ProductID = (product.ProductCategoryID.Where)
+            };
+        }
     }
 }
