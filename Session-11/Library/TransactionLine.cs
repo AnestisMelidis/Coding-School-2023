@@ -48,6 +48,32 @@ namespace Library
 
         }
 
+        public virtual void Write (TransactionLine test)
+        {
+
+
+
+        }
+
+        string message = "Only Cash";
+        public void PaymentCheck(double price, int quantity)
+        {
+            if (quantity * price > 50)
+            {
+               
+                TextWriter message;
+            }
+            else
+            {
+                TextWriter allmethodspaymends;
+            }
+        }
+
+        
+
+
+
+
     }
     }
 

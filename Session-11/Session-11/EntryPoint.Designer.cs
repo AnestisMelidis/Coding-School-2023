@@ -23,53 +23,75 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntryPoint));
             this.btnManager = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnManager
             // 
-            this.btnManager.Location = new System.Drawing.Point(61, 198);
+            this.btnManager.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnManager.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnManager.Location = new System.Drawing.Point(71, 313);
+            this.btnManager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(264, 148);
+            this.btnManager.Size = new System.Drawing.Size(302, 119);
             this.btnManager.TabIndex = 0;
             this.btnManager.Text = "Manager";
-            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.UseVisualStyleBackColor = false;
             this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
             // btnCustomer
             // 
-            this.btnCustomer.Location = new System.Drawing.Point(434, 198);
+            this.btnCustomer.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCustomer.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomer.Location = new System.Drawing.Point(497, 313);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(264, 148);
+            this.btnCustomer.Size = new System.Drawing.Size(302, 119);
             this.btnCustomer.TabIndex = 1;
             this.btnCustomer.Text = "Customer";
-            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.UseVisualStyleBackColor = false;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(328, 100);
-            this.label1.MaximumSize = new System.Drawing.Size(100, 100);
-            this.label1.MinimumSize = new System.Drawing.Size(100, 0);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(326, 227);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 30);
-            this.label1.TabIndex = 2;
+            this.label1.Size = new System.Drawing.Size(235, 30);
+            this.label1.TabIndex = 4;
             this.label1.Text = "Choise Your Entry As";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(315, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(258, 184);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // EntryPoint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(881, 600);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCustomer);
             this.Controls.Add(this.btnManager);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EntryPoint";
             this.Text = "EntryPoint";
             this.Load += new System.EventHandler(this.EntryPoint_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,6 +101,7 @@
 
         private Button btnManager;
         private Button btnCustomer;
+        private PictureBox pictureBox1;
         private Label label1;
     }
 }

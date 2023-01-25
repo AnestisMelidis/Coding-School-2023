@@ -39,6 +39,10 @@ namespace Session_11 {
             //form1.Data= data;
             //form1.Show();
         }
-            
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
