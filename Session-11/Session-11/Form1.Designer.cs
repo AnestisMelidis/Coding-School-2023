@@ -28,7 +28,7 @@
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.btnSaveEmployees = new System.Windows.Forms.Button();
             this.cmbType = new System.Windows.Forms.ComboBox();
-            this.btnShowEmployees = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.gridEmployee = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridclmID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,16 +47,12 @@
             this.gridProClmCost = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.btnSaveProducts = new System.Windows.Forms.Button();
-            this.btnLoadProducts = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCost = new System.Windows.Forms.TextBox();
             this.cmbProType = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.chkCoffee = new System.Windows.Forms.CheckBox();
-            this.chkBeverages = new System.Windows.Forms.CheckBox();
-            this.chkFood = new System.Windows.Forms.CheckBox();
-            this.cmbMenu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
@@ -107,15 +103,15 @@
             this.cmbType.Size = new System.Drawing.Size(114, 23);
             this.cmbType.TabIndex = 8;
             // 
-            // btnShowEmployees
+            // btnSave
             // 
-            this.btnShowEmployees.Location = new System.Drawing.Point(339, 64);
-            this.btnShowEmployees.Name = "btnShowEmployees";
-            this.btnShowEmployees.Size = new System.Drawing.Size(163, 35);
-            this.btnShowEmployees.TabIndex = 13;
-            this.btnShowEmployees.Text = "Show";
-            this.btnShowEmployees.UseVisualStyleBackColor = true;
-            this.btnShowEmployees.Click += new System.EventHandler(this.btnLoadEmployeesClick);
+            this.btnSave.Location = new System.Drawing.Point(582, 101);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(163, 35);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaveJson);
             // 
             // gridEmployee
             // 
@@ -276,15 +272,15 @@
             this.btnSaveProducts.UseVisualStyleBackColor = true;
             this.btnSaveProducts.Click += new System.EventHandler(this.btnSaveProductsClick);
             // 
-            // btnLoadProducts
+            // btnLoad
             // 
-            this.btnLoadProducts.Location = new System.Drawing.Point(339, 252);
-            this.btnLoadProducts.Name = "btnLoadProducts";
-            this.btnLoadProducts.Size = new System.Drawing.Size(163, 35);
-            this.btnLoadProducts.TabIndex = 21;
-            this.btnLoadProducts.Text = "Show";
-            this.btnLoadProducts.UseVisualStyleBackColor = true;
-            this.btnLoadProducts.Click += new System.EventHandler(this.btnLoadProductsClick);
+            this.btnLoad.Location = new System.Drawing.Point(582, 147);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(163, 35);
+            this.btnLoad.TabIndex = 21;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            //this.btnLoad.Click += new System.EventHandler(this.btnLoadJson);
             // 
             // txtPrice
             // 
@@ -331,67 +327,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // chkCoffee
-            // 
-            this.chkCoffee.AutoSize = true;
-            this.chkCoffee.Location = new System.Drawing.Point(802, 126);
-            this.chkCoffee.Name = "chkCoffee";
-            this.chkCoffee.Size = new System.Drawing.Size(61, 19);
-            this.chkCoffee.TabIndex = 27;
-            this.chkCoffee.Text = "Coffee";
-            this.chkCoffee.UseVisualStyleBackColor = true;
-            this.chkCoffee.CheckedChanged += new System.EventHandler(this.chkCofee_Checked);
-            // 
-            // chkBeverages
-            // 
-            this.chkBeverages.AutoSize = true;
-            this.chkBeverages.Location = new System.Drawing.Point(891, 126);
-            this.chkBeverages.Name = "chkBeverages";
-            this.chkBeverages.Size = new System.Drawing.Size(79, 19);
-            this.chkBeverages.TabIndex = 28;
-            this.chkBeverages.Text = "Beverages";
-            this.chkBeverages.UseVisualStyleBackColor = true;
-            this.chkBeverages.CheckedChanged += new System.EventHandler(this.chkBevarages_Checked);
-            // 
-            // chkFood
-            // 
-            this.chkFood.AutoSize = true;
-            this.chkFood.Location = new System.Drawing.Point(980, 126);
-            this.chkFood.Name = "chkFood";
-            this.chkFood.Size = new System.Drawing.Size(53, 19);
-            this.chkFood.TabIndex = 29;
-            this.chkFood.Text = "Food";
-            this.chkFood.UseVisualStyleBackColor = true;
-            this.chkFood.CheckedChanged += new System.EventHandler(this.chkFood_Checked);
-            // 
-            // cmbMenu
-            // 
-            this.cmbMenu.FormattingEnabled = true;
-            this.cmbMenu.Location = new System.Drawing.Point(871, 159);
-            this.cmbMenu.Name = "cmbMenu";
-            this.cmbMenu.Size = new System.Drawing.Size(83, 23);
-            this.cmbMenu.TabIndex = 30;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 582);
-            this.Controls.Add(this.cmbMenu);
-            this.Controls.Add(this.chkFood);
-            this.Controls.Add(this.chkBeverages);
-            this.Controls.Add(this.chkCoffee);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbProType);
             this.Controls.Add(this.txtCost);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.btnLoadProducts);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSaveProducts);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.gridProducts);
             this.Controls.Add(this.gridEmployee);
-            this.Controls.Add(this.btnShowEmployees);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.btnSaveEmployees);
             this.Controls.Add(this.txtSalary);
@@ -440,9 +391,7 @@
         private TextBox txtCost;
         private ComboBox cmbProType;
         private Button button2;
-        private CheckBox chkCoffee;
-        private CheckBox chkBeverages;
-        private CheckBox chkFood;
-        private ComboBox cmbMenu;
+        private Button btnSave;
+        private Button btnLoad;
     }
 }

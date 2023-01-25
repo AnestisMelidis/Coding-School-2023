@@ -21,7 +21,7 @@ namespace Library
             var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonSerializer.Serialize(obj, options);
 
-            File.AppendAllText(fileName, jsonString);
+            File.WriteAllText(fileName, jsonString);
         }
 
 
