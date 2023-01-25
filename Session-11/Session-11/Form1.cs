@@ -8,6 +8,7 @@ using DevExpress.XtraSpreadsheet.Model;
 using Library;
 using System.Collections.ObjectModel;
 using System.Linq;
+using static Library.Product;
 
 namespace Session_11
 {
@@ -22,10 +23,11 @@ namespace Session_11
 
         public Form1() {
             employees = new List<Employee>();
+            products = new List<Product>();
             InitializeComponent();
             //grvEmployee.DataSource = populate.PopulateEmployees();
             //grvEmployee.DataSource = employees;
-            grvProducts.DataSource = populate.PopulateCoffee();
+            //grvProducts.DataSource = populate.PopulateCoffee();
             //PopulateTransaction_Line();
 
         }
@@ -62,11 +64,12 @@ namespace Session_11
 
         public void LoadJson(string file) {
             object employees = serializer.DeserializeFromFile<Employee>(file);
-            grvEmployee.DataSource = employees;
+            //grvEmployee.DataSource = employees;
         }
 
 
-        public void btnSaveClick(object sender, EventArgs e) {
+        public void btnSaveEmployeesClick(object sender, EventArgs e) 
+        {
 
             //string name = txtName.Text;
             //string surname = txtSurname.Text;
@@ -95,11 +98,21 @@ namespace Session_11
 
 
         }
-    
+    public void btnSaveProductsClick(object sender, EventArgs e)
+        {
+            Product newProduct = new Product()
+            {
+                Description = txtDesc.Text,
+                TypeOfProduct = (ProductType)Enum.Parse(typeof(ProductType), cmbProType.SelectedItem.ToString()),
+                Price = Convert.ToDouble(txtPrice.Text),
+                Cost = Convert.ToDouble(txtCost.Text)
+            };
+            products.Add(newProduct);
+        }
 
 
 
-    public void btnLoadClick(object sender, EventArgs e)
+        public void btnLoadEmployeesClick(object sender, EventArgs e)
         {
 
             // grvEmployee.DataSource = employees;
@@ -107,6 +120,11 @@ namespace Session_11
             gridEmployee.DataSource = employees;
 
 
+        }
+        public void btnLoadProductsClick(object sender, EventArgs e)
+        {
+            gridProducts.DataSource = null;
+            gridProducts.DataSource = products;
         }
         public void btnPrice(object sender, EventArgs e)
         {

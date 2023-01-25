@@ -23,34 +23,14 @@
         ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.grvEmployee = new System.Windows.Forms.DataGridView();
-            this.clmEmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmEmployeeType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grvProducts = new System.Windows.Forms.DataGridView();
-            this.clmPropertyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPropertyCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPropertyDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPCID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTypeOfProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnSaveEmployees = new System.Windows.Forms.Button();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.chkFredo = new System.Windows.Forms.CheckBox();
             this.chkCap = new System.Windows.Forms.CheckBox();
-            this.btnShow = new System.Windows.Forms.Button();
+            this.btnShowEmployees = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.numFredo = new System.Windows.Forms.NumericUpDown();
             this.numCap = new System.Windows.Forms.NumericUpDown();
@@ -61,165 +41,29 @@
             this.gridclmSurname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridclmEmployeeType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridclmSalary = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).BeginInit();
+            this.gridProducts = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridProClmID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridProClmCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridProClmDesc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridProClmProID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridProClmType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridProClmPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridProClmCost = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.btnSaveProducts = new System.Windows.Forms.Button();
+            this.btnLoadProducts = new System.Windows.Forms.Button();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.cmbProType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numFredo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grvEmployee
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmEmployeeID,
-            this.clmName,
-            this.clmSurname,
-            this.clmEmployeeType,
-            this.clmSalary});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvEmployee.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grvEmployee.Location = new System.Drawing.Point(69, 104);
-            this.grvEmployee.Name = "grvEmployee";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.grvEmployee.RowTemplate.Height = 25;
-            this.grvEmployee.Size = new System.Drawing.Size(564, 55);
-            this.grvEmployee.TabIndex = 0;
-            // 
-            // clmEmployeeID
-            // 
-            this.clmEmployeeID.DataPropertyName = "ID";
-            this.clmEmployeeID.HeaderText = "ID";
-            this.clmEmployeeID.Name = "clmEmployeeID";
-            // 
-            // clmName
-            // 
-            this.clmName.DataPropertyName = "Name";
-            this.clmName.HeaderText = "Name";
-            this.clmName.Name = "clmName";
-            // 
-            // clmSurname
-            // 
-            this.clmSurname.DataPropertyName = "Surname";
-            this.clmSurname.HeaderText = "Surname";
-            this.clmSurname.Name = "clmSurname";
-            // 
-            // clmEmployeeType
-            // 
-            this.clmEmployeeType.DataPropertyName = "TypeOfEmployee";
-            this.clmEmployeeType.HeaderText = "EmployeeType";
-            this.clmEmployeeType.Name = "clmEmployeeType";
-            // 
-            // clmSalary
-            // 
-            this.clmSalary.DataPropertyName = "SalaryPerMonth";
-            this.clmSalary.HeaderText = "Salary";
-            this.clmSalary.Name = "clmSalary";
-            // 
-            // grvProducts
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.grvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmPropertyID,
-            this.clmPropertyCode,
-            this.clmPropertyDescription,
-            this.clmPCID,
-            this.clmTypeOfProduct,
-            this.clmPrice,
-            this.clmCost});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvProducts.DefaultCellStyle = dataGridViewCellStyle5;
-            this.grvProducts.Location = new System.Drawing.Point(66, 174);
-            this.grvProducts.Name = "grvProducts";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.grvProducts.RowTemplate.Height = 25;
-            this.grvProducts.Size = new System.Drawing.Size(713, 118);
-            this.grvProducts.TabIndex = 1;
-            // 
-            // clmPropertyID
-            // 
-            this.clmPropertyID.DataPropertyName = "ID";
-            this.clmPropertyID.HeaderText = "ID";
-            this.clmPropertyID.Name = "clmPropertyID";
-            // 
-            // clmPropertyCode
-            // 
-            this.clmPropertyCode.DataPropertyName = "Code";
-            this.clmPropertyCode.HeaderText = "Code";
-            this.clmPropertyCode.Name = "clmPropertyCode";
-            // 
-            // clmPropertyDescription
-            // 
-            this.clmPropertyDescription.DataPropertyName = "Description";
-            this.clmPropertyDescription.HeaderText = "Description";
-            this.clmPropertyDescription.Name = "clmPropertyDescription";
-            // 
-            // clmPCID
-            // 
-            this.clmPCID.DataPropertyName = "ProductCategoryID";
-            this.clmPCID.HeaderText = "ProductCategoryID";
-            this.clmPCID.Name = "clmPCID";
-            // 
-            // clmTypeOfProduct
-            // 
-            this.clmTypeOfProduct.DataPropertyName = "TypeOfProduct";
-            this.clmTypeOfProduct.HeaderText = "TypeOfProduct";
-            this.clmTypeOfProduct.Name = "clmTypeOfProduct";
-            // 
-            // clmPrice
-            // 
-            this.clmPrice.DataPropertyName = "Price";
-            this.clmPrice.HeaderText = "Price";
-            this.clmPrice.Name = "clmPrice";
-            // 
-            // clmCost
-            // 
-            this.clmCost.DataPropertyName = "Cost";
-            this.clmCost.HeaderText = "Cost";
-            this.clmCost.Name = "clmCost";
             // 
             // txtName
             // 
@@ -242,15 +86,15 @@
             this.txtSalary.Size = new System.Drawing.Size(112, 23);
             this.txtSalary.TabIndex = 5;
             // 
-            // btnSave
+            // btnSaveEmployees
             // 
-            this.btnSave.Location = new System.Drawing.Point(160, 64);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(163, 35);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSaveClick);
+            this.btnSaveEmployees.Location = new System.Drawing.Point(160, 64);
+            this.btnSaveEmployees.Name = "btnSaveEmployees";
+            this.btnSaveEmployees.Size = new System.Drawing.Size(163, 35);
+            this.btnSaveEmployees.TabIndex = 7;
+            this.btnSaveEmployees.Text = "Save";
+            this.btnSaveEmployees.UseVisualStyleBackColor = true;
+            this.btnSaveEmployees.Click += new System.EventHandler(this.btnSaveEmployeesClick);
             // 
             // cmbType
             // 
@@ -287,15 +131,15 @@
             this.chkCap.UseVisualStyleBackColor = true;
             this.chkCap.CheckedChanged += new System.EventHandler(this.chkCap_CheckedChanged);
             // 
-            // btnShow
+            // btnShowEmployees
             // 
-            this.btnShow.Location = new System.Drawing.Point(339, 64);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(163, 35);
-            this.btnShow.TabIndex = 13;
-            this.btnShow.Text = "Show";
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnLoadClick);
+            this.btnShowEmployees.Location = new System.Drawing.Point(339, 64);
+            this.btnShowEmployees.Name = "btnShowEmployees";
+            this.btnShowEmployees.Size = new System.Drawing.Size(163, 35);
+            this.btnShowEmployees.TabIndex = 13;
+            this.btnShowEmployees.Text = "Show";
+            this.btnShowEmployees.UseVisualStyleBackColor = true;
+            this.btnShowEmployees.Click += new System.EventHandler(this.btnLoadEmployeesClick);
             // 
             // button1
             // 
@@ -323,10 +167,10 @@
             // 
             // gridEmployee
             // 
-            this.gridEmployee.Location = new System.Drawing.Point(66, 322);
+            this.gridEmployee.Location = new System.Drawing.Point(46, 428);
             this.gridEmployee.MainView = this.gridView1;
             this.gridEmployee.Name = "gridEmployee";
-            this.gridEmployee.Size = new System.Drawing.Size(758, 200);
+            this.gridEmployee.Size = new System.Drawing.Size(758, 131);
             this.gridEmployee.TabIndex = 17;
             this.gridEmployee.UseEmbeddedNavigator = true;
             this.gridEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -383,63 +227,196 @@
             this.gridclmSalary.Visible = true;
             this.gridclmSalary.VisibleIndex = 4;
             // 
+            // gridProducts
+            // 
+            this.gridProducts.Location = new System.Drawing.Point(46, 293);
+            this.gridProducts.MainView = this.gridView2;
+            this.gridProducts.Name = "gridProducts";
+            this.gridProducts.Size = new System.Drawing.Size(750, 129);
+            this.gridProducts.TabIndex = 18;
+            this.gridProducts.UseEmbeddedNavigator = true;
+            this.gridProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridProClmID,
+            this.gridProClmCode,
+            this.gridProClmDesc,
+            this.gridProClmProID,
+            this.gridProClmType,
+            this.gridProClmPrice,
+            this.gridProClmCost});
+            this.gridView2.GridControl = this.gridProducts;
+            this.gridView2.Name = "gridView2";
+            // 
+            // gridProClmID
+            // 
+            this.gridProClmID.Caption = "ID";
+            this.gridProClmID.FieldName = "ID";
+            this.gridProClmID.Name = "gridProClmID";
+            this.gridProClmID.Visible = true;
+            this.gridProClmID.VisibleIndex = 0;
+            // 
+            // gridProClmCode
+            // 
+            this.gridProClmCode.Caption = "Code";
+            this.gridProClmCode.FieldName = "Code";
+            this.gridProClmCode.Name = "gridProClmCode";
+            this.gridProClmCode.Visible = true;
+            this.gridProClmCode.VisibleIndex = 1;
+            // 
+            // gridProClmDesc
+            // 
+            this.gridProClmDesc.Caption = "Description";
+            this.gridProClmDesc.FieldName = "Description";
+            this.gridProClmDesc.Name = "gridProClmDesc";
+            this.gridProClmDesc.Visible = true;
+            this.gridProClmDesc.VisibleIndex = 2;
+            // 
+            // gridProClmProID
+            // 
+            this.gridProClmProID.Caption = "ProductID";
+            this.gridProClmProID.FieldName = "ProductCategoryID";
+            this.gridProClmProID.Name = "gridProClmProID";
+            this.gridProClmProID.Visible = true;
+            this.gridProClmProID.VisibleIndex = 3;
+            // 
+            // gridProClmType
+            // 
+            this.gridProClmType.Caption = "Type";
+            this.gridProClmType.FieldName = "TypeOfProduct";
+            this.gridProClmType.Name = "gridProClmType";
+            this.gridProClmType.Visible = true;
+            this.gridProClmType.VisibleIndex = 4;
+            // 
+            // gridProClmPrice
+            // 
+            this.gridProClmPrice.Caption = "Price";
+            this.gridProClmPrice.FieldName = "Price";
+            this.gridProClmPrice.Name = "gridProClmPrice";
+            this.gridProClmPrice.Visible = true;
+            this.gridProClmPrice.VisibleIndex = 5;
+            // 
+            // gridProClmCost
+            // 
+            this.gridProClmCost.Caption = "Cost";
+            this.gridProClmCost.FieldName = "Cost";
+            this.gridProClmCost.Name = "gridProClmCost";
+            this.gridProClmCost.Visible = true;
+            this.gridProClmCost.VisibleIndex = 6;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(46, 216);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(112, 23);
+            this.txtDesc.TabIndex = 19;
+            // 
+            // btnSaveProducts
+            // 
+            this.btnSaveProducts.Location = new System.Drawing.Point(160, 252);
+            this.btnSaveProducts.Name = "btnSaveProducts";
+            this.btnSaveProducts.Size = new System.Drawing.Size(163, 35);
+            this.btnSaveProducts.TabIndex = 20;
+            this.btnSaveProducts.Text = "Save";
+            this.btnSaveProducts.UseVisualStyleBackColor = true;
+            this.btnSaveProducts.Click += new System.EventHandler(this.btnSaveProductsClick);
+            // 
+            // btnLoadProducts
+            // 
+            this.btnLoadProducts.Location = new System.Drawing.Point(339, 252);
+            this.btnLoadProducts.Name = "btnLoadProducts";
+            this.btnLoadProducts.Size = new System.Drawing.Size(163, 35);
+            this.btnLoadProducts.TabIndex = 21;
+            this.btnLoadProducts.Text = "Show";
+            this.btnLoadProducts.UseVisualStyleBackColor = true;
+            this.btnLoadProducts.Click += new System.EventHandler(this.btnLoadProductsClick);
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(301, 216);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(112, 23);
+            this.txtPrice.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(78, 182);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 15);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "desc-type-price-cost";
+            // 
+            // txtCost
+            // 
+            this.txtCost.Location = new System.Drawing.Point(433, 216);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(112, 23);
+            this.txtCost.TabIndex = 24;
+            // 
+            // cmbProType
+            // 
+            this.cmbProType.FormattingEnabled = true;
+            this.cmbProType.Items.AddRange(new object[] {
+            "Coffee",
+            "Beverages",
+            "Food"});
+            this.cmbProType.Location = new System.Drawing.Point(181, 216);
+            this.cmbProType.Name = "cmbProType";
+            this.cmbProType.Size = new System.Drawing.Size(114, 23);
+            this.cmbProType.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 582);
+            this.Controls.Add(this.cmbProType);
+            this.Controls.Add(this.txtCost);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.btnLoadProducts);
+            this.Controls.Add(this.btnSaveProducts);
+            this.Controls.Add(this.txtDesc);
+            this.Controls.Add(this.gridProducts);
             this.Controls.Add(this.gridEmployee);
             this.Controls.Add(this.numCap);
             this.Controls.Add(this.numFredo);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnShow);
+            this.Controls.Add(this.btnShowEmployees);
             this.Controls.Add(this.chkCap);
             this.Controls.Add(this.chkFredo);
             this.Controls.Add(this.cmbType);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnSaveEmployees);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.grvProducts);
-            this.Controls.Add(this.grvEmployee);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFredo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DataGridView grvEmployee;
-        private DataGridView grvProducts;
-        private DataGridViewTextBoxColumn clmEmployeeID;
-        private DataGridViewTextBoxColumn clmName;
-        private DataGridViewTextBoxColumn clmSurname;
-        private DataGridViewTextBoxColumn clmEmployeeType;
-        private DataGridViewTextBoxColumn clmSalary;
-        private DataGridViewTextBoxColumn clmPropertyID;
-        private DataGridViewTextBoxColumn clmPropertyCode;
-        private DataGridViewTextBoxColumn clmPropertyDescription;
-        private DataGridViewTextBoxColumn clmPCID;
-        private DataGridViewTextBoxColumn clmTypeOfProduct;
-        private DataGridViewTextBoxColumn clmPrice;
-        private DataGridViewTextBoxColumn clmCost;
         private TextBox txtName;
         private TextBox txtSurname;
         private TextBox txtSalary;
-        private Button btnSave;
+        private Button btnSaveEmployees;
         private ComboBox cmbType;
         private CheckBox chkFredo;
         private CheckBox chkCap;
-        private Button btnShow;
+        private Button btnShowEmployees;
         private Button button1;
         private NumericUpDown numFredo;
         private NumericUpDown numCap;
@@ -450,5 +427,21 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridclmSurname;
         private DevExpress.XtraGrid.Columns.GridColumn gridclmEmployeeType;
         private DevExpress.XtraGrid.Columns.GridColumn gridclmSalary;
+        private DevExpress.XtraGrid.GridControl gridProducts;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridProClmID;
+        private TextBox txtDesc;
+        private DevExpress.XtraGrid.Columns.GridColumn gridProClmCode;
+        private DevExpress.XtraGrid.Columns.GridColumn gridProClmDesc;
+        private DevExpress.XtraGrid.Columns.GridColumn gridProClmProID;
+        private DevExpress.XtraGrid.Columns.GridColumn gridProClmType;
+        private DevExpress.XtraGrid.Columns.GridColumn gridProClmPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn gridProClmCost;
+        private Button btnSaveProducts;
+        private Button btnLoadProducts;
+        private TextBox txtPrice;
+        private Label label1;
+        private TextBox txtCost;
+        private ComboBox cmbProType;
     }
 }
