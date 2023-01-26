@@ -162,22 +162,6 @@ namespace Session_11
             return test;
 
         }
-<<<<<<< HEAD
-
-        private void CustomerForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkFood_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-=======
         public void LedgerEntry()
         {
             int rent = 3000;
@@ -194,7 +178,6 @@ namespace Session_11
                 Total = total
             };
             _CoffeeShopData.monthlyLedgers.Add(ledger);
->>>>>>> 91a94693384bf24133f5c38a7f47f4ecba674d96
         }
     }
 }

@@ -125,12 +125,7 @@
             // 
             // btnSave
             // 
-<<<<<<< HEAD
-            this.btnSave.Location = new System.Drawing.Point(1046, 56);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-=======
             this.btnSave.Location = new System.Drawing.Point(818, 45);
->>>>>>> 91a94693384bf24133f5c38a7f47f4ecba674d96
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(163, 35);
             this.btnSave.TabIndex = 13;
@@ -297,19 +292,6 @@
             this.btnSaveProducts.UseVisualStyleBackColor = true;
             this.btnSaveProducts.Click += new System.EventHandler(this.btnSaveProductsClick);
             // 
-<<<<<<< HEAD
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(1046, 117);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(186, 47);
-            this.btnLoad.TabIndex = 21;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            // 
-=======
->>>>>>> 91a94693384bf24133f5c38a7f47f4ecba674d96
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(544, 322);
