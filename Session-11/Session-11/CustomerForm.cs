@@ -182,7 +182,9 @@ namespace Session_11
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            EntryPoint entryPoint = new EntryPoint();
+            entryPoint.Show();
         }
     }
 }
