@@ -179,5 +179,10 @@ namespace Session_11
             };
             _CoffeeShopData.monthlyLedgers.Add(ledger);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

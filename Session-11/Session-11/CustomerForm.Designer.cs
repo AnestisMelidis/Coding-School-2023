@@ -58,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -141,6 +142,7 @@
             this.gridSales.Name = "gridSales";
             this.gridSales.Size = new System.Drawing.Size(711, 151);
             this.gridSales.TabIndex = 37;
+            this.gridSales.UseEmbeddedNavigator = true;
             this.gridSales.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -161,6 +163,7 @@
             this.clmDescription.FieldName = "Description";
             this.clmDescription.MinWidth = 23;
             this.clmDescription.Name = "clmDescription";
+            this.clmDescription.OptionsColumn.ReadOnly = true;
             this.clmDescription.Visible = true;
             this.clmDescription.VisibleIndex = 0;
             this.clmDescription.Width = 86;
@@ -181,6 +184,7 @@
             this.clmPrice.FieldName = "Price";
             this.clmPrice.MinWidth = 23;
             this.clmPrice.Name = "clmPrice";
+            this.clmPrice.OptionsColumn.ReadOnly = true;
             this.clmPrice.Visible = true;
             this.clmPrice.VisibleIndex = 1;
             this.clmPrice.Width = 86;
@@ -191,6 +195,7 @@
             this.clmTotal.FieldName = "TotalPrice";
             this.clmTotal.MinWidth = 23;
             this.clmTotal.Name = "clmTotal";
+            this.clmTotal.OptionsColumn.ReadOnly = true;
             this.clmTotal.Visible = true;
             this.clmTotal.VisibleIndex = 3;
             this.clmTotal.Width = 86;
@@ -237,6 +242,7 @@
             this.clmID.FieldName = "ID";
             this.clmID.MinWidth = 23;
             this.clmID.Name = "clmID";
+            this.clmID.OptionsColumn.ReadOnly = true;
             this.clmID.Visible = true;
             this.clmID.VisibleIndex = 0;
             this.clmID.Width = 86;
@@ -247,6 +253,7 @@
             this.clmDate.FieldName = "Date";
             this.clmDate.MinWidth = 23;
             this.clmDate.Name = "clmDate";
+            this.clmDate.OptionsColumn.ReadOnly = true;
             this.clmDate.Visible = true;
             this.clmDate.VisibleIndex = 1;
             this.clmDate.Width = 86;
@@ -257,6 +264,7 @@
             this.clmCustomerID.FieldName = "CustomerID";
             this.clmCustomerID.MinWidth = 23;
             this.clmCustomerID.Name = "clmCustomerID";
+            this.clmCustomerID.OptionsColumn.ReadOnly = true;
             this.clmCustomerID.Visible = true;
             this.clmCustomerID.VisibleIndex = 2;
             this.clmCustomerID.Width = 86;
@@ -267,6 +275,7 @@
             this.clmEmployeeID.FieldName = "EmployeeID";
             this.clmEmployeeID.MinWidth = 23;
             this.clmEmployeeID.Name = "clmEmployeeID";
+            this.clmEmployeeID.OptionsColumn.ReadOnly = true;
             this.clmEmployeeID.Visible = true;
             this.clmEmployeeID.VisibleIndex = 3;
             this.clmEmployeeID.Width = 86;
@@ -277,6 +286,7 @@
             this.clmPayment.FieldName = "TypeOfPayment";
             this.clmPayment.MinWidth = 23;
             this.clmPayment.Name = "clmPayment";
+            this.clmPayment.OptionsColumn.ReadOnly = true;
             this.clmPayment.Visible = true;
             this.clmPayment.VisibleIndex = 4;
             this.clmPayment.Width = 86;
@@ -287,6 +297,7 @@
             this.clmTotalPrice.FieldName = "TotalPrice";
             this.clmTotalPrice.MinWidth = 23;
             this.clmTotalPrice.Name = "clmTotalPrice";
+            this.clmTotalPrice.OptionsColumn.ReadOnly = true;
             this.clmTotalPrice.Visible = true;
             this.clmTotalPrice.VisibleIndex = 5;
             this.clmTotalPrice.Width = 86;
@@ -306,7 +317,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(316, 681);
+            this.pictureBox1.Location = new System.Drawing.Point(290, 681);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(268, 60);
             this.pictureBox1.TabIndex = 41;
@@ -325,7 +336,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(68, 21);
+            this.pictureBox3.Location = new System.Drawing.Point(68, 26);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(507, 58);
             this.pictureBox3.TabIndex = 43;
@@ -371,12 +382,23 @@
             this.label4.TabIndex = 47;
             this.label4.Text = "Payment Method";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(694, 670);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(827, 738);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -441,6 +463,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Button button1;
         //private Button btnAddCart;
     }
 }
