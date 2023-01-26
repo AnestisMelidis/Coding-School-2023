@@ -58,6 +58,7 @@ namespace Session_11
             Product newProduct = new Product()
             {
                 Description = txtDesc.Text,
+                Code = GetCode(),
                 TypeOfProduct = (ProductType)Enum.Parse(typeof(ProductType), cmbProType.SelectedItem.ToString()),
                 Price = Convert.ToDecimal(txtPrice.Text),
                 Cost = Convert.ToDecimal(txtCost.Text)
@@ -93,6 +94,28 @@ namespace Session_11
             monthlyLedgers.Add(ledger);
             gridLedger.DataSource = null;
             gridLedger.DataSource = monthlyLedgers;
+        }
+        public int GetCode()
+        {
+            int code = -1;
+            List<Product> existingProducts = _CoffeeShopData.products;
+            Int32 length = existingProducts.Count;
+            if (length == 0)
+            {
+                code = 0;
+            }
+            else
+            {
+                foreach (var i in existingProducts)
+                {
+                    if (code < i.Code)
+                    {
+                        code = i.Code;
+                    }
+                }
+            }
+            code++;
+            return code;
         }
         private void btnLedger_Click(object sender, EventArgs e)
         {
