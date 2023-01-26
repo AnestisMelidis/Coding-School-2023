@@ -21,7 +21,6 @@ namespace Library {
         public Guid ProductCategoryID { get; set; }
         public ProductType TypeOfProduct { get; set; }
         
-        //public List<Product>? products;
         public decimal Price { get; set; }
         public decimal Cost { get; set; }
 
@@ -33,15 +32,6 @@ namespace Library {
             ID = Guid.NewGuid();
             Code = Guid.NewGuid();
             ProductCategoryID = Guid.NewGuid();
-            List<Product>? products = new List<Product>();
-
         }
-
-
-        
-        
-
-        //Methods
-
     }
 }

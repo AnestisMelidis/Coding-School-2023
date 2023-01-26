@@ -17,12 +17,10 @@ namespace Library
         public decimal TotalCost { get; set; }        
         public decimal TotalPrice { get; set; }
 
-        
         public TransactionLine()
         {
             ID = Guid.NewGuid();
             Date= DateTime.Now;
-            
         }
     }
 }

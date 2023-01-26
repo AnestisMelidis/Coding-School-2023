@@ -15,22 +15,10 @@ namespace Library {
         public int Code { get; set; }
         public string Description { get; set; }
 
-        
-        
-
-        
-
         public ProductCategory()
         {
             ID = Guid.NewGuid();
            
         }
-
-        //Constractors
-       
-
-        //Methods
-
-
     }
 }

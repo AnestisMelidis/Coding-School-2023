@@ -21,6 +21,8 @@ namespace Session_11
         private CoffeeShopData _CoffeeShopData = new CoffeeShopData();
         public decimal Discount = 0.85m;
         Serializer serializer = new Serializer();
+        List<TransactionLine> lines = new List<TransactionLine>();
+        List<Transaction> trans = new List<Transaction>(); 
 
         public CustomerForm(CoffeeShopData test)
         {
@@ -92,6 +94,7 @@ namespace Session_11
         {
 
             List<Product> products = _CoffeeShopData.products;
+            
             var test = (products.Where(x => x.Description == cmbMenu.Text).ToList());
             TransactionLine transactionLine = new TransactionLine()
             {
@@ -102,10 +105,10 @@ namespace Session_11
                 TotalCost = test[0].Cost * Convert.ToInt32(numQuantity.Text),
                 TotalPrice = test[0].Price * Convert.ToInt32(numQuantity.Text)
             };
-            _CoffeeShopData.transactionLines.Add(transactionLine);
+            lines.Add(transactionLine);
 
             gridSales.DataSource = null;
-            gridSales.DataSource = _CoffeeShopData.transactionLines;
+            gridSales.DataSource = lines;
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
@@ -117,8 +120,8 @@ namespace Session_11
             int length = employees.Count;
             Random ran = new Random();
             int num = ran.Next(0, length);
-            decimal totalPrice = transactionLine.Sum(x => x.TotalPrice);
-            decimal totalCost = transactionLine.Sum(x => x.TotalCost);
+            decimal totalPrice = lines.Sum(x => x.TotalPrice);
+            decimal totalCost = lines.Sum(x => x.TotalCost);
             totalPrice = DiscountCheck(totalPrice);
             var payment = CheckPayment(totalPrice);
             //MessageBox.Show("The total price after discount is: " + total.ToString());
@@ -131,16 +134,14 @@ namespace Session_11
                 Cost = totalCost
             };
 
+            lines.Clear();
+            trans.Add(transaction);
             _CoffeeShopData.transactions.Add(transaction);
             LedgerEntry();
             gridSales.DataSource = null;
             gridTransaction.DataSource = null;
-            gridTransaction.DataSource = _CoffeeShopData.transactions;
-            
+            gridTransaction.DataSource = trans;
             WriteJson(_CoffeeShopData, "test1.json");
-            
-           
-           
 
         }
         public decimal DiscountCheck(decimal price)

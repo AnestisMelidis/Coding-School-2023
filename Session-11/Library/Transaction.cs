@@ -17,12 +17,10 @@ namespace Library {
         public MethodPayment TypeOfPayment { get; set; }
         public decimal Cost { get; set; }
         public decimal TotalPrice { get; set; }
-       
 
         public Transaction() {
             ID = Guid.NewGuid();
             Date = DateTime.Now;
-            
         }
     }
 }
