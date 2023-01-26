@@ -15,7 +15,8 @@ namespace Library {
         public Guid CustomerID { get; set; }
         public Guid EmployeeID { get; set; }
         public MethodPayment TypeOfPayment { get; set; }
-        public double TotalPrice { get; set; }
+        public decimal Cost { get; set; }
+        public decimal TotalPrice { get; set; }
 
         public Transaction() {
             ID = Guid.NewGuid();

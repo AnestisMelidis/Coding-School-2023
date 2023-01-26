@@ -21,19 +21,22 @@ namespace Session_11
         List<Employee> employees;
         List<TransactionLine> transaction_Lines;
         Serializer serializer = new Serializer();
-        
-        int cnt = 0;
+       
 
-        public Form1() {
-            
-            
-           
+        public Form1(CoffeeShopData test) {
+
+
+            _CoffeeShopData = test;
             InitializeComponent();
+
             
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-
+            gridProducts.DataSource = _CoffeeShopData.products;
+            gridEmployee.DataSource = _CoffeeShopData.employees;
+            gridLedger.DataSource = _CoffeeShopData.monthlyLedgers;
+            
         }
 
 
@@ -42,11 +45,6 @@ namespace Session_11
             serializer.SerializeToFile(obj, file);
         }
 
-        public object LoadJson(string file) {
-            object employees = serializer.DeserializeFromFile<CoffeeShopData>(file);
-            return employees;
-          
-        }
 
 
         public void btnSaveEmployeesClick(object sender, EventArgs e) 
@@ -57,7 +55,7 @@ namespace Session_11
                 Name = txtName.Text,
                 Surname = txtSurname.Text,
                 TypeOfEmployee = (EmployeeType)Enum.Parse(typeof(EmployeeType), cmbType.SelectedItem.ToString()),
-                SalaryPerMonth = Convert.ToDouble(txtSalary.Text)
+                SalaryPerMonth = Convert.ToDecimal(txtSalary.Text)
             };
 
             txtName.Text = "";
@@ -73,13 +71,11 @@ namespace Session_11
         {
             Product newProduct = new Product()
             {
-                Code = cnt,
                 Description = txtDesc.Text,
                 TypeOfProduct = (ProductType)Enum.Parse(typeof(ProductType), cmbProType.SelectedItem.ToString()),
-                Price = Convert.ToDouble(txtPrice.Text),
-                Cost = Convert.ToDouble(txtCost.Text)
+                Price = Convert.ToDecimal(txtPrice.Text),
+                Cost = Convert.ToDecimal(txtCost.Text)
             };
-            cnt++;
             txtDesc.Text = "";
             cmbProType.Text = "";
             txtPrice.Text = "";
@@ -89,17 +85,6 @@ namespace Session_11
             gridProducts.DataSource = _CoffeeShopData.products;
         }
 
-
-
-        public void btnLoadJson (object sender, EventArgs e)
-        {
-            _CoffeeShopData = (CoffeeShopData)LoadJson("test1.json");
-            gridProducts.DataSource = null;
-            gridEmployee.DataSource = null;
-            gridProducts.DataSource = _CoffeeShopData.products;
-            gridEmployee.DataSource = _CoffeeShopData.employees;
-
-        }
         public void btnSaveJson(object sender, EventArgs e)
         {
             WriteJson(_CoffeeShopData, "test1.json") ;
@@ -112,5 +97,7 @@ namespace Session_11
             entryPoint.Show();
 
         }
+
+
     } 
 }

@@ -18,6 +18,7 @@ namespace Library
 
         public List<TransactionLine> transactionLines { get; set; }
         public List<Transaction> transactions{ get; set; }
+        public List<MonthlyLedger> monthlyLedgers { get; set; }
 
 
 
@@ -25,13 +26,11 @@ namespace Library
         // constructors
         public CoffeeShopData()
         {
-            //List<Product>? products = new List<Product>();
-            //List<Employee>? employees = new List<Employee>();
-            //List<TransactionLine>? transactionLines = new List<TransactionLine>();
             products = new List<Product>();
             employees = new List<Employee>();
             transactionLines = new List<TransactionLine>();
             transactions = new List<Transaction>();
+            monthlyLedgers = new List<MonthlyLedger>();
         }
     }
 }

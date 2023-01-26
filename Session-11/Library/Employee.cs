@@ -24,7 +24,7 @@ namespace Library
        //public List<Employee>? employees;
 
 
-        public double SalaryPerMonth { get; set; }
+        public decimal SalaryPerMonth { get; set; }
 
         //Constructors
         public Employee()

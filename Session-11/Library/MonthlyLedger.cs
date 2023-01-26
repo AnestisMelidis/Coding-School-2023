@@ -9,22 +9,17 @@ namespace Library
     public class MonthlyLedger
     {
         //Properties
-        public DateTime Year { get; set; }
-        public DateTime Month { get; set; }
-        public double Income { get; set; }
-        public double Expenses { get; set; }
-        public double Total { get; set; }
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public decimal Income { get; set; }
+        public decimal Expenses { get; set; }
+        public decimal Total { get; set; }
 
         //Constructors
         public MonthlyLedger() 
         {
-
-        }
-
-        //Methods
-        public void GetIncome(double income, DateTime date)
-        {
-
+            Year = DateTime.Now.Year;
+            Month = DateTime.Now.Month;
         }
     }
 }

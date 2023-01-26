@@ -19,13 +19,21 @@ namespace Session_11
     {
         public CoffeeShopData Data { get; set; }
         private CoffeeShopData _CoffeeShopData = new CoffeeShopData();
-        public double Discount = 0.85;
+        public decimal Discount = 0.85m;
+        Serializer serializer = new Serializer();
+        List<TransactionLine> lines = new List<TransactionLine>();
+        List<Transaction> trans = new List<Transaction>(); 
 
         public CustomerForm(CoffeeShopData test)
         {
             InitializeComponent();
             _CoffeeShopData = test;
 
+        }
+
+        public void WriteJson(object obj, string file)
+        {
+            serializer.SerializeToFile(obj, file);
         }
 
         private void chkCofee_Checked(object sender, EventArgs e)
@@ -86,6 +94,7 @@ namespace Session_11
         {
 
             List<Product> products = _CoffeeShopData.products;
+            
             var test = (products.Where(x => x.Description == cmbMenu.Text).ToList());
             TransactionLine transactionLine = new TransactionLine()
             {
@@ -93,12 +102,13 @@ namespace Session_11
                 Quantity = Convert.ToInt32(numQuantity.Text),
                 ProductID = test[0].ProductCategoryID,
                 Price = test[0].Price,
+                TotalCost = test[0].Cost * Convert.ToInt32(numQuantity.Text),
                 TotalPrice = test[0].Price * Convert.ToInt32(numQuantity.Text)
             };
-            _CoffeeShopData.transactionLines.Add(transactionLine);
+            lines.Add(transactionLine);
 
             gridSales.DataSource = null;
-            gridSales.DataSource = _CoffeeShopData.transactionLines;
+            gridSales.DataSource = lines;
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
@@ -110,24 +120,31 @@ namespace Session_11
             int length = employees.Count;
             Random ran = new Random();
             int num = ran.Next(0, length);
-            double total = transactionLine.Sum(x => x.TotalPrice);
-            total = DiscountCheck(total);
-            var payment = CheckPayment(total);
+            decimal totalPrice = lines.Sum(x => x.TotalPrice);
+            decimal totalCost = lines.Sum(x => x.TotalCost);
+            totalPrice = DiscountCheck(totalPrice);
+            var payment = CheckPayment(totalPrice);
             //MessageBox.Show("The total price after discount is: " + total.ToString());
             Transaction transaction = new Transaction()
             {
                 CustomerID = customer.ID,
                 EmployeeID = employees[num].ID,
                 TypeOfPayment = (MethodPayment)payment,
-                TotalPrice = total
+                TotalPrice = totalPrice,
+                Cost = totalCost
             };
 
+            lines.Clear();
+            trans.Add(transaction);
             _CoffeeShopData.transactions.Add(transaction);
+            LedgerEntry();
             gridSales.DataSource = null;
             gridTransaction.DataSource = null;
-            gridTransaction.DataSource = _CoffeeShopData.transactions;
+            gridTransaction.DataSource = trans;
+            WriteJson(_CoffeeShopData, "test1.json");
+
         }
-        public double DiscountCheck(double price)
+        public decimal DiscountCheck(decimal price)
         {
             if (price > 10)
             {
@@ -135,7 +152,7 @@ namespace Session_11
             }
             return price;
         }
-        public object CheckPayment(double price)
+        public object CheckPayment(decimal price)
         {
             var test = (MethodPayment)Enum.Parse(typeof(MethodPayment), cmbPayment.SelectedItem.ToString());
             if (price > 50) 
@@ -145,6 +162,39 @@ namespace Session_11
             return test;
 
         }
+<<<<<<< HEAD
 
+        private void CustomerForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkFood_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+=======
+        public void LedgerEntry()
+        {
+            int rent = 3000;
+            List<Transaction> transactions = _CoffeeShopData.transactions;
+            List<Employee> employees = _CoffeeShopData.employees;
+            decimal income = transactions.Sum(x => x.TotalPrice);
+            decimal expensesProd = transactions.Sum(x => x.Cost);
+            decimal expensesSal = employees.Sum(x => x.SalaryPerMonth);
+            decimal total = (income - expensesProd - expensesSal - rent);
+            MonthlyLedger ledger = new MonthlyLedger()
+            {
+                Income = income,
+                Expenses = expensesProd + expensesSal + rent,
+                Total = total
+            };
+            _CoffeeShopData.monthlyLedgers.Add(ledger);
+>>>>>>> 91a94693384bf24133f5c38a7f47f4ecba674d96
+        }
     }
 }
