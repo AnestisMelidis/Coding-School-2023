@@ -17,47 +17,34 @@ namespace Session_11
        
         public CoffeeShopData Data { get; set; }
         private CoffeeShopData _CoffeeShopData=new CoffeeShopData();
-        
         List<Product> products;
         List<Employee> employees;
         List<TransactionLine> transaction_Lines;
         Serializer serializer = new Serializer();
-       
 
-        public Form1(CoffeeShopData test) {
-
-
+        public Form1(CoffeeShopData test) 
+        {
             _CoffeeShopData = test;
-            InitializeComponent();
-
-            
+            InitializeComponent(); 
         }
-        
-        private void Form1_Load(object sender, EventArgs e) {
+
+        private void Form1_Load(object sender, EventArgs e) 
+        {
             gridProducts.DataSource = _CoffeeShopData.products;
             gridEmployee.DataSource = _CoffeeShopData.employees;
-            gridLedger.DataSource = _CoffeeShopData.monthlyLedgers;
         }
-
-
-
-        public void WriteJson(object obj, string file) {
+        public void WriteJson(object obj, string file) 
+        {
             serializer.SerializeToFile(obj, file);
         }
-
-
-
         public void btnSaveEmployeesClick(object sender, EventArgs e) 
         {
-            
-
             Employee newEmployee = new Employee() {
                 Name = txtName.Text,
                 Surname = txtSurname.Text,
                 TypeOfEmployee = (EmployeeType)Enum.Parse(typeof(EmployeeType), cmbType.SelectedItem.ToString()),
                 SalaryPerMonth = Convert.ToDecimal(txtSalary.Text)
             };
-
             txtName.Text = "";
             txtSurname.Text = "";
             cmbType.Text = "";
@@ -65,7 +52,6 @@ namespace Session_11
             _CoffeeShopData.employees.Add(newEmployee);
             gridEmployee.DataSource = null;
             gridEmployee.DataSource = _CoffeeShopData.employees;
-
         }
         public void btnSaveProductsClick(object sender, EventArgs e)
         {
@@ -84,23 +70,40 @@ namespace Session_11
             gridProducts.DataSource = null;
             gridProducts.DataSource = _CoffeeShopData.products;
         }
-
         public void btnSaveJson(object sender, EventArgs e)
         {
             WriteJson(_CoffeeShopData, "test1.json") ;
         }
-
-
-        public void button2_Click(object sender, EventArgs e) {
+        public void LedgerEntry()
+        {
+            int rent = 3000;
+            List<MonthlyLedger> monthlyLedgers= new List<MonthlyLedger>();
+            List<Transaction> transactions = _CoffeeShopData.transactions;
+            List<Employee> employees = _CoffeeShopData.employees;
+            decimal income = transactions.Sum(x => x.TotalPrice);
+            decimal expensesProd = transactions.Sum(x => x.Cost);
+            decimal expensesSal = employees.Sum(x => x.SalaryPerMonth);
+            decimal total = (income - expensesProd - expensesSal - rent);
+            MonthlyLedger ledger = new MonthlyLedger()
+            {
+                Income = income,
+                Expenses = expensesProd + expensesSal + rent,
+                Total = total
+            };
+            monthlyLedgers.Add(ledger);
+            gridLedger.DataSource = null;
+            gridLedger.DataSource = monthlyLedgers;
+        }
+        private void btnLedger_Click(object sender, EventArgs e)
+        {
+            LedgerEntry();
+        }
+        public void button2_Click(object sender, EventArgs e)
+        {
             this.Hide();
             EntryPoint entryPoint = new EntryPoint();
             entryPoint.Show();
         }
-        public void GetCode()
-        {
-            
-        }
-
 
 
     } 

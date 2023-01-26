@@ -66,6 +66,7 @@
             this.clmIncome = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmExpenses = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnLedger = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
@@ -469,12 +470,23 @@
             this.clmTotal.Visible = true;
             this.clmTotal.VisibleIndex = 4;
             // 
+            // btnLedger
+            // 
+            this.btnLedger.Location = new System.Drawing.Point(1327, 284);
+            this.btnLedger.Name = "btnLedger";
+            this.btnLedger.Size = new System.Drawing.Size(158, 41);
+            this.btnLedger.TabIndex = 38;
+            this.btnLedger.Text = "Show Ledger";
+            this.btnLedger.UseVisualStyleBackColor = true;
+            this.btnLedger.Click += new System.EventHandler(this.btnLedger_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1549, 679);
+            this.Controls.Add(this.btnLedger);
             this.Controls.Add(this.gridLedger);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -561,5 +573,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn clmIncome;
         private DevExpress.XtraGrid.Columns.GridColumn clmExpenses;
         private DevExpress.XtraGrid.Columns.GridColumn clmTotal;
+        private Button btnLedger;
     }
 }

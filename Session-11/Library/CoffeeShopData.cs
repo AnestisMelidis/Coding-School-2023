@@ -12,13 +12,9 @@ namespace Library
 
         // properties
         public List<Product> products { get; set; }
-
         public List<Employee> employees { get; set; }
-
-
         public List<TransactionLine> transactionLines { get; set; }
         public List<Transaction> transactions{ get; set; }
-        public List<MonthlyLedger> monthlyLedgers { get; set; }
 
 
 
@@ -30,7 +26,6 @@ namespace Library
             employees = new List<Employee>();
             transactionLines = new List<TransactionLine>();
             transactions = new List<Transaction>();
-            monthlyLedgers = new List<MonthlyLedger>();
         }
     }
 }

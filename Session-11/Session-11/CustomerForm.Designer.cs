@@ -54,7 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.radCoffee = new System.Windows.Forms.RadioButton();
             this.radBeverages = new System.Windows.Forms.RadioButton();
             this.radFood = new System.Windows.Forms.RadioButton();
@@ -310,16 +310,16 @@
             this.label4.TabIndex = 47;
             this.label4.Text = "Payment Method";
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.Location = new System.Drawing.Point(607, 502);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 22);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBack.Location = new System.Drawing.Point(607, 502);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(82, 22);
+            this.btnBack.TabIndex = 48;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // radCoffee
             // 
@@ -366,7 +366,7 @@
             this.Controls.Add(this.radFood);
             this.Controls.Add(this.radBeverages);
             this.Controls.Add(this.radCoffee);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -423,7 +423,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Button button1;
+        private Button btnBack;
         private RadioButton radCoffee;
         private RadioButton radBeverages;
         private RadioButton radFood;

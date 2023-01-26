@@ -81,7 +81,6 @@ namespace Session_11
             lines.Clear();
             trans.Add(transaction);
             _CoffeeShopData.transactions.Add(transaction);
-            LedgerEntry();
             gridSales.DataSource = null;
             gridTransaction.DataSource = null;
             gridTransaction.DataSource = trans;
@@ -106,23 +105,7 @@ namespace Session_11
             return test;
 
         }
-        public void LedgerEntry()
-        {
-            int rent = 3000;
-            List<Transaction> transactions = _CoffeeShopData.transactions;
-            List<Employee> employees = _CoffeeShopData.employees;
-            decimal income = transactions.Sum(x => x.TotalPrice);
-            decimal expensesProd = transactions.Sum(x => x.Cost);
-            decimal expensesSal = employees.Sum(x => x.SalaryPerMonth);
-            decimal total = (income - expensesProd - expensesSal - rent);
-            MonthlyLedger ledger = new MonthlyLedger()
-            {
-                Income = income,
-                Expenses = expensesProd + expensesSal + rent,
-                Total = total
-            };
-            _CoffeeShopData.monthlyLedgers.Add(ledger);
-        }
+
 
 
 
@@ -169,7 +152,7 @@ namespace Session_11
                 }
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             EntryPoint entryPoint = new EntryPoint();
