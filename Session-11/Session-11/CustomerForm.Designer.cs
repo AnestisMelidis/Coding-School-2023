@@ -44,7 +44,6 @@
             this.btnCheckout = new System.Windows.Forms.Button();
             this.gridTransaction = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.clmID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmCustomerID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmEmployeeID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -147,6 +146,7 @@
             this.clmTotal});
             this.gridView1.GridControl = this.gridSales;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // clmDescription
             // 
@@ -200,13 +200,13 @@
             this.gridTransaction.Name = "gridTransaction";
             this.gridTransaction.Size = new System.Drawing.Size(630, 105);
             this.gridTransaction.TabIndex = 39;
+            this.gridTransaction.UseEmbeddedNavigator = true;
             this.gridTransaction.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.clmID,
             this.clmDate,
             this.clmCustomerID,
             this.clmEmployeeID,
@@ -214,15 +214,7 @@
             this.clmTotalPrice});
             this.gridView2.GridControl = this.gridTransaction;
             this.gridView2.Name = "gridView2";
-            // 
-            // clmID
-            // 
-            this.clmID.Caption = "ID";
-            this.clmID.FieldName = "ID";
-            this.clmID.Name = "clmID";
-            this.clmID.OptionsColumn.ReadOnly = true;
-            this.clmID.Visible = true;
-            this.clmID.VisibleIndex = 0;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // clmDate
             // 
@@ -231,7 +223,7 @@
             this.clmDate.Name = "clmDate";
             this.clmDate.OptionsColumn.ReadOnly = true;
             this.clmDate.Visible = true;
-            this.clmDate.VisibleIndex = 1;
+            this.clmDate.VisibleIndex = 0;
             // 
             // clmCustomerID
             // 
@@ -240,7 +232,7 @@
             this.clmCustomerID.Name = "clmCustomerID";
             this.clmCustomerID.OptionsColumn.ReadOnly = true;
             this.clmCustomerID.Visible = true;
-            this.clmCustomerID.VisibleIndex = 2;
+            this.clmCustomerID.VisibleIndex = 1;
             // 
             // clmEmployeeID
             // 
@@ -249,7 +241,7 @@
             this.clmEmployeeID.Name = "clmEmployeeID";
             this.clmEmployeeID.OptionsColumn.ReadOnly = true;
             this.clmEmployeeID.Visible = true;
-            this.clmEmployeeID.VisibleIndex = 3;
+            this.clmEmployeeID.VisibleIndex = 2;
             // 
             // clmPayment
             // 
@@ -258,7 +250,7 @@
             this.clmPayment.Name = "clmPayment";
             this.clmPayment.OptionsColumn.ReadOnly = true;
             this.clmPayment.Visible = true;
-            this.clmPayment.VisibleIndex = 4;
+            this.clmPayment.VisibleIndex = 3;
             // 
             // clmTotalPrice
             // 
@@ -267,7 +259,7 @@
             this.clmTotalPrice.Name = "clmTotalPrice";
             this.clmTotalPrice.OptionsColumn.ReadOnly = true;
             this.clmTotalPrice.Visible = true;
-            this.clmTotalPrice.VisibleIndex = 5;
+            this.clmTotalPrice.VisibleIndex = 4;
             // 
             // cmbPayment
             // 
@@ -418,7 +410,6 @@
         private Button btnCheckout;
         private DevExpress.XtraGrid.GridControl gridTransaction;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn clmID;
         private DevExpress.XtraGrid.Columns.GridColumn clmDate;
         private DevExpress.XtraGrid.Columns.GridColumn clmCustomerID;
         private DevExpress.XtraGrid.Columns.GridColumn clmEmployeeID;

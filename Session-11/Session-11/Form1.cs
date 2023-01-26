@@ -8,6 +8,7 @@ using DevExpress.XtraSpreadsheet.Model;
 using Library;
 using System.Collections.ObjectModel;
 using System.Linq;
+using static DevExpress.Utils.Svg.CommonSvgImages;
 using static Library.Product;
 
 namespace Session_11
@@ -31,12 +32,20 @@ namespace Session_11
 
             
         }
-
+        
         private void Form1_Load(object sender, EventArgs e) {
+            DevExpress.XtraGrid.GridControl gridControl;
+            DevExpress.XtraGrid.Views.Grid.GridView gridEmployee;
             gridProducts.DataSource = _CoffeeShopData.products;
             gridEmployee.DataSource = _CoffeeShopData.employees;
             gridLedger.DataSource = _CoffeeShopData.monthlyLedgers;
-            
+
+
+
+            //gridView.OptionsView.ShowGroupPanel = true
+
+
+            gridEmployee.OptionsView.ShowGroupPanel = false;
         }
 
 

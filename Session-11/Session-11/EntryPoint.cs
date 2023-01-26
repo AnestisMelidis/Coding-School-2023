@@ -9,11 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static DevExpress.Utils.Svg.CommonSvgImages;
 
 namespace Session_11 {
     public partial class EntryPoint : Form {
 
+        /*DevExpress.XtraGrid.GridControl gridControl;
+        DevExpress.XtraGrid.Views.Grid.GridView gridView;*/
 
+
+        
         public CoffeeShopData Data { get; set; }
         private CoffeeShopData _CoffeeShopData = new CoffeeShopData();
         Serializer serializer = new Serializer();

@@ -32,17 +32,14 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.gridEmployee = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridclmID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridclmName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridclmSurname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridclmEmployeeType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridclmSalary = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridProducts = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridProClmID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridProClmCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridProClmDesc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridProClmProID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridProClmType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridProClmPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridProClmCost = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -81,34 +78,30 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(315, 80);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Location = new System.Drawing.Point(276, 60);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(127, 27);
+            this.txtName.Size = new System.Drawing.Size(112, 23);
             this.txtName.TabIndex = 2;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(450, 80);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSurname.Location = new System.Drawing.Point(394, 60);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(127, 27);
+            this.txtSurname.Size = new System.Drawing.Size(112, 23);
             this.txtSurname.TabIndex = 3;
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(720, 80);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSalary.Location = new System.Drawing.Point(630, 60);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(127, 27);
+            this.txtSalary.Size = new System.Drawing.Size(112, 23);
             this.txtSalary.TabIndex = 5;
             // 
             // btnSaveEmployees
             // 
-            this.btnSaveEmployees.Location = new System.Drawing.Point(459, 117);
-            this.btnSaveEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSaveEmployees.Location = new System.Drawing.Point(402, 88);
             this.btnSaveEmployees.Name = "btnSaveEmployees";
-            this.btnSaveEmployees.Size = new System.Drawing.Size(186, 47);
+            this.btnSaveEmployees.Size = new System.Drawing.Size(163, 35);
             this.btnSaveEmployees.TabIndex = 7;
             this.btnSaveEmployees.Text = "Add";
             this.btnSaveEmployees.UseVisualStyleBackColor = true;
@@ -122,18 +115,16 @@
             "Cashier",
             "Barista",
             "Waiter"});
-            this.cmbType.Location = new System.Drawing.Point(584, 80);
-            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbType.Location = new System.Drawing.Point(511, 60);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(130, 28);
+            this.cmbType.Size = new System.Drawing.Size(114, 23);
             this.cmbType.TabIndex = 8;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(935, 60);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSave.Location = new System.Drawing.Point(818, 45);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(186, 47);
+            this.btnSave.Size = new System.Drawing.Size(163, 35);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -141,12 +132,10 @@
             // 
             // gridEmployee
             // 
-            this.gridEmployee.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridEmployee.Location = new System.Drawing.Point(38, 199);
+            this.gridEmployee.Location = new System.Drawing.Point(33, 149);
             this.gridEmployee.MainView = this.gridView1;
-            this.gridEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridEmployee.Name = "gridEmployee";
-            this.gridEmployee.Size = new System.Drawing.Size(866, 175);
+            this.gridEmployee.Size = new System.Drawing.Size(758, 131);
             this.gridEmployee.TabIndex = 17;
             this.gridEmployee.UseEmbeddedNavigator = true;
             this.gridEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -155,73 +144,52 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridclmID,
             this.gridclmName,
             this.gridclmSurname,
             this.gridclmEmployeeType,
             this.gridclmSalary});
-            this.gridView1.DetailHeight = 467;
             this.gridView1.GridControl = this.gridEmployee;
             this.gridView1.Name = "gridView1";
-            // 
-            // gridclmID
-            // 
-            this.gridclmID.Caption = "ID";
-            this.gridclmID.FieldName = "ID";
-            this.gridclmID.MinWidth = 23;
-            this.gridclmID.Name = "gridclmID";
-            this.gridclmID.Visible = true;
-            this.gridclmID.VisibleIndex = 0;
-            this.gridclmID.Width = 86;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridclmName
             // 
             this.gridclmName.Caption = "Name";
             this.gridclmName.FieldName = "Name";
-            this.gridclmName.MinWidth = 23;
             this.gridclmName.Name = "gridclmName";
             this.gridclmName.Visible = true;
-            this.gridclmName.VisibleIndex = 1;
-            this.gridclmName.Width = 86;
+            this.gridclmName.VisibleIndex = 0;
             // 
             // gridclmSurname
             // 
             this.gridclmSurname.Caption = "Surname";
             this.gridclmSurname.FieldName = "Surname";
-            this.gridclmSurname.MinWidth = 23;
             this.gridclmSurname.Name = "gridclmSurname";
             this.gridclmSurname.Visible = true;
-            this.gridclmSurname.VisibleIndex = 2;
-            this.gridclmSurname.Width = 86;
+            this.gridclmSurname.VisibleIndex = 1;
             // 
             // gridclmEmployeeType
             // 
             this.gridclmEmployeeType.Caption = "EmployeeType";
             this.gridclmEmployeeType.FieldName = "TypeOfEmployee";
-            this.gridclmEmployeeType.MinWidth = 23;
             this.gridclmEmployeeType.Name = "gridclmEmployeeType";
             this.gridclmEmployeeType.Visible = true;
-            this.gridclmEmployeeType.VisibleIndex = 3;
-            this.gridclmEmployeeType.Width = 86;
+            this.gridclmEmployeeType.VisibleIndex = 2;
             // 
             // gridclmSalary
             // 
             this.gridclmSalary.Caption = "Salary";
             this.gridclmSalary.FieldName = "SalaryPerMonth";
-            this.gridclmSalary.MinWidth = 23;
             this.gridclmSalary.Name = "gridclmSalary";
             this.gridclmSalary.Visible = true;
-            this.gridclmSalary.VisibleIndex = 4;
-            this.gridclmSalary.Width = 86;
+            this.gridclmSalary.VisibleIndex = 3;
             // 
             // gridProducts
             // 
-            this.gridProducts.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridProducts.Location = new System.Drawing.Point(38, 564);
+            this.gridProducts.Location = new System.Drawing.Point(33, 423);
             this.gridProducts.MainView = this.gridView2;
-            this.gridProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridProducts.Name = "gridProducts";
-            this.gridProducts.Size = new System.Drawing.Size(857, 172);
+            this.gridProducts.Size = new System.Drawing.Size(750, 129);
             this.gridProducts.TabIndex = 18;
             this.gridProducts.UseEmbeddedNavigator = true;
             this.gridProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -230,101 +198,67 @@
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridProClmID,
             this.gridProClmCode,
             this.gridProClmDesc,
-            this.gridProClmProID,
             this.gridProClmType,
             this.gridProClmPrice,
             this.gridProClmCost});
-            this.gridView2.DetailHeight = 467;
             this.gridView2.GridControl = this.gridProducts;
             this.gridView2.Name = "gridView2";
-            // 
-            // gridProClmID
-            // 
-            this.gridProClmID.Caption = "ID";
-            this.gridProClmID.FieldName = "ID";
-            this.gridProClmID.MinWidth = 23;
-            this.gridProClmID.Name = "gridProClmID";
-            this.gridProClmID.Visible = true;
-            this.gridProClmID.VisibleIndex = 0;
-            this.gridProClmID.Width = 86;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // gridProClmCode
             // 
             this.gridProClmCode.Caption = "Code";
             this.gridProClmCode.FieldName = "Code";
-            this.gridProClmCode.MinWidth = 23;
             this.gridProClmCode.Name = "gridProClmCode";
             this.gridProClmCode.Visible = true;
-            this.gridProClmCode.VisibleIndex = 1;
-            this.gridProClmCode.Width = 86;
+            this.gridProClmCode.VisibleIndex = 0;
             // 
             // gridProClmDesc
             // 
             this.gridProClmDesc.Caption = "Description";
             this.gridProClmDesc.FieldName = "Description";
-            this.gridProClmDesc.MinWidth = 23;
             this.gridProClmDesc.Name = "gridProClmDesc";
             this.gridProClmDesc.Visible = true;
-            this.gridProClmDesc.VisibleIndex = 2;
-            this.gridProClmDesc.Width = 86;
-            // 
-            // gridProClmProID
-            // 
-            this.gridProClmProID.Caption = "ProductID";
-            this.gridProClmProID.FieldName = "ProductCategoryID";
-            this.gridProClmProID.MinWidth = 23;
-            this.gridProClmProID.Name = "gridProClmProID";
-            this.gridProClmProID.Visible = true;
-            this.gridProClmProID.VisibleIndex = 3;
-            this.gridProClmProID.Width = 86;
+            this.gridProClmDesc.VisibleIndex = 1;
             // 
             // gridProClmType
             // 
             this.gridProClmType.Caption = "Type";
             this.gridProClmType.FieldName = "TypeOfProduct";
-            this.gridProClmType.MinWidth = 23;
             this.gridProClmType.Name = "gridProClmType";
             this.gridProClmType.Visible = true;
-            this.gridProClmType.VisibleIndex = 4;
-            this.gridProClmType.Width = 86;
+            this.gridProClmType.VisibleIndex = 2;
             // 
             // gridProClmPrice
             // 
             this.gridProClmPrice.Caption = "Price";
             this.gridProClmPrice.FieldName = "Price";
-            this.gridProClmPrice.MinWidth = 23;
             this.gridProClmPrice.Name = "gridProClmPrice";
             this.gridProClmPrice.Visible = true;
-            this.gridProClmPrice.VisibleIndex = 5;
-            this.gridProClmPrice.Width = 86;
+            this.gridProClmPrice.VisibleIndex = 3;
             // 
             // gridProClmCost
             // 
             this.gridProClmCost.Caption = "Cost";
             this.gridProClmCost.FieldName = "Cost";
-            this.gridProClmCost.MinWidth = 23;
             this.gridProClmCost.Name = "gridProClmCost";
             this.gridProClmCost.Visible = true;
-            this.gridProClmCost.VisibleIndex = 6;
-            this.gridProClmCost.Width = 86;
+            this.gridProClmCost.VisibleIndex = 4;
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(331, 429);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDesc.Location = new System.Drawing.Point(290, 322);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(127, 27);
+            this.txtDesc.Size = new System.Drawing.Size(112, 23);
             this.txtDesc.TabIndex = 19;
             // 
             // btnSaveProducts
             // 
-            this.btnSaveProducts.Location = new System.Drawing.Point(461, 477);
-            this.btnSaveProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSaveProducts.Location = new System.Drawing.Point(403, 358);
             this.btnSaveProducts.Name = "btnSaveProducts";
-            this.btnSaveProducts.Size = new System.Drawing.Size(186, 47);
+            this.btnSaveProducts.Size = new System.Drawing.Size(163, 35);
             this.btnSaveProducts.TabIndex = 20;
             this.btnSaveProducts.Text = "Add";
             this.btnSaveProducts.UseVisualStyleBackColor = true;
@@ -332,18 +266,16 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(622, 429);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrice.Location = new System.Drawing.Point(544, 322);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(127, 27);
+            this.txtPrice.Size = new System.Drawing.Size(112, 23);
             this.txtPrice.TabIndex = 22;
             // 
             // txtCost
             // 
-            this.txtCost.Location = new System.Drawing.Point(773, 429);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCost.Location = new System.Drawing.Point(676, 322);
             this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(127, 27);
+            this.txtCost.Size = new System.Drawing.Size(112, 23);
             this.txtCost.TabIndex = 24;
             // 
             // cmbProType
@@ -353,18 +285,16 @@
             "Coffee",
             "Beverages",
             "Food"});
-            this.cmbProType.Location = new System.Drawing.Point(485, 429);
-            this.cmbProType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbProType.Location = new System.Drawing.Point(424, 322);
             this.cmbProType.Name = "cmbProType";
-            this.cmbProType.Size = new System.Drawing.Size(130, 28);
+            this.cmbProType.Size = new System.Drawing.Size(114, 23);
             this.cmbProType.TabIndex = 25;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(815, 813);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(713, 610);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 31);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 26;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
@@ -374,9 +304,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(475, 56);
+            this.label2.Location = new System.Drawing.Point(416, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 22);
+            this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 27;
             this.label2.Text = "Surname";
             // 
@@ -384,9 +314,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(349, 56);
+            this.label3.Location = new System.Drawing.Point(305, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 22);
+            this.label3.Size = new System.Drawing.Size(46, 18);
             this.label3.TabIndex = 28;
             this.label3.Text = "Name";
             // 
@@ -394,9 +324,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(587, 56);
+            this.label4.Location = new System.Drawing.Point(514, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 22);
+            this.label4.Size = new System.Drawing.Size(107, 18);
             this.label4.TabIndex = 30;
             this.label4.Text = "Employee Type";
             // 
@@ -404,9 +334,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(755, 56);
+            this.label5.Location = new System.Drawing.Point(661, 42);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 22);
+            this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 29;
             this.label5.Text = "Salary";
             // 
@@ -414,9 +344,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(657, 403);
+            this.label6.Location = new System.Drawing.Point(575, 302);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 22);
+            this.label6.Size = new System.Drawing.Size(41, 18);
             this.label6.TabIndex = 34;
             this.label6.Text = "Price";
             // 
@@ -424,9 +354,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(800, 403);
+            this.label7.Location = new System.Drawing.Point(700, 302);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 22);
+            this.label7.Size = new System.Drawing.Size(38, 18);
             this.label7.TabIndex = 33;
             this.label7.Text = "Cost";
             // 
@@ -434,9 +364,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(343, 403);
+            this.label8.Location = new System.Drawing.Point(300, 302);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 22);
+            this.label8.Size = new System.Drawing.Size(82, 18);
             this.label8.TabIndex = 32;
             this.label8.Text = "Description";
             // 
@@ -444,18 +374,19 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(491, 403);
+            this.label9.Location = new System.Drawing.Point(430, 302);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 22);
+            this.label9.Size = new System.Drawing.Size(93, 18);
             this.label9.TabIndex = 31;
             this.label9.Text = "Product Type";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(49, 42);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
@@ -463,21 +394,20 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(47, 419);
+            this.pictureBox2.Location = new System.Drawing.Point(41, 314);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(91, 95);
+            this.pictureBox2.Size = new System.Drawing.Size(80, 71);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 36;
             this.pictureBox2.TabStop = false;
             // 
             // gridLedger
             // 
-            this.gridLedger.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridLedger.Location = new System.Drawing.Point(1009, 228);
+            this.gridLedger.Location = new System.Drawing.Point(890, 149);
             this.gridLedger.MainView = this.gridView3;
-            this.gridLedger.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridLedger.Name = "gridLedger";
-            this.gridLedger.Size = new System.Drawing.Size(717, 164);
+            this.gridLedger.Size = new System.Drawing.Size(627, 123);
             this.gridLedger.TabIndex = 37;
             this.gridLedger.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -490,71 +420,61 @@
             this.clmIncome,
             this.clmExpenses,
             this.clmTotal});
-            this.gridView3.DetailHeight = 467;
             this.gridView3.GridControl = this.gridLedger;
             this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
             // clmYear
             // 
             this.clmYear.Caption = "Year";
             this.clmYear.FieldName = "Year";
-            this.clmYear.MinWidth = 23;
             this.clmYear.Name = "clmYear";
             this.clmYear.OptionsColumn.ReadOnly = true;
             this.clmYear.Visible = true;
             this.clmYear.VisibleIndex = 0;
-            this.clmYear.Width = 86;
             // 
             // clmMonth
             // 
             this.clmMonth.Caption = "Month";
             this.clmMonth.FieldName = "Month";
-            this.clmMonth.MinWidth = 23;
             this.clmMonth.Name = "clmMonth";
             this.clmMonth.OptionsColumn.ReadOnly = true;
             this.clmMonth.Visible = true;
             this.clmMonth.VisibleIndex = 1;
-            this.clmMonth.Width = 86;
             // 
             // clmIncome
             // 
             this.clmIncome.Caption = "Income";
             this.clmIncome.FieldName = "Income";
-            this.clmIncome.MinWidth = 23;
             this.clmIncome.Name = "clmIncome";
             this.clmIncome.OptionsColumn.ReadOnly = true;
             this.clmIncome.Visible = true;
             this.clmIncome.VisibleIndex = 2;
-            this.clmIncome.Width = 86;
             // 
             // clmExpenses
             // 
             this.clmExpenses.Caption = "Expenses";
             this.clmExpenses.FieldName = "Expenses";
-            this.clmExpenses.MinWidth = 23;
             this.clmExpenses.Name = "clmExpenses";
             this.clmExpenses.OptionsColumn.ReadOnly = true;
             this.clmExpenses.Visible = true;
             this.clmExpenses.VisibleIndex = 3;
-            this.clmExpenses.Width = 86;
             // 
             // clmTotal
             // 
             this.clmTotal.Caption = "Total";
             this.clmTotal.FieldName = "Total";
-            this.clmTotal.MinWidth = 23;
             this.clmTotal.Name = "clmTotal";
             this.clmTotal.OptionsColumn.ReadOnly = true;
             this.clmTotal.Visible = true;
             this.clmTotal.VisibleIndex = 4;
-            this.clmTotal.Width = 86;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1770, 905);
+            this.ClientSize = new System.Drawing.Size(1549, 679);
             this.Controls.Add(this.gridLedger);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -580,7 +500,6 @@
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -606,18 +525,15 @@
         private Button btnShowEmployees;
         private DevExpress.XtraGrid.GridControl gridEmployee;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridclmID;
         private DevExpress.XtraGrid.Columns.GridColumn gridclmName;
         private DevExpress.XtraGrid.Columns.GridColumn gridclmSurname;
         private DevExpress.XtraGrid.Columns.GridColumn gridclmEmployeeType;
         private DevExpress.XtraGrid.Columns.GridColumn gridclmSalary;
         private DevExpress.XtraGrid.GridControl gridProducts;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridProClmID;
         private TextBox txtDesc;
         private DevExpress.XtraGrid.Columns.GridColumn gridProClmCode;
         private DevExpress.XtraGrid.Columns.GridColumn gridProClmDesc;
-        private DevExpress.XtraGrid.Columns.GridColumn gridProClmProID;
         private DevExpress.XtraGrid.Columns.GridColumn gridProClmType;
         private DevExpress.XtraGrid.Columns.GridColumn gridProClmPrice;
         private DevExpress.XtraGrid.Columns.GridColumn gridProClmCost;
