@@ -6,6 +6,7 @@ using DevExpress.XtraCharts;
 using DevExpress.XtraSpreadsheet.Export;
 using DevExpress.XtraSpreadsheet.Model;
 using Library;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using static Library.Product;
@@ -22,7 +23,7 @@ namespace Session_11
         List<TransactionLine> transaction_Lines;
         Serializer serializer = new Serializer();
         
-        int cnt = 0;
+        //int cnt = 0;
 
         public Form1(CoffeeShopData test) {
 
@@ -56,7 +57,7 @@ namespace Session_11
                 Name = txtName.Text,
                 Surname = txtSurname.Text,
                 TypeOfEmployee = (EmployeeType)Enum.Parse(typeof(EmployeeType), cmbType.SelectedItem.ToString()),
-                SalaryPerMonth = Convert.ToDouble(txtSalary.Text)
+                SalaryPerMonth = Convert.ToDecimal(txtSalary.Text)
             };
 
             txtName.Text = "";
@@ -72,13 +73,13 @@ namespace Session_11
         {
             Product newProduct = new Product()
             {
-                Code = cnt,
+               
                 Description = txtDesc.Text,
                 TypeOfProduct = (ProductType)Enum.Parse(typeof(ProductType), cmbProType.SelectedItem.ToString()),
-                Price = Convert.ToDouble(txtPrice.Text),
-                Cost = Convert.ToDouble(txtCost.Text)
+                Price = Convert.ToDecimal(txtPrice.Text),
+                Cost = Convert.ToDecimal(txtCost.Text)
             };
-            cnt++;
+            //cnt++;
             txtDesc.Text = "";
             cmbProType.Text = "";
             txtPrice.Text = "";
@@ -117,10 +118,10 @@ namespace Session_11
             int rent = 3000;
             List<Transaction> transactions = _CoffeeShopData.transactions;
             List<Employee> employees = _CoffeeShopData.employees;
-            double income = transactions.Sum(x => x.TotalPrice);
-            double expensesProd = transactions.Sum(x => x.Cost);
-            double expensesSal = employees.Sum(x => x.SalaryPerMonth);
-            double total = (income - expensesProd - expensesSal - rent);
+            decimal income = transactions.Sum(x => x.TotalPrice);
+            decimal expensesProd = transactions.Sum(x => x.Cost);
+            decimal expensesSal = employees.Sum(x => x.SalaryPerMonth);
+            decimal total = (income - expensesProd - expensesSal - rent);
             MonthlyLedger ledger = new MonthlyLedger()
             {
                 Income = income,

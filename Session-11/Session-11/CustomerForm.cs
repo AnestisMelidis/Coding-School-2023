@@ -19,7 +19,7 @@ namespace Session_11
     {
         public CoffeeShopData Data { get; set; }
         private CoffeeShopData _CoffeeShopData = new CoffeeShopData();
-        public double Discount = 0.85;
+        public decimal Discount = 0.85m;
         Serializer serializer = new Serializer();
 
         public CustomerForm(CoffeeShopData test)
@@ -117,8 +117,8 @@ namespace Session_11
             int length = employees.Count;
             Random ran = new Random();
             int num = ran.Next(0, length);
-            double totalPrice = transactionLine.Sum(x => x.TotalPrice);
-            double totalCost = transactionLine.Sum(x => x.TotalCost);
+            decimal totalPrice = transactionLine.Sum(x => x.TotalPrice);
+            decimal totalCost = transactionLine.Sum(x => x.TotalCost);
             totalPrice = DiscountCheck(totalPrice);
             var payment = CheckPayment(totalPrice);
             //MessageBox.Show("The total price after discount is: " + total.ToString());
@@ -136,10 +136,14 @@ namespace Session_11
             gridSales.DataSource = null;
             gridTransaction.DataSource = null;
             gridTransaction.DataSource = _CoffeeShopData.transactions;
+            
             WriteJson(_CoffeeShopData, "test1.json");
+            
+           
+           
 
         }
-        public double DiscountCheck(double price)
+        public decimal DiscountCheck(decimal price)
         {
             if (price > 10)
             {
@@ -147,7 +151,7 @@ namespace Session_11
             }
             return price;
         }
-        public object CheckPayment(double price)
+        public object CheckPayment(decimal price)
         {
             var test = (MethodPayment)Enum.Parse(typeof(MethodPayment), cmbPayment.SelectedItem.ToString());
             if (price > 50) 
@@ -162,10 +166,10 @@ namespace Session_11
             int rent = 3000;
             List<Transaction> transactions = _CoffeeShopData.transactions;
             List<Employee> employees = _CoffeeShopData.employees;
-            double income = transactions.Sum(x => x.TotalPrice);
-            double expensesProd = transactions.Sum(x => x.Cost);
-            double expensesSal = employees.Sum(x => x.SalaryPerMonth);
-            double total = (income - expensesProd - expensesSal - rent);
+            decimal income = transactions.Sum(x => x.TotalPrice);
+            decimal expensesProd = transactions.Sum(x => x.Cost);
+            decimal expensesSal = employees.Sum(x => x.SalaryPerMonth);
+            decimal total = (income - expensesProd - expensesSal - rent);
             MonthlyLedger ledger = new MonthlyLedger()
             {
                 Income = income,

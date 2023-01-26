@@ -16,9 +16,9 @@ namespace Library
         public List<Employee> employees { get; set; }
 
 
-        public List<TransactionLine> transactionLines { get; set; }
-        public List<Transaction> transactions{ get; set; }
-        public List<MonthlyLedger> monthlyLedgers { get; set; }
+       public List<TransactionLine> transactionLines { get; set; }
+       public List<Transaction> transactions{ get; set; }
+       public List<MonthlyLedger> monthlyLedgers { get; set; }
 
 
 

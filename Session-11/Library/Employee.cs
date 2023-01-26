@@ -18,13 +18,13 @@ namespace Library
        public string Name { get; set; }
        public string Surname { get; set; }
        
-       // public enum EmployeeType { get; set; }
+       
        public EmployeeType TypeOfEmployee { get; set; }
 
-       //public List<Employee>? employees;
+       
 
 
-        public double SalaryPerMonth { get; set; }
+        public decimal SalaryPerMonth { get; set; }
 
         //Constructors
         public Employee()
@@ -33,12 +33,6 @@ namespace Library
         }
     }
 
-    /* Each shop should have: 1 Manager, 1-2 Cashiers, 1-2 Baristas and 1-3 Waiters */
-
-  
-
-    
-   
 
     //Methods
 }

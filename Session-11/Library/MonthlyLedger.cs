@@ -11,9 +11,9 @@ namespace Library
         //Properties
         public int Year { get; set; }
         public int Month { get; set; }
-        public double Income { get; set; }
-        public double Expenses { get; set; }
-        public double Total { get; set; }
+        public decimal Income { get; set; }
+        public decimal Expenses { get; set; }
+        public decimal Total { get; set; }
 
         //Constructors
         public MonthlyLedger() 
