@@ -34,11 +34,12 @@
             // btnManager
             // 
             this.btnManager.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnManager.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnManager.Location = new System.Drawing.Point(71, 313);
+            this.btnManager.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnManager.ForeColor = System.Drawing.Color.Indigo;
+            this.btnManager.Location = new System.Drawing.Point(85, 419);
             this.btnManager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(302, 119);
+            this.btnManager.Size = new System.Drawing.Size(302, 94);
             this.btnManager.TabIndex = 0;
             this.btnManager.Text = "Manager";
             this.btnManager.UseVisualStyleBackColor = false;
@@ -47,11 +48,12 @@
             // btnCustomer
             // 
             this.btnCustomer.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnCustomer.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCustomer.Location = new System.Drawing.Point(497, 313);
+            this.btnCustomer.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomer.ForeColor = System.Drawing.Color.Indigo;
+            this.btnCustomer.Location = new System.Drawing.Point(511, 419);
             this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(302, 119);
+            this.btnCustomer.Size = new System.Drawing.Size(302, 94);
             this.btnCustomer.TabIndex = 1;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.UseVisualStyleBackColor = false;
@@ -60,19 +62,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(326, 227);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(324, 350);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 30);
+            this.label1.Size = new System.Drawing.Size(250, 30);
             this.label1.TabIndex = 4;
             this.label1.Text = "Choise Your Entry As";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(315, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(303, 64);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 184);
+            this.pictureBox1.Size = new System.Drawing.Size(283, 254);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -101,7 +103,7 @@
 
         private Button btnManager;
         private Button btnCustomer;
-        private PictureBox pictureBox1;
         private Label label1;
+        private PictureBox pictureBox1;
     }
 }
