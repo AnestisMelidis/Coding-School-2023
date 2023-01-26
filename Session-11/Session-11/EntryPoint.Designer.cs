@@ -65,9 +65,9 @@
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(324, 350);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 30);
+            this.label1.Size = new System.Drawing.Size(257, 30);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Choise Your Entry As";
+            this.label1.Text = "Choose Your Entry As";
             // 
             // pictureBox1
             // 
