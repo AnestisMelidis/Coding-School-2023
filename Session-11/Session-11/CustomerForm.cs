@@ -36,61 +36,7 @@ namespace Session_11
             serializer.SerializeToFile(obj, file);
         }
 
-        private void chkCofee_Checked(object sender, EventArgs e)
-        {
-
-            if (chkCoffee.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Coffee)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkCoffee.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }
-
-        private void chkBevarages_Checked(object sender, EventArgs e)
-        {
-            if (chkBeverages.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Beverages)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkBeverages.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }
-        private void chkFood_Checked(object sender, EventArgs e)
-        {
-            if (chkFood.Checked == true)
-            {
-                foreach (var i in _CoffeeShopData.products)
-                {
-                    if (i.TypeOfProduct == ProductType.Food)
-                    {
-                        cmbMenu.Items.Add(i.Description);
-                    }
-                }
-            }
-            if (chkFood.Checked == false)
-            {
-                cmbMenu.Items.Clear();
-            }
-        }
-
-        private void addToCart_Click(object sender, EventArgs e)
+            private void addToCart_Click(object sender, EventArgs e)
         {
 
             List<Product> products = _CoffeeShopData.products;
@@ -114,7 +60,6 @@ namespace Session_11
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             List<TransactionLine> transactionLine = _CoffeeShopData.transactionLines;
-            //TransactionLine transactionLine1 = new TransactionLine();
             Customer customer = new Customer();
             List<Employee> employees = _CoffeeShopData.employees;
             int length = employees.Count;
@@ -124,7 +69,6 @@ namespace Session_11
             decimal totalCost = lines.Sum(x => x.TotalCost);
             totalPrice = DiscountCheck(totalPrice);
             var payment = CheckPayment(totalPrice);
-            //MessageBox.Show("The total price after discount is: " + total.ToString());
             Transaction transaction = new Transaction()
             {
                 CustomerID = customer.ID,
@@ -180,6 +124,51 @@ namespace Session_11
             _CoffeeShopData.monthlyLedgers.Add(ledger);
         }
 
+
+
+        private void radCoffee_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbMenu.Items.Clear();
+            if (radCoffee.Checked == true)
+            {
+                foreach (var i in _CoffeeShopData.products)
+                {
+                    if (i.TypeOfProduct == ProductType.Coffee)
+                    {
+                        cmbMenu.Items.Add(i.Description);
+                    }
+                }
+            }
+        }
+        private void radBeverages_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbMenu.Items.Clear();
+            if (radBeverages.Checked == true)
+            {
+                cmbMenu.SelectedItem = -1;
+                foreach (var i in _CoffeeShopData.products)
+                {
+                    if (i.TypeOfProduct == ProductType.Beverages)
+                    {
+                        cmbMenu.Items.Add(i.Description);
+                    }
+                }
+            }
+        }
+        private void radFood_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbMenu.Items.Clear();
+            if (radFood.Checked == true)
+            {
+                foreach (var i in _CoffeeShopData.products)
+                {
+                    if (i.TypeOfProduct == ProductType.Food)
+                    {
+                        cmbMenu.Items.Add(i.Description);
+                    }
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();

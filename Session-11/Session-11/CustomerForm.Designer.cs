@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.cmbMenu = new System.Windows.Forms.ComboBox();
-            this.chkFood = new System.Windows.Forms.CheckBox();
-            this.chkBeverages = new System.Windows.Forms.CheckBox();
-            this.chkCoffee = new System.Windows.Forms.CheckBox();
             this.numQuantity = new System.Windows.Forms.NumericUpDown();
             this.addToCart = new System.Windows.Forms.Button();
             this.gridSales = new DevExpress.XtraGrid.GridControl();
@@ -58,6 +55,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.radCoffee = new System.Windows.Forms.RadioButton();
+            this.radBeverages = new System.Windows.Forms.RadioButton();
+            this.radFood = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -76,39 +76,6 @@
             this.cmbMenu.Size = new System.Drawing.Size(72, 23);
             this.cmbMenu.TabIndex = 34;
             // 
-            // chkFood
-            // 
-            this.chkFood.AutoSize = true;
-            this.chkFood.Location = new System.Drawing.Point(80, 179);
-            this.chkFood.Name = "chkFood";
-            this.chkFood.Size = new System.Drawing.Size(53, 19);
-            this.chkFood.TabIndex = 33;
-            this.chkFood.Text = "Food";
-            this.chkFood.UseVisualStyleBackColor = true;
-            this.chkFood.Click += new System.EventHandler(this.chkFood_Checked);
-            // 
-            // chkBeverages
-            // 
-            this.chkBeverages.AutoSize = true;
-            this.chkBeverages.Location = new System.Drawing.Point(80, 155);
-            this.chkBeverages.Name = "chkBeverages";
-            this.chkBeverages.Size = new System.Drawing.Size(79, 19);
-            this.chkBeverages.TabIndex = 32;
-            this.chkBeverages.Text = "Beverages";
-            this.chkBeverages.UseVisualStyleBackColor = true;
-            this.chkBeverages.Click += new System.EventHandler(this.chkBevarages_Checked);
-            // 
-            // chkCoffee
-            // 
-            this.chkCoffee.AutoSize = true;
-            this.chkCoffee.Location = new System.Drawing.Point(80, 131);
-            this.chkCoffee.Name = "chkCoffee";
-            this.chkCoffee.Size = new System.Drawing.Size(61, 19);
-            this.chkCoffee.TabIndex = 31;
-            this.chkCoffee.Text = "Coffee";
-            this.chkCoffee.UseVisualStyleBackColor = true;
-            this.chkCoffee.Click += new System.EventHandler(this.chkCofee_Checked);
-            // 
             // numQuantity
             // 
             this.numQuantity.Location = new System.Drawing.Point(315, 160);
@@ -118,7 +85,7 @@
             // 
             // addToCart
             // 
-            this.addToCart.Location = new System.Drawing.Point(276, 194);
+            this.addToCart.Location = new System.Drawing.Point(277, 194);
             this.addToCart.Name = "addToCart";
             this.addToCart.Size = new System.Drawing.Size(110, 32);
             this.addToCart.TabIndex = 36;
@@ -354,12 +321,51 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // radCoffee
+            // 
+            this.radCoffee.AutoSize = true;
+            this.radCoffee.Location = new System.Drawing.Point(77, 134);
+            this.radCoffee.Name = "radCoffee";
+            this.radCoffee.Size = new System.Drawing.Size(60, 19);
+            this.radCoffee.TabIndex = 1;
+            this.radCoffee.TabStop = true;
+            this.radCoffee.Text = "Coffee";
+            this.radCoffee.UseVisualStyleBackColor = true;
+            this.radCoffee.CheckedChanged += new System.EventHandler(this.radCoffee_CheckedChanged);
+            // 
+            // radBeverages
+            // 
+            this.radBeverages.AutoSize = true;
+            this.radBeverages.Location = new System.Drawing.Point(77, 159);
+            this.radBeverages.Name = "radBeverages";
+            this.radBeverages.Size = new System.Drawing.Size(78, 19);
+            this.radBeverages.TabIndex = 2;
+            this.radBeverages.TabStop = true;
+            this.radBeverages.Text = "Beverages";
+            this.radBeverages.UseVisualStyleBackColor = true;
+            this.radBeverages.CheckedChanged += new System.EventHandler(this.radBeverages_CheckedChanged);
+            // 
+            // radFood
+            // 
+            this.radFood.AutoSize = true;
+            this.radFood.Location = new System.Drawing.Point(77, 184);
+            this.radFood.Name = "radFood";
+            this.radFood.Size = new System.Drawing.Size(52, 19);
+            this.radFood.TabIndex = 3;
+            this.radFood.TabStop = true;
+            this.radFood.Text = "Food";
+            this.radFood.UseVisualStyleBackColor = true;
+            this.radFood.CheckedChanged += new System.EventHandler(this.radFood_CheckedChanged);
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(724, 554);
+            this.Controls.Add(this.radFood);
+            this.Controls.Add(this.radBeverages);
+            this.Controls.Add(this.radCoffee);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -375,9 +381,6 @@
             this.Controls.Add(this.addToCart);
             this.Controls.Add(this.numQuantity);
             this.Controls.Add(this.cmbMenu);
-            this.Controls.Add(this.chkFood);
-            this.Controls.Add(this.chkBeverages);
-            this.Controls.Add(this.chkCoffee);
             this.Name = "CustomerForm";
             this.Text = "Customer";
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
@@ -396,9 +399,6 @@
         #endregion
 
         private ComboBox cmbMenu;
-        private CheckBox chkFood;
-        private CheckBox chkBeverages;
-        private CheckBox chkCoffee;
         private NumericUpDown numQuantity;
         private Button addToCart;
         private DevExpress.XtraGrid.GridControl gridSales;
@@ -424,6 +424,9 @@
         private Label label3;
         private Label label4;
         private Button button1;
+        private RadioButton radCoffee;
+        private RadioButton radBeverages;
+        private RadioButton radFood;
         //private Button btnAddCart;
     }
 }

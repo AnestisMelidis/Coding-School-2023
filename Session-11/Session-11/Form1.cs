@@ -95,8 +95,12 @@ namespace Session_11
             this.Hide();
             EntryPoint entryPoint = new EntryPoint();
             entryPoint.Show();
-
         }
+        public void GetCode()
+        {
+            
+        }
+
 
 
     } 
