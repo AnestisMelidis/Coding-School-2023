@@ -72,19 +72,17 @@
             // cmbMenu
             // 
             this.cmbMenu.FormattingEnabled = true;
-            this.cmbMenu.Location = new System.Drawing.Point(360, 175);
-            this.cmbMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbMenu.Location = new System.Drawing.Point(315, 131);
             this.cmbMenu.Name = "cmbMenu";
-            this.cmbMenu.Size = new System.Drawing.Size(82, 28);
+            this.cmbMenu.Size = new System.Drawing.Size(72, 23);
             this.cmbMenu.TabIndex = 34;
             // 
             // chkFood
             // 
             this.chkFood.AutoSize = true;
-            this.chkFood.Location = new System.Drawing.Point(91, 239);
-            this.chkFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFood.Location = new System.Drawing.Point(80, 179);
             this.chkFood.Name = "chkFood";
-            this.chkFood.Size = new System.Drawing.Size(65, 24);
+            this.chkFood.Size = new System.Drawing.Size(53, 19);
             this.chkFood.TabIndex = 33;
             this.chkFood.Text = "Food";
             this.chkFood.UseVisualStyleBackColor = true;
@@ -93,10 +91,9 @@
             // chkBeverages
             // 
             this.chkBeverages.AutoSize = true;
-            this.chkBeverages.Location = new System.Drawing.Point(91, 207);
-            this.chkBeverages.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkBeverages.Location = new System.Drawing.Point(80, 155);
             this.chkBeverages.Name = "chkBeverages";
-            this.chkBeverages.Size = new System.Drawing.Size(99, 24);
+            this.chkBeverages.Size = new System.Drawing.Size(79, 19);
             this.chkBeverages.TabIndex = 32;
             this.chkBeverages.Text = "Beverages";
             this.chkBeverages.UseVisualStyleBackColor = true;
@@ -105,10 +102,9 @@
             // chkCoffee
             // 
             this.chkCoffee.AutoSize = true;
-            this.chkCoffee.Location = new System.Drawing.Point(91, 175);
-            this.chkCoffee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkCoffee.Location = new System.Drawing.Point(80, 131);
             this.chkCoffee.Name = "chkCoffee";
-            this.chkCoffee.Size = new System.Drawing.Size(75, 24);
+            this.chkCoffee.Size = new System.Drawing.Size(61, 19);
             this.chkCoffee.TabIndex = 31;
             this.chkCoffee.Text = "Coffee";
             this.chkCoffee.UseVisualStyleBackColor = true;
@@ -116,18 +112,16 @@
             // 
             // numQuantity
             // 
-            this.numQuantity.Location = new System.Drawing.Point(360, 213);
-            this.numQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numQuantity.Location = new System.Drawing.Point(315, 160);
             this.numQuantity.Name = "numQuantity";
-            this.numQuantity.Size = new System.Drawing.Size(82, 27);
+            this.numQuantity.Size = new System.Drawing.Size(72, 23);
             this.numQuantity.TabIndex = 35;
             // 
             // addToCart
             // 
-            this.addToCart.Location = new System.Drawing.Point(316, 259);
-            this.addToCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.addToCart.Location = new System.Drawing.Point(276, 194);
             this.addToCart.Name = "addToCart";
-            this.addToCart.Size = new System.Drawing.Size(126, 43);
+            this.addToCart.Size = new System.Drawing.Size(110, 32);
             this.addToCart.TabIndex = 36;
             this.addToCart.Text = "Add";
             this.addToCart.UseVisualStyleBackColor = true;
@@ -135,12 +129,10 @@
             // 
             // gridSales
             // 
-            this.gridSales.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridSales.Location = new System.Drawing.Point(68, 349);
+            this.gridSales.Location = new System.Drawing.Point(60, 262);
             this.gridSales.MainView = this.gridView1;
-            this.gridSales.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridSales.Name = "gridSales";
-            this.gridSales.Size = new System.Drawing.Size(711, 151);
+            this.gridSales.Size = new System.Drawing.Size(622, 113);
             this.gridSales.TabIndex = 37;
             this.gridSales.UseEmbeddedNavigator = true;
             this.gridSales.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -153,7 +145,6 @@
             this.clmQuantity,
             this.clmPrice,
             this.clmTotal});
-            this.gridView1.DetailHeight = 467;
             this.gridView1.GridControl = this.gridSales;
             this.gridView1.Name = "gridView1";
             // 
@@ -161,51 +152,42 @@
             // 
             this.clmDescription.Caption = "Description";
             this.clmDescription.FieldName = "Description";
-            this.clmDescription.MinWidth = 23;
             this.clmDescription.Name = "clmDescription";
             this.clmDescription.OptionsColumn.ReadOnly = true;
             this.clmDescription.Visible = true;
             this.clmDescription.VisibleIndex = 0;
-            this.clmDescription.Width = 86;
             // 
             // clmQuantity
             // 
             this.clmQuantity.Caption = "Quantity";
             this.clmQuantity.FieldName = "Quantity";
-            this.clmQuantity.MinWidth = 23;
             this.clmQuantity.Name = "clmQuantity";
             this.clmQuantity.Visible = true;
             this.clmQuantity.VisibleIndex = 2;
-            this.clmQuantity.Width = 86;
             // 
             // clmPrice
             // 
             this.clmPrice.Caption = "Price";
             this.clmPrice.FieldName = "Price";
-            this.clmPrice.MinWidth = 23;
             this.clmPrice.Name = "clmPrice";
             this.clmPrice.OptionsColumn.ReadOnly = true;
             this.clmPrice.Visible = true;
             this.clmPrice.VisibleIndex = 1;
-            this.clmPrice.Width = 86;
             // 
             // clmTotal
             // 
             this.clmTotal.Caption = "Total Price";
             this.clmTotal.FieldName = "TotalPrice";
-            this.clmTotal.MinWidth = 23;
             this.clmTotal.Name = "clmTotal";
             this.clmTotal.OptionsColumn.ReadOnly = true;
             this.clmTotal.Visible = true;
             this.clmTotal.VisibleIndex = 3;
-            this.clmTotal.Width = 86;
             // 
             // btnCheckout
             // 
-            this.btnCheckout.Location = new System.Drawing.Point(639, 259);
-            this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCheckout.Location = new System.Drawing.Point(559, 194);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(140, 43);
+            this.btnCheckout.Size = new System.Drawing.Size(122, 32);
             this.btnCheckout.TabIndex = 38;
             this.btnCheckout.Text = "Checkout";
             this.btnCheckout.UseVisualStyleBackColor = true;
@@ -213,12 +195,10 @@
             // 
             // gridTransaction
             // 
-            this.gridTransaction.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridTransaction.Location = new System.Drawing.Point(68, 523);
+            this.gridTransaction.Location = new System.Drawing.Point(60, 392);
             this.gridTransaction.MainView = this.gridView2;
-            this.gridTransaction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridTransaction.Name = "gridTransaction";
-            this.gridTransaction.Size = new System.Drawing.Size(720, 140);
+            this.gridTransaction.Size = new System.Drawing.Size(630, 105);
             this.gridTransaction.TabIndex = 39;
             this.gridTransaction.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -232,7 +212,6 @@
             this.clmEmployeeID,
             this.clmPayment,
             this.clmTotalPrice});
-            this.gridView2.DetailHeight = 467;
             this.gridView2.GridControl = this.gridTransaction;
             this.gridView2.Name = "gridView2";
             // 
@@ -240,67 +219,55 @@
             // 
             this.clmID.Caption = "ID";
             this.clmID.FieldName = "ID";
-            this.clmID.MinWidth = 23;
             this.clmID.Name = "clmID";
             this.clmID.OptionsColumn.ReadOnly = true;
             this.clmID.Visible = true;
             this.clmID.VisibleIndex = 0;
-            this.clmID.Width = 86;
             // 
             // clmDate
             // 
             this.clmDate.Caption = "Date";
             this.clmDate.FieldName = "Date";
-            this.clmDate.MinWidth = 23;
             this.clmDate.Name = "clmDate";
             this.clmDate.OptionsColumn.ReadOnly = true;
             this.clmDate.Visible = true;
             this.clmDate.VisibleIndex = 1;
-            this.clmDate.Width = 86;
             // 
             // clmCustomerID
             // 
             this.clmCustomerID.Caption = "CustomerID";
             this.clmCustomerID.FieldName = "CustomerID";
-            this.clmCustomerID.MinWidth = 23;
             this.clmCustomerID.Name = "clmCustomerID";
             this.clmCustomerID.OptionsColumn.ReadOnly = true;
             this.clmCustomerID.Visible = true;
             this.clmCustomerID.VisibleIndex = 2;
-            this.clmCustomerID.Width = 86;
             // 
             // clmEmployeeID
             // 
             this.clmEmployeeID.Caption = "EmployeeID";
             this.clmEmployeeID.FieldName = "EmployeeID";
-            this.clmEmployeeID.MinWidth = 23;
             this.clmEmployeeID.Name = "clmEmployeeID";
             this.clmEmployeeID.OptionsColumn.ReadOnly = true;
             this.clmEmployeeID.Visible = true;
             this.clmEmployeeID.VisibleIndex = 3;
-            this.clmEmployeeID.Width = 86;
             // 
             // clmPayment
             // 
             this.clmPayment.Caption = "Payment Method";
             this.clmPayment.FieldName = "TypeOfPayment";
-            this.clmPayment.MinWidth = 23;
             this.clmPayment.Name = "clmPayment";
             this.clmPayment.OptionsColumn.ReadOnly = true;
             this.clmPayment.Visible = true;
             this.clmPayment.VisibleIndex = 4;
-            this.clmPayment.Width = 86;
             // 
             // clmTotalPrice
             // 
             this.clmTotalPrice.Caption = "Total Price";
             this.clmTotalPrice.FieldName = "TotalPrice";
-            this.clmTotalPrice.MinWidth = 23;
             this.clmTotalPrice.Name = "clmTotalPrice";
             this.clmTotalPrice.OptionsColumn.ReadOnly = true;
             this.clmTotalPrice.Visible = true;
             this.clmTotalPrice.VisibleIndex = 5;
-            this.clmTotalPrice.Width = 86;
             // 
             // cmbPayment
             // 
@@ -308,27 +275,28 @@
             this.cmbPayment.Items.AddRange(new object[] {
             "Cash",
             "Credit_Card"});
-            this.cmbPayment.Location = new System.Drawing.Point(641, 220);
-            this.cmbPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbPayment.Location = new System.Drawing.Point(561, 165);
             this.cmbPayment.Name = "cmbPayment";
-            this.cmbPayment.Size = new System.Drawing.Size(138, 28);
+            this.cmbPayment.Size = new System.Drawing.Size(121, 23);
             this.cmbPayment.TabIndex = 40;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(290, 681);
+            this.pictureBox1.Location = new System.Drawing.Point(254, 511);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(271, 45);
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(599, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(524, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(189, 142);
+            this.pictureBox2.Size = new System.Drawing.Size(165, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 42;
             this.pictureBox2.TabStop = false;
@@ -336,9 +304,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(68, 26);
+            this.pictureBox3.Location = new System.Drawing.Point(60, 20);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(507, 58);
+            this.pictureBox3.Size = new System.Drawing.Size(444, 44);
             this.pictureBox3.TabIndex = 43;
             this.pictureBox3.TabStop = false;
             // 
@@ -346,9 +315,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(76, 133);
+            this.label1.Location = new System.Drawing.Point(66, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 26);
+            this.label1.Size = new System.Drawing.Size(101, 21);
             this.label1.TabIndex = 44;
             this.label1.Text = "Product Type";
             // 
@@ -356,9 +325,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(254, 177);
+            this.label2.Location = new System.Drawing.Point(222, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 22);
+            this.label2.Size = new System.Drawing.Size(58, 18);
             this.label2.TabIndex = 45;
             this.label2.Text = "Product";
             // 
@@ -366,9 +335,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(251, 214);
+            this.label3.Location = new System.Drawing.Point(220, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 22);
+            this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 46;
             this.label3.Text = "Quantity";
             // 
@@ -376,17 +345,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(491, 226);
+            this.label4.Location = new System.Drawing.Point(430, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 22);
+            this.label4.Size = new System.Drawing.Size(119, 18);
             this.label4.TabIndex = 47;
             this.label4.Text = "Payment Method";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(694, 670);
+            this.button1.Location = new System.Drawing.Point(607, 502);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(82, 22);
             this.button1.TabIndex = 48;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
@@ -394,10 +364,10 @@
             // 
             // CustomerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(827, 738);
+            this.ClientSize = new System.Drawing.Size(724, 554);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -416,7 +386,6 @@
             this.Controls.Add(this.chkFood);
             this.Controls.Add(this.chkBeverages);
             this.Controls.Add(this.chkCoffee);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CustomerForm";
             this.Text = "Customer";
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
