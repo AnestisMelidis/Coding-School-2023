@@ -25,7 +25,9 @@ namespace Session_11
         public Form1(CoffeeShopData test) 
         {
             _CoffeeShopData = test;
-            InitializeComponent(); 
+            InitializeComponent();
+            btnSaveEmployees.Enabled = false;
+            btnSaveProducts.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e) 
@@ -74,6 +76,36 @@ namespace Session_11
         public void btnSaveJson(object sender, EventArgs e)
         {
             WriteJson(_CoffeeShopData, "test1.json") ;
+        }
+        private void setEmployeeButtonVisibility()
+        {
+            if ((txtName.Text != String.Empty) && (txtSurname.Text != String.Empty) && (txtSalary.Text != String.Empty))
+            {
+                btnSaveEmployees.Enabled = true;
+            }
+            else
+            {
+                btnSaveEmployees.Enabled = false;
+            }
+        }
+        private void setProductsButtonVisibility()
+        {
+            if ((txtDesc.Text != String.Empty) && (txtCost.Text != String.Empty) && (txtPrice.Text != String.Empty)) 
+            {
+                btnSaveProducts.Enabled = true;
+            }
+            else
+            {
+                btnSaveProducts.Enabled = false;
+            }
+        }
+        private void Employee_TextChanged(object sender, EventArgs e)
+        {
+            setEmployeeButtonVisibility();
+        }
+        private void Products_TextChanged(object sender, EventArgs e)
+        {
+            setProductsButtonVisibility();
         }
         public void LedgerEntry()
         {

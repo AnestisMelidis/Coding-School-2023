@@ -83,6 +83,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(112, 23);
             this.txtName.TabIndex = 2;
+            this.txtName.TextChanged += new System.EventHandler(this.Employee_TextChanged);
             // 
             // txtSurname
             // 
@@ -90,6 +91,7 @@
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(112, 23);
             this.txtSurname.TabIndex = 3;
+            this.txtSurname.TextChanged += new System.EventHandler(this.Employee_TextChanged);
             // 
             // txtSalary
             // 
@@ -97,6 +99,7 @@
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(112, 23);
             this.txtSalary.TabIndex = 5;
+            this.txtSalary.TextChanged += new System.EventHandler(this.Employee_TextChanged);
             // 
             // btnSaveEmployees
             // 
@@ -254,6 +257,7 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(112, 23);
             this.txtDesc.TabIndex = 19;
+            this.txtDesc.TextChanged += new System.EventHandler(this.Products_TextChanged);
             // 
             // btnSaveProducts
             // 
@@ -271,6 +275,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(112, 23);
             this.txtPrice.TabIndex = 22;
+            this.txtPrice.TextChanged += new System.EventHandler(this.Products_TextChanged);
             // 
             // txtCost
             // 
@@ -278,6 +283,7 @@
             this.txtCost.Name = "txtCost";
             this.txtCost.Size = new System.Drawing.Size(112, 23);
             this.txtCost.TabIndex = 24;
+            this.txtCost.TextChanged += new System.EventHandler(this.Products_TextChanged);
             // 
             // cmbProType
             // 
@@ -310,6 +316,7 @@
             this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 27;
             this.label2.Text = "Surname";
+            this.label2.TextChanged += new System.EventHandler(this.Employee_TextChanged);
             // 
             // label3
             // 
@@ -320,6 +327,7 @@
             this.label3.Size = new System.Drawing.Size(46, 18);
             this.label3.TabIndex = 28;
             this.label3.Text = "Name";
+            this.label3.TextChanged += new System.EventHandler(this.Employee_TextChanged);
             // 
             // label4
             // 
@@ -330,6 +338,7 @@
             this.label4.Size = new System.Drawing.Size(107, 18);
             this.label4.TabIndex = 30;
             this.label4.Text = "Employee Type";
+            this.label4.TextChanged += new System.EventHandler(this.Employee_TextChanged);
             // 
             // label5
             // 
@@ -340,6 +349,7 @@
             this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 29;
             this.label5.Text = "Salary";
+            this.label5.TextChanged += new System.EventHandler(this.Employee_TextChanged);
             // 
             // label6
             // 
