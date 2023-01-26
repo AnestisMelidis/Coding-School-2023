@@ -34,18 +34,9 @@ namespace Session_11
         }
         
         private void Form1_Load(object sender, EventArgs e) {
-            DevExpress.XtraGrid.GridControl gridControl;
-            DevExpress.XtraGrid.Views.Grid.GridView gridEmployee;
             gridProducts.DataSource = _CoffeeShopData.products;
             gridEmployee.DataSource = _CoffeeShopData.employees;
             gridLedger.DataSource = _CoffeeShopData.monthlyLedgers;
-
-
-
-            //gridView.OptionsView.ShowGroupPanel = true
-
-
-            gridEmployee.OptionsView.ShowGroupPanel = false;
         }
 
 
