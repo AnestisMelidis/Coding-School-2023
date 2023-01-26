@@ -304,10 +304,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(60, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 24);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(444, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(495, 44);
             this.pictureBox3.TabIndex = 43;
             this.pictureBox3.TabStop = false;
             // 
