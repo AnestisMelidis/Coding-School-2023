@@ -77,35 +77,41 @@ namespace Session_11
         {
             WriteJson(_CoffeeShopData, "test1.json") ;
         }
-        private void setEmployeeButtonVisibility()
+        private bool setEmployeeButtonVisibility()
         {
-            if ((txtName.Text != String.Empty) && (txtSurname.Text != String.Empty) && (txtSalary.Text != String.Empty))
+            bool res = false;
+            if ((txtName.Text != String.Empty)
+                && (txtSurname.Text != String.Empty)
+                && (txtSalary.Text != String.Empty)
+                && (cmbType.SelectedItem != null))
             {
-                btnSaveEmployees.Enabled = true;
+                res = true;
             }
-            else
-            {
-                btnSaveEmployees.Enabled = false;
-            }
+            return res;
         }
-        private void setProductsButtonVisibility()
+        private bool setProductsButtonVisibility()
         {
-            if ((txtDesc.Text != String.Empty) && (txtCost.Text != String.Empty) && (txtPrice.Text != String.Empty)) 
+            bool res = false;
+            if ((txtDesc.Text != String.Empty)
+                && (txtCost.Text != String.Empty)
+                && (txtPrice.Text != String.Empty)
+                && (cmbProType.SelectedItem != null))
             {
-                btnSaveProducts.Enabled = true;
+                res = true;
             }
-            else
-            {
-                btnSaveProducts.Enabled = false;
-            }
+            return res;
         }
         private void Employee_TextChanged(object sender, EventArgs e)
         {
-            setEmployeeButtonVisibility();
+            bool visibility;
+            visibility = setEmployeeButtonVisibility();
+            btnSaveEmployees.Enabled = visibility;
         }
         private void Products_TextChanged(object sender, EventArgs e)
         {
-            setProductsButtonVisibility();
+            bool visibility;
+            visibility = setProductsButtonVisibility();
+            btnSaveProducts.Enabled = visibility;
         }
         public void LedgerEntry()
         {

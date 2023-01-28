@@ -238,6 +238,8 @@
             this.cmbPayment.Name = "cmbPayment";
             this.cmbPayment.Size = new System.Drawing.Size(121, 23);
             this.cmbPayment.TabIndex = 40;
+            this.cmbPayment.SelectedIndexChanged += new System.EventHandler(this.Payment_TextChanged);
+            this.cmbPayment.SelectedValueChanged += new System.EventHandler(this.Payment_TextChanged);
             // 
             // pictureBox1
             // 
