@@ -28,7 +28,10 @@ namespace Session_11
         {
             InitializeComponent();
             _CoffeeShopData = test;
+            numQuantity.TextChanged += new EventHandler(Menu_TextChanged);
             btnCheckout.Enabled = false;
+            addToCart.Enabled = false;
+            
 
         }
         public void WriteJson(object obj, string file)
@@ -85,6 +88,16 @@ namespace Session_11
             WriteJson(_CoffeeShopData, "test1.json");
 
         }
+        private bool setAddButtonVisibility()
+        {
+            bool res = false;
+            if (cmbMenu.SelectedItem != null
+                && numQuantity.Value != 0)
+            {
+                res = true;
+            }
+            return res;
+        }
         private bool setCheckoutButtonVisibility()
         {
             bool res = false;
@@ -99,6 +112,12 @@ namespace Session_11
             bool visibility;
             visibility = setCheckoutButtonVisibility();
             btnCheckout.Enabled = visibility;
+        }
+        private void Menu_TextChanged(object sender, EventArgs e)
+        {
+            bool visibility;
+            visibility = setAddButtonVisibility();
+            addToCart.Enabled = visibility;
         }
         public decimal DiscountCheck(decimal price)
         {
