@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Details</title>
+</head>
+<body>
+    <h2>Customer Details</h2>
+    <form>
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" required>
+        <br><br>
+        <label for="surnameInput">Surname:</label>
+        <input type="text" id="surnameInput" required>
+        <br><br>
+        <label for="ageInput">Age:</label>
+        <input type="number" id="ageInput" required>
+        <br><br>
+        <label for="genderInput">Gender:</label>
+        <input type="text" id="genderInput" required>
+        <br><br>
+        <button id="submitButton">Submit</button>
+    </form>
+    <br>
+    <table id="customersTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody id="customersTableBody"></tbody>
+    </table>
+    <br>
+    <h4>Selected Customer Details:</h4>
+    <form id="selectedCustomerDetails">
+        <label for="selectedNameInput">Name:</label>
+        <input type="text" id="selectedNameInput" disabled>
+        <br><br>
+        <label for="selectedSurnameInput">Surname:</label>
+        <input type="text" id="selectedSurnameInput" disabled>
+        <br><br>
+        <label for="selectedAgeInput">Age:</label>
+        <input type="number" id="selectedAgeInput" disabled>
+        <br><br>
+        <label for="selectedGenderInput">Gender:</label>
+        <input type="text" id="selectedGenderInput" disabled>
+    </form>
+    <script src="Javascript/CustomersManage.js"></script>
+</body>
+</html>
